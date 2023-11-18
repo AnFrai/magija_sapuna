@@ -50,18 +50,23 @@
           </ul>
         </nav>
         <div class="user-communication">
-          <button class="header-icon-button header-search-button" type="button">
-            <span class="visually-hidden">Pronadji</span>
-          </button>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <button class="header-icon-button header-search-button" type="submit">
+              <span class="visually-hidden">Pronadji</span>
+            </button>
+            <input class="input search-input" id="search" type="text" name="search-input" value="Poklon za Novu Godinu" placeholder="Koji pokloncic trazite?">
+          </form>
           <a class="link header-icon-button header-cart-button" href="#" >
             <span class="visually-hidden">Artikala u korpi:</span>
-            <span class="card-items-counter">12</span>
+            <span class="visually-hidden products-number">0</span>
           </a>
         </div>
       </header>
 
       <main class="main-container" data-test="main" >
         <h1>Это страничка о мыле, йееей</h1>
+        <!-- <button class="plus" type="button">плюс один</button>
+        <button class="minus" type="button">минус один</button> -->
       </main>
 
       <footer class="main-footer" data-test="footer">
@@ -88,6 +93,8 @@
           </li>
         </ul>
       </footer>
+
+      <script src="script.js"></script>
     </div>
   </body>
 </html>
