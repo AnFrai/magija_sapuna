@@ -335,19 +335,12 @@ body {
 
 /* MAIN */
 /* Hero */
-.hero-img-container {
-  margin: 20px auto;
-  padding: 40px;
-  padding-bottom: 80px;
-
-  /* background-image: linear-gradient(0.25turn, rgba(19, 14, 68, 0.7), rgba(19, 14, 68, 0.4), rgba(69, 24, 231, 0.2), rgba(140, 222, 204, 0.2));
-  filter: blur(10px); */
-}
-
 .hero-img {
   display: block;
   width: 100%;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 20px;
+
   font-size: 120px;
   font-family: 'Alex Brush', cursive;
 }
