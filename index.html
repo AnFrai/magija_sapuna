@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Kuca carobnih sapuna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
   </head>
   <body>
     <div class="container">
-      <header class="main-header" data-test="header">
+      <header class="main-header">
         <a class="link header-logo" href="index.html" aria-current="page" tabindex="-1">
           <img class="logo" src="images/logo.png" width="70" height="70" alt="Logo Magija Sapuna.">
         </a>
@@ -45,7 +48,10 @@
               </ul>
             </li>
             <li class="list-item navigation-item">
-              <a class="link navigation-link" href="constructor" aria-current="page">Konstruktor poklona</a>
+              <a class="link navigation-link" href="constructor.html">Konstruktor poklona</a>
+            </li>
+            <li class="list-item navigation-item">
+              <a class="link navigation-link" href="delivery.html">Dostava</a>
             </li>
           </ul>
         </nav>
@@ -56,6 +62,10 @@
             </button>
             <input class="input search-input" id="search" type="text" name="search-input" value="Poklon za Novu Godinu" placeholder="Koji pokloncic trazite?">
           </form>
+          <a class="link header-icon-button header-wishlist-button" href="#">
+            <span class="visually-hidden">Zeljenih artikala:</span>
+            <span class="visually-hidden products-number">0</span>
+          </a>
           <a class="link header-icon-button header-cart-button" href="#" >
             <span class="visually-hidden">Artikala u korpi:</span>
             <span class="visually-hidden products-number">0</span>
@@ -63,13 +73,38 @@
         </div>
       </header>
 
-      <main class="main-container" data-test="main" >
-        <h1>Это страничка о мыле, йееей</h1>
-        <button class="plus" type="button">плюс один</button>
-        <button class="minus" type="button">минус один</button>
+      <main class="main-container">
+        <section class="hero">
+          <h1 class="visually-hidden">Magija sapuna - Kuca carobnih sapuna</h1>
+          <div class="hero-img-container">
+            <svg class="hero-img" width="200" height="280" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="textGradient" x1="50%" gradientTransform="rotate(50)">
+                    <stop offset="0%" stop-color="rgba(19, 14, 68, 0.7)" />
+                    <stop offset="20%" stop-color="rgba(69, 24, 231, 0.7)" />
+                    <!-- <stop offset="40%" stop-color="rgba(140, 222, 204, 0.7)" /> -->
+                    <stop offset="60%" stop-color="rgba(140, 222, 204, 0.7)" />
+                    <stop offset="80%" stop-color="rgba(69, 24, 231, 0.7)" />
+                    <stop offset="100%" stop-color="rgba(19, 14, 68, 0.7)" />
+                </linearGradient>
+              </defs>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" xml:space="preserve" fill="url(#textGradient)">
+                <tspan class="name-bigger" x="50%" dy="-0.6em" >Magija sapuna</tspan><tspan class="name-smaller" x="50%" dy="1.2em">Kuca carobnih sapuna</tspan></text>
+            </svg>
+          </div>
+        </section>
+
+        <section class="main-content">
+          <div class="filter"></div>
+          <div class="slider"></div>
+          <div class="products"></div>
+        </section>
+
+        <!-- <button class="plus" type="button">плюс один</button>
+        <button class="minus" type="button">минус один</button> -->
       </main>
 
-      <footer class="main-footer" data-test="footer">
+      <footer class="main-footer">
         <ul class="list social">
           <li class="list-item social-item">
             <a class="link social-item-link social-tg" href="#" title="Telegram">
