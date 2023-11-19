@@ -35,6 +35,11 @@ body {
 }
 
 /* ОБЩЕЕ */
+/**/
+.name-text {
+  font-family: 'Alex Brush', cursive;
+}
+
 /* ссылки */
 .link {
   display: block;
@@ -185,17 +190,17 @@ body {
 }
 
 .category-item-name::after {
- content: "";
- display: inline-block;
- width: 30px;
- height: 30px;
- margin: 0 5px 0 10px;
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 10px;
 
- align-self: center;
+    align-self: center;
 
- background-image: var(--category-item-photo);
- background-size: 30px 30px;
- background-repeat: no-repeat;
+    background-image: var(--category-item-photo);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
   }
 
   .category-new-year {
@@ -214,9 +219,15 @@ body {
     --category-item-photo: url(../images/)
   }
 
-  .category-adults-18 {
-    --category-item-photo: url(../images/icons/icon-age-18.png)
+  .category-adults-18::after {
+    background-image: url(../images/icons/icon-age-18.png);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .category-adults-18:hover::after {
+    animation: heartbeat 1s infinite;
 }
+
 
 
 /* user-communication */
@@ -340,19 +351,15 @@ body {
   width: 100%;
   margin: 20px auto;
   padding: 20px;
+}
 
+.name-text-hero {
   font-size: 120px;
-  font-family: 'Alex Brush', cursive;
 }
 
 .name-smaller {
   font-size: 70%;
 }
-
-
-
-
-
 
 /* .main-content {
   display: grid;
@@ -392,11 +399,12 @@ body {
 /* FOOTER */
 .main-footer {
   display: flex;
+  position: relative;
   justify-content: start;
   align-items: center;
   gap: 70px;
 
-  padding: 15px var(--container-padding);
+  padding: 20px var(--container-padding);
 
   background-image: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
 }
@@ -410,14 +418,14 @@ body {
   display: flex;
   height: 44px;
   width: 44px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   border-radius: 15px;
 }
 
-.social-item-link:hover,
-.social-item-link:focus {
+.social-item-link:not(.social-inst-18):hover,
+.social-item-link:not(.social-inst-18):focus {
   background-color: rgb(19, 14, 68);
   outline: none;
 }
@@ -426,16 +434,16 @@ body {
   opacity: 60%;
 }
 
-.social-item-link::before {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 40px;
+.social-item-link:not(.social-inst-18):before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
 
-  background-color: #ffffff;
+    background-color: #ffffff;
 
-  -webkit-mask: var(--social-icon) no-repeat center;
-  mask: var(--social-icon) no-repeat center;
+    -webkit-mask: var(--social-icon) no-repeat center;
+    mask: var(--social-icon) no-repeat center;
   }
 
   .social-tg {
@@ -450,6 +458,35 @@ body {
     --social-icon: url("../images/icons/icon-facebook.svg");
   }
 
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+
   .social-inst-18 {
-    --social-icon: url("../images/icons/icon-facebook.svg");
+    background: url("../images/icons/icon-age-18.png") no-repeat center;
+    background-size: 100%;
+
+    transition: 0.3s ease-in;
+  }
+
+  .social-inst-18:hover,
+  .social-inst-18:focus {
+    outline: none;
+     animation: heartbeat 1s infinite;
+}
+
+/* имя фирмы */
+.name-text-footer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 60px;
+  text-align: center;
 }
