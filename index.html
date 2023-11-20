@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
   </head>
@@ -13,7 +14,7 @@
     <div class="container">
       <header class="main-header">
         <a class="link header-logo" href="index.html" aria-current="page" tabindex="-1">
-          <img class="logo" src="images/logo.png" width="70" height="70" alt="Logo Magija Sapuna.">
+          <img class="logo" src="images/logo.png" width="60" height="60" alt="Logo Magija Sapuna.">
         </a>
         <nav class="navigation">
           <ul class="list navigation-list">
@@ -26,8 +27,8 @@
                   </a>
                 </li>
                 <li class="list-item submenu-category">
-                  <a class="link submenu-category-item" href="#" title="Noć veštica">
-                    <span class="category-item-name category-halloween">Noć veštica</span>
+                  <a class="link submenu-category-item" href="#" title="Uskrs">
+                    <span class="category-item-name category-easter">Uskrs</span>
                   </a>
                 </li>
                 <li class="list-item submenu-category">
@@ -36,8 +37,8 @@
                   </a>
                 </li>
                 <li class="list-item submenu-category">
-                  <a class="link submenu-category-item" href="#" title="bla bla bla">
-                    <span class="category-item-name category-bla-bla-bla">bla bla bla</span>
+                  <a class="link submenu-category-item" href="#" title="Noc veštica">
+                    <span class="category-item-name category-halloween">Noc veštica</span>
                   </a>
                 </li>
                 <li class="list-item submenu-category">
@@ -81,21 +82,137 @@
               <linearGradient id="textGradient" x1="50%" gradientTransform="rotate(60)">
                   <stop offset="0%" stop-color="rgba(19, 14, 68, 0.7)" />
                   <stop offset="20%" stop-color="rgba(69, 24, 231, 0.7)" />
-                  <!-- <stop offset="40%" stop-color="rgba(140, 222, 204, 0.7)"/> -->
                   <stop offset="60%" stop-color="rgba(140, 222, 204, 0.7)" />
                   <stop offset="80%" stop-color="rgba(69, 24, 231, 0.7)" />
                   <stop offset="100%" stop-color="rgba(19, 14, 68, 0.7)" />
               </linearGradient>
             </defs>
             <text x="50%" y="70%" text-anchor="middle" dominant-baseline="middle" xml:space="preserve" fill="url(#textGradient)">
-              <tspan class="name-bigger" x="50%" dy="-0.6em" >Magija sapuna</tspan><tspan class="name-smaller" x="50%" dy="1.2em">Kuca carobnih sapuna</tspan></text>
+              <tspan class="name-bigger" x="50%" dy="-0.6em" >Magija sapuna</tspan><tspan class="name-smaller" x="50%" dy="1.4em">Kuca carobnih sapuna</tspan></text>
           </svg>
         </section>
 
         <section class="main-content">
-          <div class="filter"></div>
-          <div class="slider"></div>
-          <div class="products"></div>
+          <h2 class="visually-hidden">Filter poklona</h2>
+          <form class="present-searching-form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="price-slider-wrapper">
+              <span class="slider-price-title">Cena:</span>
+              <div class="slider">
+                <div class="slider-scale" style="left: 0; width: 150px;">
+                  <button class="slider-button slider-button-min" type="button"><span class="visually-hidden">Цена минимальная</span></button>
+                  <button class="slider-button slider-button-max" type="button"><span class="visually-hidden">Цена максимальная</span></button>
+                </div>
+              </div>
+              <p class="slider-price-value"><span class="price price-min">0</span> RSD - <span class="price price-max">10 000</span> RSD</p>
+            </div>
+
+            <fieldset class="fieldset infrastructure">
+              <legend class="fieldset-legend">Kategorija:</legend>
+              <ul class="list category-wrapper">
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-new-year" name="category" value="new-year">
+                  <label class="checkbox-label" for="checkbox-new-year">Nova godina</label>
+                </li>
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-easter" name="category" value="easter">
+                  <label class="checkbox-label" for="checkbox-easter">Uskrs</label>
+                </li>
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-animals" name="category" value="animals">
+                  <label class="checkbox-label" for="checkbox-animals">Zivotinje</label>
+                </li>
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-halloween" name="category" value="halloween">
+                  <label class="checkbox-label" for="checkbox-halloween">Noc vestica</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <button class="present-searching-form-button">кнопка отправки формы</button>
+          </form>
+
+          <ul class="list promotion-slider">
+            <li class="list-item promotion-slider-item promotion-new-year">
+              <img class="promotion-slider-photo" src="images/promotion-slider/photoshop/new-year copy.png" width="890px" height="300px" alt="Logo Magija Sapuna.">
+              <a class="link slider-photo-link photo-link-warm-cloth" href="#"><span class="photo-link-title">Set sapuna<br>&quot;Zimski aksesuari&quot;</span></a>
+              <a class="link slider-photo-link photo-link-2024" href="#"><span class="photo-link-title">Sapun<br>&quot;2024&quot;</span></a>
+              <a class="link slider-photo-link photo-link-ny-tree" href="#"><span class="photo-link-title">Sapun<br>&quot;Jelka&quot;</span></a>
+            </li>
+            <li class="list-item promotion-slider-item promocion-halloween visually-hidden">
+              <a class="link" href="#">текст ссылки</a>
+              <a class="link" href="#">текст ссылки</a>
+              <a class="link" href="#">текст ссылки</a>
+              <a class="link" href="#">текст ссылки</a>
+              <a class="link" href="#">текст ссылки</a>
+            </li>
+            <li class="list-item promotion-slider-item promocion-easter visually-hidden">
+              <a class="link" href="#">текст ссылки</a>
+              <a class="link" href="#">текст ссылки</a>
+              <a class="link" href="#">текст ссылки</a>
+              <a class="link" href="#">текст ссылки</a>
+              <a class="link" href="#">текст ссылки</a>
+            </li>
+          </ul>
+
+          <ul class="list list-2">
+            <li class="list-item promotion-new-year">
+              <br>карточка товара:<br>
+              фото мыла<br>
+              название<br>
+              Цена<br>
+              купить<br>
+              в избранное<br>
+              добавить в набор<br>
+            </li>
+            <li class="list-item promocion-halloween">
+              <br>карточка товара:<br>
+              фото мыла<br>
+              название<br>
+              Цена<br>
+              купить<br>
+              в избранное<br>
+              добавить в набор<br>
+            </li>
+            <li class="list-item promocion-easter">
+              <br>карточка товара:<br>
+              фото мыла<br>
+              название<br>
+              Цена<br>
+              купить<br>
+              в избранное<br>
+              добавить в набор<br>
+            </li>
+            <li class="list-item promocion-easter">
+              <br>карточка товара:<br>
+              фото мыла<br>
+              название<br>
+              Цена<br>
+              купить<br>
+              в избранное<br>
+              добавить в набор<br>
+            </li>
+            <li class="list-item promocion-easter">
+              <br>карточка товара:<br>
+              фото мыла<br>
+              название<br>
+              Цена<br>
+              купить<br>
+              в избранное<br>
+              добавить в набор<br>
+            </li>
+            <li class="list-item promocion-easter">
+              <br>карточка товара:<br>
+              фото мыла<br>
+              название<br>
+              Цена<br>
+              купить<br>
+              в избранное<br>
+              добавить в набор<br>
+            </li>
+          </ul>
+
+          <!-- <p>чекбоксам задать стили, сделать кнопку отправки формы. подумать, может товары не одной большой картинкой, а каждый по отдельности, а надпись svg</p> -->
+
         </section>
 
         <!-- <button class="plus" type="button">плюс один</button>
