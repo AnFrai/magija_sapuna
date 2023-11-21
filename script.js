@@ -23,4 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(numProducts);
     }
   };
+
+  //кликанье по категории фильтра
+  let buttonContainers = document.querySelectorAll('.fieldset-openable');
+
+  for (let buttonContainer of buttonContainers) {
+    buttonContainer.onclick = function () {
+        buttonContainer.classList.toggle('opened');
+        buttonContainer.classList.toggle('closed');
+    };
+  };
+
 });

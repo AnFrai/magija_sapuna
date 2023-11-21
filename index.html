@@ -19,30 +19,30 @@
         <nav class="navigation">
           <ul class="list navigation-list">
             <li class="list-item navigation-item">
-              <a class="link submenu-title navigation-link navigation-link-menu" href="index.html" aria-current="page" tabindex="0">Meni</a>
-              <ul class="list submenu">
-                <li class="list-item submenu-category">
-                  <a class="link submenu-category-item" href="#" title="Nova godina">
+              <a class="link navigation-submenu-title navigation-link navigation-link-menu" href="index.html" aria-current="page" tabindex="0">Meni</a>
+              <ul class="list navigation-submenu">
+                <li class="list-item navigation-submenu-category">
+                  <a class="link navigation-submenu-category-item" href="#" title="Nova godina">
                     <span class="category-item-name category-new-year">Nova godina</span>
                   </a>
                 </li>
-                <li class="list-item submenu-category">
-                  <a class="link submenu-category-item" href="#" title="Uskrs">
+                <li class="list-item navigation-submenu-category">
+                  <a class="link navigation-submenu-category-item" href="#" title="Uskrs">
                     <span class="category-item-name category-easter">Uskrs</span>
                   </a>
                 </li>
-                <li class="list-item submenu-category">
-                  <a class="link submenu-category-item" href="#" title="Zivotinje">
+                <li class="list-item navigation-submenu-category">
+                  <a class="link navigation-submenu-category-item" href="#" title="Zivotinje">
                     <span class="category-item-name category-animals">Zivotinje</span>
                   </a>
                 </li>
-                <li class="list-item submenu-category">
-                  <a class="link submenu-category-item" href="#" title="Noc veštica">
+                <li class="list-item navigation-submenu-category">
+                  <a class="link navigation-submenu-category-item" href="#" title="Noc veštica">
                     <span class="category-item-name category-halloween">Noc veštica</span>
                   </a>
                 </li>
-                <li class="list-item submenu-category">
-                  <a class="link submenu-category-item" href="#" title="Pee.Pee_sapuni">
+                <li class="list-item navigation-submenu-category">
+                  <a class="link navigation-submenu-category-item" href="#" title="Pee.Pee_sapuni">
                     <span class="category-item-name category-adults-18">Sapuni 18+</span>
                   </a>
                 </li>
@@ -96,7 +96,7 @@
           <h2 class="visually-hidden">Filter poklona</h2>
           <form class="present-searching-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="price-slider-wrapper">
-              <span class="slider-price-title">Cena:</span>
+              <span class="slider-price-title slider-category-title">Cena:</span>
               <div class="slider">
                 <div class="slider-scale" style="left: 0; width: 150px;">
                   <button class="slider-button slider-button-min" type="button"><span class="visually-hidden">Цена минимальная</span></button>
@@ -106,45 +106,86 @@
               <p class="slider-price-value"><span class="price price-min">0</span> RSD - <span class="price price-max">10 000</span> RSD</p>
             </div>
 
-            <fieldset class="fieldset infrastructure">
-              <legend class="fieldset-legend">Kategorija:</legend>
-              <ul class="list category-wrapper">
+            <fieldset class="fieldset cause-fieldset">
+              <div class="fieldset-legend-wrapper">
+                <legend class="fieldset-legend slider-category-title">Povod</legend>
+                </div>
+              <ul class="list category-wrapper visible">
                 <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-new-year" name="category" value="new-year">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-new-year" name="cause" value="new-year" checked>
                   <label class="checkbox-label" for="checkbox-new-year">Nova godina</label>
                 </li>
                 <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-easter" name="category" value="easter">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-easter" name="cause" value="easter" checked>
                   <label class="checkbox-label" for="checkbox-easter">Uskrs</label>
                 </li>
                 <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-animals" name="category" value="animals">
-                  <label class="checkbox-label" for="checkbox-animals">Zivotinje</label>
+                  <input class="checkbox-input" type="checkbox" id="checkbox-birthday" name="cause" value="birthday" checked>
+                  <label class="checkbox-label" for="checkbox-birthday">Rodjendan</label>
                 </li>
                 <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-halloween" name="category" value="halloween">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-halloween" name="cause" value="halloween" checked>
                   <label class="checkbox-label" for="checkbox-halloween">Noc vestica</label>
                 </li>
               </ul>
             </fieldset>
 
-            <button class="present-searching-form-button">кнопка отправки формы</button>
+            <fieldset class="fieldset shape-fieldset">
+              <div class="fieldset-legend-wrapper fieldset-openable closed">
+                <legend class="fieldset-legend slider-category-title">Oblik</legend>
+                <button class="fieldset-open-button" type="button"></button>
+              </div>
+              <ul class="list category-wrapper">
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-animals" name="shape" value="animals" checked>
+                  <label class="checkbox-label" for="checkbox-animals">Zivotinje</label>
+                </li>
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-flowers" name="shape" value="flowers" checked>
+                  <label class="checkbox-label" for="checkbox-flowers">Cvetice</label>
+                </li>
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-sweets" name="shape" value="sweets" checked>
+                  <label class="checkbox-label" for="checkbox-sweets">Slatkisi</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="fieldset category-fieldset">
+              <div class="fieldset-legend-wrapper fieldset-openable closed">
+                <legend class="fieldset-legend slider-category-title">Kategorija</legend>
+                <button class="fieldset-open-button" type="button"></button>
+              </div>
+              <ul class="list category-wrapper">
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-soap" name="category" value="soap" checked>
+                  <label class="checkbox-label" for="checkbox-new-year">Sapun</label>
+                </li>
+                <li class="list-item checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-lollipop" name="category" value="lollipop" checked>
+                  <label class="checkbox-label" for="checkbox-lollipop">Lizalica</label>
+                </li>
+              </ul>
+            </fieldset>
+              <button class="button present-searching-form-button" type="submit">Trazi</button>
           </form>
 
           <ul class="list promotion-slider">
             <li class="list-item promotion-slider-item promotion-new-year">
-              <img class="promotion-slider-photo" src="images/promotion-slider/photoshop/new-year copy.png" width="890px" height="300px" alt="Logo Magija Sapuna.">
+              <img class="promotion-slider-photo" src="images/promotion-slider/new-year.png" width="890" height="300" alt="Logo Magija Sapuna.">
               <a class="link slider-photo-link photo-link-warm-cloth" href="#"><span class="photo-link-title">Set sapuna<br>&quot;Zimski aksesuari&quot;</span></a>
               <a class="link slider-photo-link photo-link-2024" href="#"><span class="photo-link-title">Sapun<br>&quot;2024&quot;</span></a>
               <a class="link slider-photo-link photo-link-ny-tree" href="#"><span class="photo-link-title">Sapun<br>&quot;Jelka&quot;</span></a>
             </li>
-            <li class="list-item promotion-slider-item promocion-halloween visually-hidden">
+            <!-- <li class="list-item promotion-slider-item promocion-halloween">
+              <a class="link photo-link-warm-cloth" href="#">
+                <img class="promotion-slider-photo warm-cloth-photo" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Logo Magija Sapuna.">
+              </a>
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
-              <a class="link" href="#">текст ссылки</a>
-            </li>
+            </li> -->
             <li class="list-item promotion-slider-item promocion-easter visually-hidden">
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
@@ -215,8 +256,8 @@
 
         </section>
 
-        <!-- <button class="plus" type="button">плюс один</button>
-        <button class="minus" type="button">минус один</button> -->
+        <button class="plus" type="button">плюс один</button>
+        <button class="minus" type="button">минус один</button>
       </main>
 
       <footer class="main-footer">
