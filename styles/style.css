@@ -296,7 +296,7 @@ body {
   display: grid;
   width: 250px;
 
-  grid-template-columns: 1fr, 44px;
+  grid-template-columns: 1fr 44px;
   align-items: center;
   order: -1;
 }
@@ -546,7 +546,12 @@ body {
   opacity: var(--active-opacity);
 }
 
-.fieldset-openable:hover {
+.fieldset-openable:active ~ .category-wrapper {
+  opacity: var(--active-opacity);
+}
+
+.fieldset-openable:hover,
+.fieldset-openable:focus-within {
   color: var(--company-light-color);
   background-color: var(--company-dark-color);
   border-radius: 0 30px 30px 0;
@@ -575,6 +580,8 @@ body {
 
   background-color: white;
   border: none;
+
+  -webkit-mask: url(../images/icons/icon-arrow-down.svg) no-repeat center;
   mask: url(../images/icons/icon-arrow-down.svg);
   background-repeat: no-repeat;
   z-index: 1;
@@ -681,6 +688,18 @@ body {
   position: relative;
 }
 
+.promotion-image-title {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+  font-size: 80px;
+  font-family: 'Alex Brush', cursive;
+}
+
 .promotion-slider-photo {
   display: block;
   height: 100%;
@@ -689,18 +708,56 @@ body {
   object-fit: cover;
 }
 
+.image-area {
+  outline: 3px solid var(--company-dark-color);
+}
+
 .slider-photo-link {
-  display: block;
+  display: inline-block;
   position: absolute;
   height: 30px;
   width: 30px;
+  margin-left: 20px;
 
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
+  box-sizing: border-box;
 
-  opacity: 0.6;
   animation: blink 0.7s infinite alternate;
-  /* border: 2px solid #130e44; */
+}
+
+.slider-photo-link:active,
+.image-area:active + .slider-photo-link {
+  opacity: var(--active-opacity);
+}
+
+.slider-photo-link:hover,
+.image-area:hover + .slider-photo-link,
+.image-area:focus + .slider-photo-link {
+  animation: none;
+  background-color: var(--company-dark-color);
+  outline: 3px solid #ffffff;
+}
+
+.slider-photo-link::before {
+  display: none;
+  content: var(--slider-photo-link-text-content);
+  height: max-content;
+  margin-left: 30px;
+  margin-top: 7px;
+
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(20, 15, 69, 1), 0 0 10px rgba(20, 15, 69, 0.8), 0 0 15px rgba(20, 15, 69, 0.6);
+  white-space: pre;
+}
+
+.slider-photo-link:hover::before,
+.image-area:hover + .slider-photo-link::before,
+.image-area:focus + .slider-photo-link::before {
+ display: inline-block;
 }
 
 @keyframes blink {
@@ -713,29 +770,7 @@ body {
   }
 }
 
-.slider-photo-link:hover {
-  animation: none;
-  opacity: 1;
-}
-
 /* расположение ссылок на слайдере в самом конце документа */
-
-.photo-link-title {
-  display: none;
-  width: max-content;
-  margin-top: 7px;
-  margin-left: 35px;
-
-
-  color: #ffffff;
-  line-height: 20px;
-  text-align: center;
-  text-shadow: 0 0 5px rgba(20, 15, 69, 1), 0 0 10px rgba(20, 15, 69, 0.8), 0 0 15px rgba(20, 15, 69, 0.6);
-}
-
-.slider-photo-link:hover .photo-link-title {
-  display: block;
-}
 
 .list-2 {
   display: flex;
@@ -795,6 +830,7 @@ body {
 
     -webkit-mask: var(--social-icon) no-repeat center;
     mask: var(--social-icon) no-repeat center;
+    -webkit-mask-size: contain;
     mask-size: contain;
   }
 
@@ -848,15 +884,18 @@ body {
 /* расположение ссылок на слайдере */
 .photo-link-warm-cloth {
   top: 145px;
-  left: 210px;
+  left: 185px;
+  --slider-photo-link-text-content: "Set mini-sapuna\0a" open-quote "Zimski aksesuari" close-quote;
 }
 
 .photo-link-2024 {
   top: 140px;
-  left: 540px;
+  left: 535px;
+  --slider-photo-link-text-content: "Sapun\0a" open-quote "2024" close-quote;
 }
 
 .photo-link-ny-tree {
-  top: 200px;
-  right: 115px;
+  top: 155px;
+  right: 95px;
+  --slider-photo-link-text-content: "Sapun\0a" open-quote "Jelka" close-quote;
 }
