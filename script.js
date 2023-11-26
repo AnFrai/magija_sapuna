@@ -34,4 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
   };
 
+
+  //Изменение названия и цену продукта по селекту
 });

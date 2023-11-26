@@ -423,9 +423,9 @@ body {
 /* MAIN CONTENT */
 .main-content {
   display: grid;
-  grid-template-columns: 25% auto;
-  row-gap: 60px;
-  column-gap: 60px;
+  grid-template-columns: 25% 70%;
+  row-gap: 5%;
+  column-gap: 5%;
 }
 
 /* форма поиска подарка*/
@@ -772,10 +772,121 @@ body {
 
 /* расположение ссылок на слайдере в самом конце документа */
 
-.list-2 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 150px;
+
+/* КАРТОЧКИ ТОВАРОВ */
+.products-list {
+  display: grid;
+  margin-bottom: 70px;
+
+  grid-template-columns: repeat(3, 30%);
+  gap: 5%;
+  justify-content: center;
+}
+
+.product-card {
+  display: grid;
+  min-width: min-content;
+  padding: 20px;
+
+  grid-template-columns: auto 20% 20%;
+  grid-template-rows: auto repeat(3, 1fr);
+  column-gap: 5%;
+  row-gap: 5%;
+
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: var(--border-radius);
+}
+
+.card-img-link {
+  grid-column: 1 / -1;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-type,
+.product-weight {
+  display: block;
+
+  margin: 5px 0 -5px 0;
+}
+
+.product-weight {
+  grid-column: 2 / 4;
+
+  justify-self: end;
+  font-size: 12px;
+}
+
+.product-name {
+  margin: 0 auto;
+  grid-column: 1 / -1;
+
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  max-height: fit-content;
+}
+
+.card-title-link::before,
+.card-title-link::after {
+  display: inline;
+  content: '"';
+}
+
+.card-price-value {
+  margin: auto 0;
+
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  max-height: fit-content;
+}
+
+.product-card-button {
+  min-height: 40px;
+  padding: 0;
+}
+
+.product-card-button::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  -webkit-mask: var(--product-card-button) no-repeat center;
+  mask: var(--product-card-button) no-repeat center;
+  mask-size: 80%;
+  transform: scaleX(-1);
+}
+
+.product-card-add {
+  background-color: var(--company-dark-color);
+}
+
+.product-card-add::before {
+  background-color: #ffffff;
+  --product-card-button: url(../images/icons/icon-cart.svg)
+}
+
+.product-favorites-add {
+  background-color: transparent;
+  border: none;
+}
+
+.product-favorites-add::before  {
+  background-color: red;
+  --product-card-button: url("../images/icons/icon-wishlist.svg");
 }
 
 

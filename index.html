@@ -135,7 +135,7 @@
               <legend class="visually-hidden">Oblik</legend>
               <div class="fieldset-legend-wrapper fieldset-openable closed">
                 <h3 class="fieldset-legend slider-category-title" aria-hidden="true">Oblik</h3>
-                <button class="fieldset-open-button" type="button"></button>
+                <button class="fieldset-open-button" type="button"><span class="visually-hidden">Otvori spisak oblika</span></button>
               </div>
               <ul class="list category-wrapper">
                 <li class="list-item checkbox-item">
@@ -157,7 +157,7 @@
               <legend class="visually-hidden">Kategorija</legend>
               <div class="fieldset-legend-wrapper fieldset-openable closed">
                 <h3 class="fieldset-legend slider-category-title" aria-hidden="true">Kategorija</h3>
-                <button class="fieldset-open-button" type="button"></button>
+                <button class="fieldset-open-button" type="button"><span class="visually-hidden">Otvori spisak kategorija</span></button>
               </div>
               <ul class="list category-wrapper">
                 <li class="list-item checkbox-item">
@@ -195,74 +195,76 @@
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
             </li> -->
-            <li class="list-item promotion-slider-item promocion-easter visually-hidden">
+            <!-- <li class="list-item promotion-slider-item promocion-easter visually-hidden">
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
               <a class="link" href="#">текст ссылки</a>
-            </li>
+            </li> -->
           </ul>
 
-          <ul class="list list-2">
-            <li class="list-item promotion-new-year">
-              <br>карточка товара:<br>
-              фото мыла<br>
-              название<br>
-              Цена<br>
-              купить<br>
-              в избранное<br>
-              добавить в набор<br>
+          <h2 class="visually-hidden">Spisak proizvoda</h2>
+          <ul class="list products-list">
+            <li class="list-item product-card">
+              <a class="card-img-link" href="#" tabindex="-1">
+                <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
+              </a>
+              <span class="product-type">Set mini sapuna</span>
+              <span class="product-weight">3 x 20g</span>
+              <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">Zimski aksesuari</a></h3>
+              <!-- <select id="warmCloth" onchange="updateProductInfo()">
+                <option value="set-mini-sapuna">Set mini sapuna</option>
+                <option value="cap">Kapica</option>
+                <option value="glove">Rukavica</option>
+                <option value="scarf">Sal</option>
+              </select> -->
+              <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
+              <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
+              <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
             </li>
-            <li class="list-item promocion-halloween">
-              <br>карточка товара:<br>
-              фото мыла<br>
-              название<br>
-              Цена<br>
-              купить<br>
-              в избранное<br>
-              добавить в набор<br>
+            <li class="list-item product-card">
+              <a class="card-img-link" href="#" tabindex="-1">
+                <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
+              </a>
+              <p class="product-type">Sapun</p>
+              <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">2024</a></h3>
+              <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
+              <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
+              <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
             </li>
-            <li class="list-item promocion-easter">
-              <br>карточка товара:<br>
-              фото мыла<br>
-              название<br>
-              Цена<br>
-              купить<br>
-              в избранное<br>
-              добавить в набор<br>
-            </li>
-            <li class="list-item promocion-easter">
-              <br>карточка товара:<br>
-              фото мыла<br>
-              название<br>
-              Цена<br>
-              купить<br>
-              в избранное<br>
-              добавить в набор<br>
-            </li>
-            <li class="list-item promocion-easter">
-              <br>карточка товара:<br>
-              фото мыла<br>
-              название<br>
-              Цена<br>
-              купить<br>
-              в избранное<br>
-              добавить в набор<br>
-            </li>
-            <li class="list-item promocion-easter">
-              <br>карточка товара:<br>
-              фото мыла<br>
-              название<br>
-              Цена<br>
-              купить<br>
-              в избранное<br>
-              добавить в набор<br>
-            </li>
-          </ul>
-
-          <!-- <p>чекбоксам задать стили, сделать кнопку отправки формы. подумать, может товары не одной большой картинкой, а каждый по отдельности, а надпись svg</p> -->
-
+          <li class="list-item product-card">
+            <a class="card-img-link" href="#" tabindex="-1">
+              <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
+            </a>
+            <p class="product-type">Sapun</p>
+            <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">Jelkica</a></h3>
+            <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
+            <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
+            <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
+          </li>
+          <li class="list-item product-card">
+            <a class="card-img-link" href="#" tabindex="-1">
+              <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
+            </a>
+            <p class="product-type">Set mini sapuna</p>
+            <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">Zimski aksesuari</a></h3>
+            <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
+            <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
+            <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
+          </li>
+          <li class="list-item product-card">
+            <a class="card-img-link" href="#" tabindex="-1">
+              <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
+            </a>
+            <p class="product-type">Set mini sapuna</p>
+            <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">Zimski aksesuari</a></h3>
+            <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
+            <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
+            <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
+          </li>
+        </ul>
+        <p>добавить состояния кнопок, добавить плашку акции</p>
         </section>
 
         <button class="plus" type="button">плюс один</button>
