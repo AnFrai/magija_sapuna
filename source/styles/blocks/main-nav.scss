@@ -1,0 +1,94 @@
+.main-nav__list {
+  &--mobile-closed {
+   @include hidden-element;
+  }
+
+  &--mobile-opened {
+    @include revealed-element;
+  }
+}
+
+.main-nav__sublist {
+  &--closed {
+    @include hidden-element;
+  }
+
+  &--opened {
+    @include revealed-element;
+  }
+}
+
+.main-nav__main-list--mobile {
+  width: 100vw;
+
+  &::after {
+    @include pseudo-element;
+    width: 100vw;
+
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.main-nav__main-list-link--mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 65px;
+  background-color: antiquewhite;
+
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+  display: flex;
+  min-height: 60px;
+  align-items: center;
+
+  gap: 5px;
+ }
+
+  .main-nav__main-list {
+    position: relative;
+  }
+
+  .main-nav__main-list-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+
+    box-sizing: border-box;
+    border-radius: $border-radius;
+
+    color: white;
+    font-weight: 700;
+
+    &--list-down {
+      border-radius: $border-radius $border-radius 0 0;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 9px;
+
+        background-image: url(../../images/icons/icon-arrow-down.svg);
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+      background-color: var(--company-dark-color);
+      outline: none;
+    }
+
+    &:active {
+      opacity: var(--active-opacity);
+      transition: none;
+    }
+  }
+}

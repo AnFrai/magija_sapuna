@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 243 39" style="shape-rendering: geometricprecision;" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="Swis721 Blk BT">@font-face { font-family: "Swis721 Blk BT"; font-variant: normal; font-style: normal; font-weight: normal; }</style>
+    <clipPath id="id0">
+      <path d="M14863.8 1436.9c5110.77,0 9253.87,4143.1 9253.87,9253.87 0,5110.77 -4143.1,9253.87 -9253.87,9253.87 -5110.77,0 -9253.87,-4143.1 -9253.87,-9253.87 0,-5110.77 4143.1,-9253.87 9253.87,-9253.87z"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_x0020_1" transform="matrix(0.026576, 0, 0, 0.026576, -9964.563477, -15623.646484)" style="transform-origin: 9964.38px 15626.5px;">
+    <g style="clip-path:url(#id0)">
+      <text class="fil8 fnt0" style="fill: rgb(18, 13, 67); font-family: 'Swis721 Blk BT'; font-size: 1138px; stroke-width: 0px; white-space: pre; transform-origin: 14541.9px 14.4641px;" transform="matrix(1, 0, 0, 0.997531, 0, 39.153141)" x="10005" y="16940.1">MAGIJA SAPUNA</text>
+      <path class="fil9" d="M 13489.176 15833.584 L 13453.972 15843.06 C 13390.567 15860.148 13340.969 15909.676 13323.882 15973.088 L 13314.475 16008.285 L 13304.974 15973.088 C 13287.906 15909.676 13238.302 15860.148 13174.878 15843.06 L 13139.7 15833.584 L 13174.878 15824.109 C 13238.302 15807.016 13287.906 15757.493 13304.974 15694.081 L 13314.475 15658.884 L 13323.882 15694.081 C 13340.969 15757.493 13390.567 15807.016 13453.972 15824.109 L 13489.176 15833.584 Z" style="fill-rule: nonzero; stroke-width: 0px; fill: rgb(18, 13, 67);"/>
+    </g>
+  </g>
+</svg>

@@ -1,1 +1,29 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+:root {
+  --container-padding: 10%;
+
+  --company-dark-color:#120d43;
+  --company-light-color: #8fe0cc;
+  --slider-color: 255, 255, 255;
+
+  --company-gradient: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
+  --company-gradient-returning: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3) 40%, rgb(140, 222, 204, 0.3) 60%, rgb(69, 24, 231, 0.3), rgb(19, 14, 68, 0.5), rgb(19, 14, 68));
+  --company-gradient-vertical: linear-gradient(0.5turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
+
+  --active-opacity: 60%;
+}
+
+body {
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  font-family: $basic-font-family;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 00;
+  color: #000000;
+
+  background-color: #f2f2f2;
+}

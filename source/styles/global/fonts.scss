@@ -1,1 +1,9 @@
 /* здесь подключите шрифты*/
+@include font-face("Playpen-sans", 100, normal, url("../../fonts/playpen-sans/playpen-sans-100.woff2"));
+@include font-face("Playpen-sans", 200, normal, url("../../fonts/playpen-sans/playpen-sans-200.woff2"));
+@include font-face("Playpen-sans", 300, normal, url("../../fonts/playpen-sans/playpen-sans-300.woff2"));
+@include font-face("Playpen-sans", 400, normal, url("../../fonts/playpen-sans/playpen-sans-400.woff2"));
+@include font-face("Playpen-sans", 500, normal, url("../../fonts/playpen-sans/playpen-sans-500.woff2"));
+@include font-face("Playpen-sans", 600, normal, url("../../fonts/playpen-sans/playpen-sans-600.woff2"));
+@include font-face("Playpen-sans", 700, normal, url("../../fonts/playpen-sans/playpen-sans-700.woff2"));
+@include font-face("Playpen-sans", 800, normal, url("../../fonts/playpen-sans/playpen-sans-800.woff2"));

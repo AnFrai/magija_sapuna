@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="sr">
   <head>
     <meta charset="utf-8">
     <title>Kuca carobnih sapuna</title>
@@ -10,305 +10,102 @@
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="images/favicons/favicon.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicons/favicon@1x.png" type="image/png" sizes="32x32">
     <link rel="manifest" href="manifest.webmanifest">
     <script src="scripts/index.js" defer></script>
   </head>
-  <body>
-    <div class="container">
-      <header class="main-header">
-        <a class="link header-logo" href="index.html" aria-current="page" tabindex="-1">
-          <img class="logo" src="images/logo.png" width="60" height="60" alt="Logo Magija Sapuna.">
-        </a>
-        <nav class="navigation">
-          <ul class="list navigation-list">
-            <li class="list-item navigation-item">
-              <a class="link navigation-submenu-title navigation-link navigation-link-menu" href="index.html" aria-current="page" tabindex="0">Meni</a>
-              <ul class="list navigation-submenu">
-                <li class="list-item navigation-submenu-category">
-                  <a class="link navigation-submenu-category-item" href="#" title="Nova godina">
-                    <span class="category-item-name category-new-year">Nova godina</span>
-                  </a>
-                </li>
-                <li class="list-item navigation-submenu-category">
-                  <a class="link navigation-submenu-category-item" href="#" title="Uskrs">
-                    <span class="category-item-name category-easter">Uskrs</span>
-                  </a>
-                </li>
-                <li class="list-item navigation-submenu-category">
-                  <a class="link navigation-submenu-category-item" href="#" title="Zivotinje">
-                    <span class="category-item-name category-animals">Zivotinje</span>
-                  </a>
-                </li>
-                <li class="list-item navigation-submenu-category">
-                  <a class="link navigation-submenu-category-item" href="#" title="Noc veštica">
-                    <span class="category-item-name category-halloween">Noc veštica</span>
-                  </a>
-                </li>
-                <li class="list-item navigation-submenu-category">
-                  <a class="link navigation-submenu-category-item" href="#" title="Pee.Pee_sapuni">
-                    <span class="category-item-name category-adults-18">Sapuni 18+</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="list-item navigation-item">
-              <a class="link navigation-link" href="constructor.html">Konstruktor poklona</a>
-            </li>
-            <li class="list-item navigation-item">
-              <a class="link navigation-link" href="delivery.html">Dostava</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="user-communication">
-          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <button class="header-icon-button header-search-button" type="submit">
-              <span class="visually-hidden">Pronadji</span>
-            </button>
-            <input class="input search-input" id="search" type="text" name="search-input" value="Poklon za Novu Godinu" placeholder="Koji pokloncic trazite?">
-          </form>
-          <a class="link header-icon-button header-wishlist-button" href="#">
+  <body class="page__body">
+    <header class="main-header container">
+      <a class="link main-header__logo-link" href="index.html" aria-current="page" tabindex="-1">
+        <picture class="main-header__logo-container main-header__logo-container--picture">
+          <!-- <source width="80" height="80" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/icons/company-logo.svg"> -->
+          <source width="80" height="80" type="image/svg+xml" media="(min-width: 768px)" srcset="images/icons/company-logo-tablet.svg">
+          <img class="logo main-header__logo-picture" src="images/icons/company-logo-mobile-2.svg" width="80" height="80" alt="Logo Magija Sapuna.">
+        </picture>
+        <picture class="main-header__logo-container main-header__logo-container--text">
+          <!-- <source width="80" height="80" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/icons/company-logo.svg"> -->
+          <source width="192" height="19" type="images/icons/company-logo-text.svg" media="(min-width: 768px)" srcset="images/icons/company-logo-tablet.svg">
+          <img class="logo main-header__logo-text" width="191" height="18" src="images/icons/company-logo-text-3.svg" alt="Logo Magija Sapuna.">
+        </picture>
+      </a>
+      <button class="main-header__menu-button icon-button icon-button__header-menu-button--opened" type="button">
+        <span class="visually-hidden">Открывает/Закрывает навигацию</span>
+      </button>
+      <nav class="main-header__navigation main-nav">
+        <ul class="list main-nav__list main-nav__list--mobile-opened">
+          <li class="list-item main-nav__main-list main-nav__main-list--mobile main-nav__main-list--mobile main-nav__main-list--list-down">
+            <a class="link main-nav__main-list-link main-nav__main-list-link--mobile main-nav__main-list-link--list-down" href="index.html" aria-current="page" tabindex="0">
+              <span class="main-nav__main-list-text">Meni</span>
+            </a>
+            <ul class="list main-nav__sublist main-nav__sublist--closed nav-submenu">
+              <li class="list-item nav-submenu__category">
+                <a class="link nav-submenu__category-item nav-submenu__category-item--new-year" href="#" title="Nova godina">
+                  <span class="nav-submenu__category-item-name nav-submenu__category-item-name--new-year">Nova godina</span>
+                </a>
+              </li>
+              <li class="list-item nav-submenu__category">
+                <a class="link nav-submenu__category-item nav-submenu__category-item--easter" href="#" title="Uskrs">
+                  <span class="nav-submenu__category-item-name nav-submenu__category-item-name--easter">Uskrs</span>
+                </a>
+              </li>
+              <li class="list-item nav-submenu__category">
+                <a class="link nav-submenu__category-item nav-submenu__category-item--animals" href="#" title="Zivotinje">
+                  <span class="nav-submenu__category-item-name nav-submenu__category-item-name--animals">Zivotinje</span>
+                </a>
+              </li>
+              <li class="list-item nav-submenu__category">
+                <a class="link nav-submenu__category-item nav-submenu__category-item--halloween" href="#" title="Noc veštica">
+                  <span class="nav-submenu__category-item-name nav-submenu__category-item-name--halloween">Noc veštica</span>
+                </a>
+              </li>
+              <li class="list-item nav-submenu__category">
+                <a class="link nav-submenu__category-item nav-submenu__category-item--adults-18" href="#" title="Pee.Pee_sapuni">
+                  <span class="nav-submenu__category-item-name nav-submenu__category-item-name--adults-18">Sapuni 18+</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="list-item main-nav__main-list main-nav__main-list--mobile main-nav__main-list--constructor">
+            <a class="link main-nav__main-list-link main-nav__main-list-link--constructor" href="constructor.html">
+              <span class="main-nav__main-list-text">Konstruktor poklona</span>
+            </a>
+          </li>
+          <li class="list-item main-nav__main-list main-nav__main-list--mobile main-nav__main-list--constructor">
+            <a class="link main-nav__main-list-link main-nav__main-list-link--constructor" href="delivery.html">
+              <span class="main-nav__main-list-text">Dostava</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-header__user-communication user-communication">
+        <form class="user-communication__button-wrapper user-communication__button-wrapper--search user-communication__search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <input class="input user-communication__search-input visually-hidden" id="search" type="text" name="search-input" value="Poklon za Novu Godinu" placeholder="Koji pokloncic trazite?">
+          <button class="user-communication__button user-communication__button--search icon-button icon-button__user-communication--search-button" id="searchOpenButton" type="button">
+            <span class="visually-hidden">Otvara pretrazivac po sajtu</span>
+          </button>
+          <button class="user-communication__button user-communication__button-activation--search icon-button icon-button__user-communication--activation-search-button visually-hidden" id="searchActivationButton" type="submit">
+            <span class="visually-hidden">Pronadji</span>
+          </button>
+        </form>
+        <div class="user-communication__button-wrapper user-communication__button-wrapper--wishlist">
+          <a class="link user-communication__button user-communication__button--wishlist icon-button icon-button__user-communication--wishlist-button" href="#">
             <span class="visually-hidden">Zeljenih artikala:</span>
-            <span class="visually-hidden products-number">0</span>
-          </a>
-          <a class="link header-icon-button header-cart-button" href="#" >
-            <span class="visually-hidden">Artikala u korpi:</span>
-            <span class="visually-hidden products-number">0</span>
+            <span class="visually-hidden">0</span>
           </a>
         </div>
-      </header>
-
-      <main class="main-container">
-        <section class="hero">
-          <h1 class="visually-hidden">Magija sapuna - Kuca carobnih sapuna</h1>
-          <svg class="hero-img name-text name-text-hero" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="textGradient" x1="50%" gradientTransform="rotate(60)">
-                  <stop offset="0%" stop-color="rgba(19, 14, 68, 0.7)" />
-                  <stop offset="20%" stop-color="rgba(69, 24, 231, 0.7)" />
-                  <stop offset="60%" stop-color="rgba(140, 222, 204, 0.7)" />
-                  <stop offset="80%" stop-color="rgba(69, 24, 231, 0.7)" />
-                  <stop offset="100%" stop-color="rgba(19, 14, 68, 0.7)" />
-              </linearGradient>
-            </defs>
-            <text x="50%" y="70%" text-anchor="middle" dominant-baseline="middle" xml:space="preserve" fill="url(#textGradient)">
-              <tspan class="name-bigger" x="50%" dy="-0.6em" >Magija sapuna</tspan><tspan class="name-smaller" x="50%" dy="1.4em">Kuca carobnih sapuna</tspan></text>
-          </svg>
-        </section>
-
-        <section class="main-content">
-          <h2 class="visually-hidden">Filter poklona</h2>
-          <form class="present-searching-form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="price-slider-wrapper">
-              <span class="slider-price-title slider-category-title">Cena:</span>
-              <div class="slider">
-                <div class="slider-scale" style="left: 0; width: 150px;">
-                  <button class="slider-button slider-button-min" type="button"><span class="visually-hidden">Цена минимальная</span></button>
-                  <button class="slider-button slider-button-max" type="button"><span class="visually-hidden">Цена максимальная</span></button>
-                </div>
-              </div>
-              <p class="slider-price-value"><span class="price price-min">0</span> RSD - <span class="price price-max">10 000</span> RSD</p>
-            </div>
-
-            <fieldset class="fieldset cause-fieldset">
-              <legend class="visually-hidden">Povod</legend>
-              <div class="fieldset-legend-wrapper">
-                <h3 class="fieldset-legend slider-category-title" aria-hidden="true">Povod</h3>
-              </div>
-              <ul class="list category-wrapper visible">
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-new-year" name="cause" value="new-year" checked>
-                  <label class="checkbox-label" for="checkbox-new-year">Nova godina</label>
-                </li>
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-easter" name="cause" value="easter" checked>
-                  <label class="checkbox-label" for="checkbox-easter">Uskrs</label>
-                </li>
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-birthday" name="cause" value="birthday" checked>
-                  <label class="checkbox-label" for="checkbox-birthday">Rodjendan</label>
-                </li>
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-halloween" name="cause" value="halloween" checked>
-                  <label class="checkbox-label" for="checkbox-halloween">Noc vestica</label>
-                </li>
-              </ul>
-            </fieldset>
-
-            <fieldset class="fieldset shape-fieldset">
-              <legend class="visually-hidden">Oblik</legend>
-              <div class="fieldset-legend-wrapper fieldset-openable closed">
-                <h3 class="fieldset-legend slider-category-title" aria-hidden="true">Oblik</h3>
-                <button class="fieldset-open-button" type="button"><span class="visually-hidden">Otvori spisak oblika</span></button>
-              </div>
-              <ul class="list category-wrapper">
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-animals" name="shape" value="animals" checked>
-                  <label class="checkbox-label" for="checkbox-animals">Zivotinje</label>
-                </li>
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-flowers" name="shape" value="flowers" checked>
-                  <label class="checkbox-label" for="checkbox-flowers">Cvetice</label>
-                </li>
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-sweets" name="shape" value="sweets" checked>
-                  <label class="checkbox-label" for="checkbox-sweets">Slatkisi</label>
-                </li>
-              </ul>
-            </fieldset>
-
-            <fieldset class="fieldset category-fieldset">
-              <legend class="visually-hidden">Kategorija</legend>
-              <div class="fieldset-legend-wrapper fieldset-openable closed">
-                <h3 class="fieldset-legend slider-category-title" aria-hidden="true">Kategorija</h3>
-                <button class="fieldset-open-button" type="button"><span class="visually-hidden">Otvori spisak kategorija</span></button>
-              </div>
-              <ul class="list category-wrapper">
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-soap" name="category" value="soap" checked>
-                  <label class="checkbox-label" for="checkbox-new-year">Sapun</label>
-                </li>
-                <li class="list-item checkbox-item">
-                  <input class="checkbox-input" type="checkbox" id="checkbox-lollipop" name="category" value="lollipop" checked>
-                  <label class="checkbox-label" for="checkbox-lollipop">Lizalica</label>
-                </li>
-              </ul>
-            </fieldset>
-              <button class="button present-searching-form-button" type="submit">Trazi</button>
-          </form>
-
-          <h2 class="visually-hidden">Slider promo akcija</h2>
-          <ul class="list promotion-slider">
-            <li class="list-item promotion-slider-item promotion-new-year">
-              <img class="promotion-slider-photo" src="/images/promotion-slider/new-year.png" usemap="#image-map">
-              <map name="image-map">
-                  <area class="image-area" alt="Set mini-sapuna &quot;Zimski aksesuari&quot;" href="#" target="_blank" coords="113,140,115,108,118,87,127,77,144,77,154,87,175,90,197,94,212,117,212,129,263,261,227,273,110,291,70,275,62,243,80,173" shape="poly">
-                  <span class="slider-photo-link photo-link-warm-cloth"></span>
-                  <area class="image-area" alt="Sapun &quot;2024&quot;" href="#" target="_blank" coords="300,170,305,154,319,139,336,125,375,119,405,130,436,132,473,115,512,128,533,112,576,117,581,216,588,238,572,295,503,288,305,280,301,258,320,214" shape="poly">
-                  <span class="slider-photo-link photo-link-2024"></span>
-                  <area class="image-area" alt="Sapun &quot;Jelka&quot;" title="Sapun Jelka" href="#" target="_blank" coords="627,197,681,171,680,149,722,127,722,108,795,76,818,167,799,177,807,224,785,234,797,291,701,292,647,254" shape="poly">
-                  <span class="slider-photo-link photo-link-ny-tree"></span>
-              </map>
-            </li>
-            <!-- <li class="list-item promotion-slider-item promocion-halloween">
-              <a class="link photo-link-warm-cloth" href="#">
-                <img class="promotion-slider-photo warm-cloth-photo" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Logo Magija Sapuna.">
-              </a>
-              <a class="link" href="#">текст ссылки</a>
-              <a class="link" href="#">текст ссылки</a>
-              <a class="link" href="#">текст ссылки</a>
-              <a class="link" href="#">текст ссылки</a>
-            </li> -->
-            <!-- <li class="list-item promotion-slider-item promocion-easter visually-hidden">
-              <a class="link" href="#">текст ссылки</a>
-              <a class="link" href="#">текст ссылки</a>
-              <a class="link" href="#">текст ссылки</a>
-              <a class="link" href="#">текст ссылки</a>
-              <a class="link" href="#">текст ссылки</a>
-            </li> -->
-          </ul>
-
-          <h2 class="visually-hidden">Spisak proizvoda</h2>
-          <ul class="list products-list">
-            <li class="list-item product-card">
-              <a class="card-img-link" href="#" tabindex="-1">
-                <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
-              </a>
-              <span class="product-type">Set mini sapuna</span>
-              <span class="product-weight">3 x 20g</span>
-              <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">Zimski aksesuari</a></h3>
-              <!-- <select id="warmCloth" onchange="updateProductInfo()">
-                <option value="set-mini-sapuna">Set mini sapuna</option>
-                <option value="cap">Kapica</option>
-                <option value="glove">Rukavica</option>
-                <option value="scarf">Sal</option>
-              </select> -->
-              <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
-              <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
-              <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
-            </li>
-            <li class="list-item product-card">
-              <a class="card-img-link" href="#" tabindex="-1">
-                <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
-              </a>
-              <p class="product-type">Sapun</p>
-              <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">2024</a></h3>
-              <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
-              <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
-              <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
-            </li>
-          <li class="list-item product-card">
-            <a class="card-img-link" href="#" tabindex="-1">
-              <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
-            </a>
-            <p class="product-type">Sapun</p>
-            <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">Jelkica</a></h3>
-            <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
-            <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
-            <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
-          </li>
-          <li class="list-item product-card">
-            <a class="card-img-link" href="#" tabindex="-1">
-              <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
-            </a>
-            <p class="product-type">Set mini sapuna</p>
-            <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">Zimski aksesuari</a></h3>
-            <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
-            <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
-            <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
-          </li>
-          <li class="list-item product-card">
-            <a class="card-img-link" href="#" tabindex="-1">
-              <img class="card-img" src="images/promotion-slider/ny-warm-cloth.png" width="192" height="208" alt="Vezani kapica, sal i rukavica u svetlo-zelenim bojama">
-            </a>
-            <p class="product-type">Set mini sapuna</p>
-            <h3 class="product-name"><a class="link card-title-link" href="#" tabindex="-1">Zimski aksesuari</a></h3>
-            <p class="card-price-value"><span class="hotel-price">300</span>&nbsp;RSD</p>
-            <button class="button product-card-button product-favorites-add" type="button"><span class="visually-hidden">Dodaj na listu zelja</span></button>
-            <button class="button product-card-button product-card-add" type="button"><span class="visually-hidden">Dodaj u korpu</span></button>
-          </li>
-        </ul>
-        <p>добавить состояния кнопок, добавить плашку акции</p>
-        </section>
-
-        <button class="plus" type="button">плюс один</button>
-        <button class="minus" type="button">минус один</button>
-      </main>
-
-      <footer class="main-footer">
-        <ul class="list social">
-          <li class="list-item social-item">
-            <a class="link social-item-link social-tg" href="#" title="Telegram">
-              <span class="visually-hidden">Telegram bot za porucivanje</span>
-            </a>
-          </li>
-          <li class="list-item social-item">
-            <a class="link social-item-link social-inst" href="https://www.instagram.com/magija_sapuna/" title="Instagram">
-              <span class="visually-hidden">Mi na Instagramu</span>
-            </a>
-          </li>
-          <li class="list-item social-item">
-            <a class="link social-item-link social-fb" href="https://www.facebook.com/profile.php?id=100076371199627" title="Facebook">
-              <span class="visually-hidden">Mi na Fejsu</span>
-            </a>
-          </li>
-          <li class="list-item social-item">
-            <a class="link social-item-link social-inst-18" href="https://www.instagram.com/pee.pee_sapuni/" title="Instagram Pee.pee_sapuni">
-              <span class="visually-hidden">Šaljivi sapuni za odrasle  18+</span>
-            </a>
-          </li>
-        </ul>
-          <svg class="name-text name-text-footer" role="img" aria-label="Logo Magia sapuna" aria-hidden="true" width="400px" height="80px" xmlns="http://www.w3.org/2000/svg">
-            <linearGradient id="textGradientFooter" x1="50%" gradientTransform="rotate(60)">
-              <stop offset="0%" stop-color="rgba(19, 14, 68, 0.7)" />
-              <stop offset="20%" stop-color="rgba(69, 24, 231, 0.7)" />
-              <stop offset="100%" stop-color="rgba(19, 14, 68, 0.7)" />
-          </linearGradient>
-            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" xml:space="preserve" fill="url(#textGradientFooter)"><tspan dy="0.1em">Magija sapuna</tspan></text>
-          </svg>
-      </footer>
-
-      <script src="script.js"></script>
-    </div>
+        <div class="user-communication__button-wrapper user-communication__button-wrapper--cart">
+          <a class="link user-communication__button user-communication__button--cart icon-button icon-button__user-communication--cart-button" href="#" >
+            <span class="visually-hidden">Artikala u korpi:</span>
+            <span class="visually-hidden">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div>
+        <p class="test">Тут тестовый текст</p>
+        <img class="logo main-header__logo-text" width="191" height="18" src="images/icons/company-logo-text-3.svg" alt="Logo Magija Sapuna.">
+      </div>
+    </main>
   </body>
 </html>

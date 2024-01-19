@@ -1,0 +1,93 @@
+@media (min-width: $tablet-width) {
+  .nav-submenu {
+    position: absolute;
+
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-submenu__category-item {
+    padding: 5px;
+    padding-left: 15px;
+    margin: 5px;
+
+    color: white;
+    font-weight: 400;
+
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 0 30px 30px 0;
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      border-radius: 0 30px 30px 0;
+      background-color: var(--company-light-color);
+    }
+
+    &:active {
+      opacity: var(--active-opacity);
+    }
+  }
+
+  .nav-submenu {
+    &:hover,
+    &:focus,
+    &:focus-within {
+    @include sub-menu-appearance;
+    }
+  }
+
+  .main-nav__main-list-link:hover + .nav-submenu,
+  .main-nav__main-list-link:focus + .nav-submenu {
+    @include sub-menu-appearance;
+  }
+
+  .nav-submenu__category-item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 0 5px 0 10px;
+
+      align-self: center;
+
+      background-image: var(--category-item-photo);
+      background-size: 30px 30px;
+      background-repeat: no-repeat;
+    }
+
+    &--new-year {
+      --category-item-photo: url(../../images/icon-christmas-tree@1x.png);
+    }
+
+    &--easter {
+      --category-item-photo: url(../../images/icon-bunny@1x.png);
+    }
+
+    &--animals {
+      --category-item-photo: url(../../images/icons/stack.svg#icon-unicorn);
+    }
+
+    &--halloween {
+      --category-item-photo: url(../../images/icon-pumpkin@1x.png);
+    }
+
+    &--adults-18 {
+      --category-item-photo: url(../../images/icon-age-18@1x.png);
+
+      &::after {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        @include heartbeat-animation;
+      }
+    }
+  }
+}
