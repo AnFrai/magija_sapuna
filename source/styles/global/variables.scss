@@ -13,3 +13,10 @@ $basic-font-family: "Playpen-sans", "Comic Sans MS", sans-serif;
 $border-radius: 15px;
 
 $basic-black: #000000;
+$company-dark-color: #120d43;
+$company-medium-color: #4719e4;
+$company-light-color: #8fe0cc;
+
+$company-gradient: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
+$company-gradient-reverse: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3) 40%, rgb(140, 222, 204, 0.3) 60%, rgb(69, 24, 231, 0.3), rgb(19, 14, 68, 0.5), rgb(19, 14, 68));
+$company-gradient-vertical: linear-gradient(0.5turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));

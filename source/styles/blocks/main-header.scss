@@ -8,7 +8,7 @@
   box-sizing: border-box;
 
 
-  background-image: var(--company-gradient);
+  background-image: $company-gradient;
 }
 
 /* логотип */
@@ -33,6 +33,11 @@
     grid-column: 2;
     justify-self: center;
     align-self: center;
+
+    fill: $company-dark-color;
+    font-family: $basic-font-family;
+    font-size: 22px;
+    text-transform: uppercase;
   }
 }
 

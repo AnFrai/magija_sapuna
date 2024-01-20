@@ -92,17 +92,11 @@
 }
 
 .header-search-button {
-  grid-row: 1;
-  grid-column: 2;
-  justify-self: end;
 
-  cursor: pointer;
-  --header-icon: url("../images/icons/icon-search.svg");
-  z-index: 1;
 }
 
 .header-wishlist-button {
-  --header-icon: url("../images/icons/icon-wishlist.svg");
+
 }
 
 .header-cart-button {

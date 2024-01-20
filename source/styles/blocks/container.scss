@@ -1,32 +1,16 @@
 .container {
-  max-width: 708px;
+
   padding: 10px;
   margin: 0;
   // outline: 2px solid red;
 }
 
-.test {
-  margin-top: 200px;
-  display: block;
-  width: 200px;
-  height: 200px;
-  background-color:aqua ;
-  font-family: $basic-font-family;
-  // font-style: normal;
-  // font-size: 14px;
-  // line-height: 14px;
-  // font-weight: 400;
-  // color: #000000;
-}
+// @media (min-width: $tablet-width) {
 
-@media (min-width: $tablet-width) {
-  .container {
-    max-width: 1220px;
-  }
-}
+// }
 
 @media (min-width: $desktop-width) {
   .container {
-    width: 1220px;
+    width: 1440px;
   }
 }
