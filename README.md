@@ -4,7 +4,7 @@
 Я только учусь и сама продумываю дизайн, поэтому может выглядеть странно
 Как есть - так есть, что поделать 😊
 
-Если есть какие-то пожелания/замечания/комментарии - feel free to<a href="https://t.me/AnFrai"> contact me,   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/64px-Telegram_logo.svg.png" alt="Telegram" width="32" height="32" style="border-radius: 50%;"></a> я буду рада любой помощи ❤️
+Если есть какие-то пожелания/замечания/комментарии - feel free to<a href="https://t.me/AnFrai"> contact me <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/64px-Telegram_logo.svg.png" alt="Telegram" width="20" height="20" style="border-radius: 50%"></a>, я буду рада любой помощи ❤️
 
 <br>
 <br>
@@ -14,6 +14,5 @@
 ### Кстати
 
 
-<a href="https://t.me/AnFrai" style="display: flex; gap: 8px; align-items: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Telegram" width="32" height="32">
-</a> Вот тут вот наш инстаграм, если вдруг вам интересно 😊
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Telegram" width="32" height="32">
+&nbsp;Вот тут вот наш <a href="https://t.me/AnFrai"">инстаграм</a>, если вдруг вам интересно 😊
