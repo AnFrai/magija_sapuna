@@ -6,7 +6,7 @@
 
 Если есть какие-то пожелания/замечания/комментарии - feel free to<a href="https://t.me/AnFrai"> contact me,</a> я буду рада любой помощи ❤️
 
-<a href="https://t.me/AnFrai" style="display: flex; gap: 8px; align-items: center;">
+<a href="https://t.me/AnFrai">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/64px-Telegram_logo.svg.png" alt="Telegram" width="32" height="32" style="border-radius: 50%;">
   <div style="font-weight: 500; text-decoration: none;">- AnFrai </div>
 </a>
