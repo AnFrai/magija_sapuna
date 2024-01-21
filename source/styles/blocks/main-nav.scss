@@ -1,6 +1,6 @@
 .main-nav__list {
   &--mobile-closed {
-   @include hidden-element;
+    @include hidden-element;
   }
 
   &--mobile-opened {
@@ -43,12 +43,12 @@
 
 @media (min-width: $tablet-width) {
   .main-nav__list {
-  display: flex;
-  min-height: 60px;
-  align-items: center;
+    display: flex;
+    min-height: 60px;
+    align-items: center;
 
-  gap: 5px;
- }
+    gap: 5px;
+  }
 
   .main-nav__main-list {
     position: relative;
@@ -63,7 +63,7 @@
     box-sizing: border-box;
     border-radius: $border-radius;
 
-    color: white;
+    color: $basic-white;
     font-weight: 700;
 
     &--list-down {
@@ -75,7 +75,7 @@
         width: 12px;
         height: 9px;
 
-        background-image: url(../../images/icons/icon-arrow-down.svg);
+        background-image: url("../../images/icons/icon-arrow-down.svg");
         background-repeat: no-repeat;
       }
     }

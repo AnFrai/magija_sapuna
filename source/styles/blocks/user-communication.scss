@@ -43,17 +43,19 @@
   border-radius: 15px;
 }
 
-.user-communication__button--search {
-  grid-row: 1;
-  grid-column: 5;
-  align-self: center;
-  justify-self: center;
-}
+.user-communication__button {
+  &--search {
+    grid-row: 1;
+    grid-column: 5;
+    align-self: center;
+    justify-self: center;
+  }
 
-.user-communication__button-activation--search {
-  grid-row: 1;
-  grid-column: 4;
+  &--activation-search {
+    grid-row: 1;
+    grid-column: 4;
 
-  justify-self: end;
-  margin-right: 10px;
+    justify-self: end;
+    margin-right: 10px;
+  }
 }

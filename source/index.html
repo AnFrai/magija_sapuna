@@ -5,10 +5,7 @@
     <title>Kuca carobnih sapuna</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/playpen-sans/playpen-sans-400.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/favicon@1x.png" type="image/png" sizes="32x32">
     <link rel="manifest" href="manifest.webmanifest">
@@ -26,12 +23,12 @@
           <text x="3" y="24">magija sapuna</text>
         </svg>
       </a>
-      <button class="main-header__menu-button icon-button icon-button__header-menu-button--opened" type="button">
+      <button class="main-header__menu-button icon-button icon-button--header-menu-button-opened" type="button">
         <span class="visually-hidden">Открывает/Закрывает навигацию</span>
       </button>
       <nav class="main-header__navigation main-nav">
         <ul class="list main-nav__list main-nav__list--mobile-opened">
-          <li class="list-item main-nav__main-list main-nav__main-list--mobile main-nav__main-list--mobile main-nav__main-list--list-down">
+          <li class="list-item main-nav__main-list main-nav__main-list--mobile main-nav__main-list--list-down">
             <a class="link main-nav__main-list-link main-nav__main-list-link--mobile main-nav__main-list-link--list-down" href="index.html" aria-current="page" tabindex="0">
               <span class="main-nav__main-list-text">Meni</span>
             </a>
@@ -78,21 +75,22 @@
       <div class="main-header__user-communication user-communication">
         <form class="user-communication__button-wrapper user-communication__button-wrapper--search user-communication__search-form" action="https://echo.htmlacademy.ru/" method="get">
           <input class="input user-communication__search-input visually-hidden" id="search" type="text" name="search-input" value="Poklon za Novu Godinu" placeholder="Koji pokloncic trazite?">
-          <button class="user-communication__button user-communication__button--search icon-button icon-button__user-communication--search-button" id="searchOpenButton" type="button">
+          <label class="visually-hidden" for="search">тут надо исправить</label>
+          <button class="user-communication__button user-communication__button--search icon-button icon-button--user-communication-search" id="search-open-button" type="button">
             <span class="visually-hidden">Otvara pretrazivac po sajtu</span>
           </button>
-          <button class="user-communication__button user-communication__button-activation--search icon-button icon-button__user-communication--activation-search-button visually-hidden" id="searchActivationButton" type="submit">
+          <button class="user-communication__button user-communication__button--activation-search icon-button icon-button--user-communication-activation-search visually-hidden" id="search-activation-button" type="submit">
             <span class="visually-hidden">Pronadji</span>
           </button>
         </form>
         <div class="user-communication__button-wrapper user-communication__button-wrapper--wishlist">
-          <a class="link user-communication__button user-communication__button--wishlist icon-button icon-button__user-communication--wishlist-button" href="#">
+          <a class="link user-communication__button user-communication__button--wishlist icon-button icon-button--user-communication-wishlist" href="#">
             <span class="visually-hidden">Zeljenih artikala:</span>
             <span class="visually-hidden">0</span>
           </a>
         </div>
         <div class="user-communication__button-wrapper user-communication__button-wrapper--cart">
-          <a class="link user-communication__button user-communication__button--cart icon-button icon-button__user-communication--cart-button" href="#" >
+          <a class="link user-communication__button user-communication__button--cart icon-button icon-button--user-communication-cart" href="#" >
             <span class="visually-hidden">Artikala u korpi:</span>
             <span class="visually-hidden">0</span>
           </a>
