@@ -38,21 +38,21 @@
 }
 
 // Пункт субменю
-@mixin sub-menu-appearance {
-  padding: 10px;
-  width: 180px;
+// @mixin sub-menu-appearance {
+//   padding: 10px;
+//   width: 180px;
 
-  display: flex;
-  flex-direction: column;
-  transform: scaleY(1);
+//   display: flex;
+//   flex-direction: column;
+//   transform: scaleY(1);
 
-  top: 50px;
-  left: 0;
+//   top: 50px;
+//   left: 0;
 
-  background-color: var(--company-dark-color);
-  box-shadow: 1px 1px 10px rgb(19, 14, 68, 30%);
-  border-radius: 0 $border-radius $border-radius $border-radius;
-}
+//   background-color: var(--company-dark-color);
+//   box-shadow: 1px 1px 10px rgb(19, 14, 68, 30%);
+//   border-radius: 0 $border-radius $border-radius $border-radius;
+// }
 
 // Анимация "сердцебиение"
 @mixin heartbeat-animation {
