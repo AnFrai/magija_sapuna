@@ -16,22 +16,22 @@
       <a class="link main-header__logo-link" href="index.html" aria-current="page" tabindex="-1">
         <picture class="main-header__logo-container main-header__logo-container--picture">
           <!-- <source width="80" height="80" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/icons/company-logo.svg"> -->
-          <source width="80" height="80" type="image/svg+xml" media="(min-width: 768px)" srcset="images/icons/company-logo-tablet.svg">
-          <img class="logo main-header__logo-picture" src="images/icons/company-logo-mobile.svg" width="80" height="80" alt="Logo Magija Sapuna.">
+          <source width="80" height="82" type="image/svg+xml" media="(min-width: 768px)" srcset="images/icons/company-logo-tablet.svg">
+          <img class="logo main-header__logo-picture" src="images/icons/company-logo-mobile.svg" width="80" height="82" alt="Logo Magija Sapuna.">
         </picture>
         <svg class="main-header__logo-container main-header__logo-container--text" xmlns="http://www.w3.org/2000/svg" width="190" height="30" viewBox="0 0 200 30">
           <text x="3" y="24">magija sapuna</text>
         </svg>
       </a>
-      <button class="main-header__menu-button icon-button icon-button--header-menu-button-opened" type="button">
+      <button class="main-header__menu-button icon-button icon-button--header-menu-button-closed" type="button">
         <span class="visually-hidden">Открывает/Закрывает навигацию</span>
       </button>
       <nav class="main-header__navigation main-nav">
-        <ul class="list main-nav__list main-nav__list--mobile-opened">
-          <li class="list-item main-nav__main-list main-nav__main-list--mobile main-nav__main-list--list-down">
-            <a class="link main-nav__main-list-link main-nav__main-list-link--mobile main-nav__main-list-link--list-down" href="index.html" aria-current="page" tabindex="0">
-              <span class="main-nav__main-list-text">Meni</span>
-            </a>
+        <ul class="list main-nav__list main-nav__list--mobile-closed">
+          <li class="list-item main-nav__main-list main-nav__main-list--mobile-closed main-nav__main-list--list-down">
+            <button class="link main-nav__main-list-link main-nav__main-list-link--mobile main-nav__main-list-link--list-down" type="button">
+              <span class="main-nav__main-list-text main-nav__main-list-text--list-down">Meni</span>
+            </button>
             <ul class="list main-nav__sublist main-nav__sublist--closed nav-submenu">
               <li class="list-item nav-submenu__category">
                 <a class="link nav-submenu__category-item nav-submenu__category-item--new-year" href="#" title="Nova godina">
@@ -54,7 +54,7 @@
                 </a>
               </li>
               <li class="list-item nav-submenu__category">
-                <a class="link nav-submenu__category-item nav-submenu__category-item--adults-18" href="#" title="Pee.Pee_sapuni">
+                <a class="link nav-submenu__category-item nav-submenu__category-item--adults-18" href="https://www.instagram.com/pee.pee_sapuni/" title="Pee.Pee_sapuni">
                   <span class="nav-submenu__category-item-name nav-submenu__category-item-name--adults-18">Sapuni 18+</span>
                 </a>
               </li>
@@ -97,8 +97,10 @@
         </div>
       </div>
     </header>
-    <main>
-
+    <main class="main">
+      <div>
+        <span>основной контент страницы Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam voluptatum cumque tempore velit laboriosam, eaque temporibus? Rerum rem voluptatem minima. Quos saepe mollitia ullam deserunt maiores nobis corporis magni illo.</span>
+      </div>
     </main>
   </body>
 </html>

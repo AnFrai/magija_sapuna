@@ -1,6 +1,10 @@
 .link {
   display: block;
 
-  color: $basic-black;
+  color: $company-dark-color;
   text-decoration: none;
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
