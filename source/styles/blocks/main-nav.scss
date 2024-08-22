@@ -73,13 +73,16 @@
     &::after {
       content: "";
       display: block;
-      width: 12px;
-      height: 9px;
+      // width: 12px;
+      // height: 9px;
+      width: 30px;
+      height: 30px;
       margin-top: 5px;
 
-      background-color: $company-dark-color;
+      // background-color: $company-dark-color;
 
-      mask: url("../../images/icons/icon-arrow-down.svg");
+      // mask: url("../../images/icons/icon-arrow-down.svg");
+      background-image: url("../../images/icons/stack.svg#icon-menu-burger");
       background-repeat: no-repeat;
     }
   }
