@@ -10,14 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: ci-${{ github.ref }}
     steps:
-
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Configure Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.18.4'
+       uses: actions/setup-node@v1
+       with:
+         node-version: '12.18.4'
 
       - name: Install and Build
         run: |
