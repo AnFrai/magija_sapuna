@@ -1,5 +1,5 @@
 .category-slider-list {
-  display:flex;
+  display: flex;
   justify-content: start;
   column-gap: 10px;
 
@@ -63,17 +63,17 @@
     font-weight: 600;
   }
 
-  &--promotion-sup {
-    @include superscript;
-
-    top: -10px;
-    right: -10px;
-
-    color: red;
-  }
-
   &--sets {
-    color: #1d6e8e;
+    color: $sets-color;
     font-weight: 600;
   }
+}
+
+.category-slider-list__promotion-sup {
+  @include superscript;
+
+  top: -10px;
+  right: -10px;
+
+  color: $basic-red;
 }
