@@ -1,0 +1,19 @@
+.main-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 0;
+
+  color: $basic-white;
+  background: $company-dark-color;
+}
+
+.main-footer__copyright {
+  margin: 0;
+  padding-top: 15px;
+}

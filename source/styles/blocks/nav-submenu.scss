@@ -1,0 +1,148 @@
+.nav-submenu {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.nav-submenu__category {
+  display: block;
+  height: 40px;
+  width: 90%;
+
+  margin: 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.nav-submenu__category-item {
+  display: block;
+  padding: 10px;
+  padding-left: 15px;
+
+  font-weight: 400;
+
+  box-sizing: border-box;
+  background-color: rgb($basic-white, $background-color-opacity);
+  border-radius: 0 30px 30px 0;
+
+  transition: background 1.2s ease, color 0.6s ease;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+
+    color: $basic-white;
+    background-color: rgba($company-medium-color, $background-color-opacity);
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+}
+
+.nav-submenu__category-item-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin: -10px;
+    margin-right: -8px;
+
+    align-self: center;
+
+    background-image: var(--category-item-photo);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--new-year {
+    --category-item-photo: url("../../images/icon-christmas-tree@1x.png");
+  }
+
+  &--valentines-day {
+    --category-item-photo: url("../../images/icon-cupid.png");
+
+    &::after {
+      transform: scaleX(-1);
+    }
+  }
+
+  &--womens-day {
+    --category-item-photo: url("../../images/icon-womens-day.png");
+  }
+
+  &--easter {
+    --category-item-photo: url("../../images/icon-bunny@1x.png");
+  }
+
+  &--animals {
+    --category-item-photo: url("../../images/icons/stack.svg#icon-unicorn");
+  }
+
+  &--halloween {
+    --category-item-photo: url("../../images/icon-pumpkin@1x.png");
+  }
+
+  &--for-him {
+    --category-item-photo: url("../../images/icon-for-him.png");
+  }
+
+  &--sweets {
+    --category-item-photo: url("../../images/icon-sweets.png");
+  }
+
+  &--newborns {
+    --category-item-photo: url("../../images/icon-newborn.png");
+  }
+
+  &--horoscope-signs {
+    --category-item-photo: url("../../images/horoscope.png");
+  }
+
+  &--adults-18 {
+    --category-item-photo: url("../../images/icon-age-18@1x.png");
+
+    &::after {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      @include heartbeat-animation;
+    }
+  }
+
+  &:hover:not(.nav-submenu__category-item-name--adults-18)::after {
+    background-color: #cac4f6;
+    border-radius: 50%;
+    outline: 2px solid $company-dark-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav-submenu {
+    position: absolute;
+
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      @include sub-menu-appearance;
+    }
+  }
+
+  .main-nav__main-list-link:hover + .nav-submenu,
+  .main-nav__main-list-link:focus + .nav-submenu {
+    @include sub-menu-appearance;
+  }
+}

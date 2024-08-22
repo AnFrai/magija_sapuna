@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchOpenButton = document.getElementById('search-open-button');
   const searchActivationButton = document.getElementById('search-activation-button');
   const searchInput = document.getElementById('search');
-  const wishlistButtonWrapper = document.querySelector('.user-communication__button-wrapper--wishlist');
+  const loginButtonWrapper = document.querySelector('.user-communication__button-wrapper--login');
   const cartButtonWrapper = document.querySelector('.user-communication__button-wrapper--cart');
 
   searchOpenButton.addEventListener('click', () => {
     searchActivationButton.classList.toggle('visually-hidden');
     searchInput.classList.toggle('visually-hidden');
-    wishlistButtonWrapper.classList.toggle('visually-hidden');
+    loginButtonWrapper.classList.toggle('visually-hidden');
     cartButtonWrapper.classList.toggle('visually-hidden');
     searchOpenButton.classList.toggle('icon-button--user-communication-search-opened');
   });
@@ -43,4 +43,26 @@ document.addEventListener('DOMContentLoaded', () => {
       mainList.classList.toggle('main-nav__main-list--mobile-opened');
     });
   });
+});
+
+
+// рассчет высоты шапки для динамической прокрутки
+const header = document.querySelector('header');
+const main = document.querySelector('main');
+
+// Get the height of the header with padding and border
+const headerHeight = header.offsetHeight;
+
+// Set the padding-top for the main content to match the header height
+main.style.paddingTop = `${headerHeight}px`;
+
+
+// прокручивающийся фон херо
+const hero = document.querySelector('.hero');
+const parallaxFactor = -0.5; // Now negative to invert the direction
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const bgPositionY = scrollY * parallaxFactor;
+  hero.style.backgroundPositionY = `${bgPositionY}px`;
 });

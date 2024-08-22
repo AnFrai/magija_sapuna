@@ -1,0 +1,28 @@
+.main-footer__social-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  margin: 10px 0 20px;
+  z-index: 10;
+}
+
+.social-list__link {
+  display: inline-block;
+
+  font-size: 32px;
+  color: inherit;
+  transition: 0.5s;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  &:active {
+    opacity: $active-opacity;
+    transition: $active-transition;
+  }
+}

@@ -11,6 +11,7 @@ $basic-line-height: 18px;
 $basic-font-family: "Playpen-sans", "Comic Sans MS", sans-serif;
 
 
+
 $border-radius: 15px;
 $background-color-opacity: 0.4;
 
@@ -19,7 +20,17 @@ $basic-white: #ffffff;
 $company-dark-color: #120d43;
 $company-medium-color: #4719e4;
 $company-light-color: #8fe0cc;
+$company-light-violet: #cdc2f7;
+$basic-red: #ff0000;
 
-$company-gradient: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
+// $company-gradient: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
+$company-gradient: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5), rgba($company-light-color, 0.3) 42%, $basic-white 50%, rgba($company-light-color, 0.3) 58%, rgba($company-dark-color, 0.5), $company-dark-color);
 $company-gradient-reverse: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3) 40%, rgb(140, 222, 204, 0.3) 60%, rgb(69, 24, 231, 0.3), rgb(19, 14, 68, 0.5), rgb(19, 14, 68));
 $company-gradient-vertical: linear-gradient(0.5turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
+
+
+// Состояния
+$hover-opacity: 0.6;
+
+$active-opacity: 0.3;
+$active-transition: 0.2s;
