@@ -12,6 +12,8 @@
 @import "./blocks/list.scss";
 @import "./blocks/list-item.scss";
 @import "./blocks/logo.scss";
+@import "./blocks/catalog-button.scss";
+
 
 // разделитель
 @import "./blocks/page.scss";
@@ -26,8 +28,7 @@
 // главная часть
 @import "./blocks/main-container.scss";
 @import "./blocks/hero.scss";
-// @import "./blocks/second-container.scss";
-@import "./blocks/product-catalog.scss";
+@import "./blocks/popular.scss";
 
 // подвал
 @import "./blocks/footer.scss";
