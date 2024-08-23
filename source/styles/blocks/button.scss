@@ -25,3 +25,14 @@
     opacity: 0.4;
   }
 }
+
+.button-contrary {
+  color: $basic-white;
+  background-color: $company-dark-color;
+  border: 2px solid $basic-white;
+  outline: 2px solid $company-dark-color;
+
+  &:hover {
+    outline: none;
+  }
+}

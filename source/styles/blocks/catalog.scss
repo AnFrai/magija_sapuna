@@ -1,0 +1,64 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+.catalog__title{
+  margin: 0 auto;
+
+  font-size: 25px;
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 20px;
+
+  overflow-x: auto;
+
+  padding: 40px 0;
+}
+
+.catalog__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 220px;
+  max-width: 280px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  border: 2px solid brown;
+}
+
+// Фото товара
+.catalog__card-image-link {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog__card-image {
+  @include image-stabilization;
+  height: 100%;
+
+  object-fit: cover;
+
+  /* для того чтоб изображение растягивалось на всю поверхность */
+}
+
+// Название
+.catalog__card-title {
+  margin: 0;
+}
+
+.catalog__card-button-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
