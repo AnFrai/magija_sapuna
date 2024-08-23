@@ -24,20 +24,21 @@
 .catalog__card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 
-  min-width: 220px;
-  max-width: 280px;
-  padding: 10px;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 15px;
   box-sizing: border-box;
 
-  border: 2px solid brown;
+  box-shadow: 4px 4px 8px 0px rgba($company-dark-color, 0.5);
 }
 
 // Фото товара
 .catalog__card-image-link {
-  height: 200px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,19 +47,40 @@
 .catalog__card-image {
   @include image-stabilization;
   height: 100%;
-
   object-fit: cover;
 
-  /* для того чтоб изображение растягивалось на всю поверхность */
+  border-radius: 5%;
 }
+/*для того чтоб изображение растягивалось на всю поверхность */
 
 // Название
 .catalog__card-title {
-  margin: 0;
+  font-size: 22px;
 }
 
+// Описание и свойства
+.catalog__card-properties {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  row-gap: 20px;
+}
+
+.catalog__card-properties-item {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 20px;
+}
+
+// Кнопки
 .catalog__card-button-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+}
+
+.catalog__card-button {
+  width: 40px;
+  height: 40px;
 }
