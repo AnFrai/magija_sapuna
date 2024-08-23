@@ -73,17 +73,13 @@
     &::after {
       content: "";
       display: block;
-      // width: 12px;
-      // height: 9px;
-      width: 30px;
-      height: 30px;
+      width: 12px;
+      height: 9px;
       margin-top: 5px;
 
       background-color: $company-dark-color;
-
-      mask: url("../../images/icons/stack.svg#icon-arrow-down");
-      // background-image: url("../../images/icons/stack.svg#icon-arrow-down");
-      background-repeat: no-repeat;
+      mask: url("../../images/icons/stack.svg#icon-arrow-down") no-repeat center;
+      // mask-size: 12px 9px;
     }
   }
 }
