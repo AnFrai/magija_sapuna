@@ -79,10 +79,10 @@
       height: 30px;
       margin-top: 5px;
 
-      // background-color: $company-dark-color;
+      background-color: $company-dark-color;
 
-      // mask: url("../../images/icons/icon-arrow-down.svg");
-      background-image: url("../../images/icons/stack.svg#icon-cart");
+      mask: url("../../images/icons/stack.svg#icon-cart");
+      // background-image: url("../../images/icons/stack.svg#icon-arrow-down");
       background-repeat: no-repeat;
     }
   }
