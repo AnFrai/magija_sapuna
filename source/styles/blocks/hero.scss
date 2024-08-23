@@ -31,3 +31,23 @@
   font-size: 25px;
   background-color: rgba($basic-white, 0.6);
 }
+
+@media (min-width: $tablet-width) {
+  .hero {
+    background-image: none;
+
+     &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../../images/hero.webp);
+      background-size: 100%;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: -1;
+    }
+  }
+}
