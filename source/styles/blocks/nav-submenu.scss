@@ -11,7 +11,7 @@
   margin: 20px;
 
   &:first-child {
-    margin-top: 0;
+    margin-top: 10px;
   }
 }
 
@@ -33,7 +33,7 @@
     outline: none;
 
     color: $basic-white;
-    background-color: rgba($company-medium-color, $background-color-opacity);
+    background-color: $drop-down-submenu-color;
   }
 
   &:active {
@@ -42,9 +42,24 @@
 }
 
 .nav-submenu__category-item-name {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:before {
+    content: "";
+    display: none;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    align-self: center;
+    right: -13px;
+
+    outline: 2px solid $company-dark-color;
+    border-radius: 50%;
+    background-color: $drop-down-menu-color;
+  }
 
   &::after {
     content: "";
@@ -56,6 +71,7 @@
     margin-right: -8px;
 
     align-self: center;
+    z-index: 1;
 
     background-image: var(--category-item-photo);
     background-size: 40px 40px;
@@ -119,10 +135,14 @@
     }
   }
 
-  &:hover:not(.nav-submenu__category-item-name--adults-18)::after {
-    background-color: #cac4f6;
-    border-radius: 50%;
-    outline: 2px solid $company-dark-color;
+  // &:hover:not(.nav-submenu__category-item-name--adults-18)::after {
+  //   background-color: $drop-down-menu-color;
+  //   border-radius: 50%;
+  //   outline: 2px solid $company-dark-color;
+  // }
+
+  &:hover:not(.nav-submenu__category-item-name--adults-18)::before {
+    display: block;
   }
 }
 

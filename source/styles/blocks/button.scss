@@ -5,15 +5,23 @@
   padding: 8px 10px;
   box-sizing: border-box;
 
+  color: $company-dark-color;
+  text-align: center;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  color: #ffffff;
   text-transform: uppercase;
-  text-align: center;
 
-  border: 3px solid var(--company-dark-color);
-  border-radius: var(--border-radius);
-  background-color: var(--company-dark-color);
+  background-color: $basic-white;
+  border: 2px solid $company-dark-color;
+  border-radius: $button-border-radius;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 }

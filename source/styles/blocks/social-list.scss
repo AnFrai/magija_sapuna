@@ -17,6 +17,10 @@
   color: inherit;
   transition: 0.5s;
 
+  &--email {
+    background-color: transparent;
+  }
+
   &:hover {
     transform: translateY(-10px);
   }

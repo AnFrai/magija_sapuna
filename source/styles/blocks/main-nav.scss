@@ -21,7 +21,7 @@
 .main-nav__main-list-content {
   width: 100%;
   overflow: scroll;
-  padding-top: 5px;
+  // padding-top: 10px;
 }
 
 .main-nav__main-list {
@@ -33,7 +33,7 @@
 
   height: 65px;
   width: 100vw;
-  background: #cac4f6;
+  background: $drop-down-menu-color;
 
   font-size: 18px;
 

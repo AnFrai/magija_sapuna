@@ -11,6 +11,7 @@ $basic-line-height: 18px;
 $basic-font-family: "Playpen-sans", "Comic Sans MS", sans-serif;
 
 $border-radius: 15px;
+$button-border-radius: 10px;
 
 
 // Цвета
@@ -24,6 +25,12 @@ $sets-color: #1d6e8e;
 $company-light-color: #8fe0cc;
 $company-light-violet: #cdc2f7;
 $basic-red: #ff0000;
+
+$drop-down-menu-color: #cac4f6;
+$drop-down-submenu-color:  rgba($company-medium-color, $background-color-opacity);
+// $drop-down-menu-color: #efc7d9;
+// $drop-down-submenu-color:  rgba(#8fe0cc, 0.7);
+
 
 // $company-gradient: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
 $company-gradient: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5), rgba($company-light-color, 0.3) 42%, $basic-white 50%, rgba($company-light-color, 0.3) 58%, rgba($company-dark-color, 0.5), $company-dark-color);
