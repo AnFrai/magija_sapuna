@@ -43,26 +43,44 @@ document.addEventListener('DOMContentLoaded', () => {
       mainList.classList.toggle('main-nav__main-list--mobile-opened');
     });
   });
-});
 
 
-// рассчет высоты шапки для динамической прокрутки
-const header = document.querySelector('header');
-const main = document.querySelector('main');
+  // рассчет высоты шапки для динамической прокрутки
+  const header = document.querySelector('header');
+  const main = document.querySelector('main');
 
-// Get the height of the header with padding and border
-const headerHeight = header.offsetHeight;
+  const headerHeight = header.offsetHeight;
 
-// Set the padding-top for the main content to match the header height
-main.style.paddingTop = `${headerHeight}px`;
+  main.style.paddingTop = `${headerHeight}px`;
+
+  // прокручивающийся фон херо
+  const hero = document.querySelector('.hero');
+  const parallaxFactor = -0.7;
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const bgPositionY = scrollY * parallaxFactor;
+    hero.style.backgroundPositionY = `${bgPositionY}px`;
+  });
 
 
-// прокручивающийся фон херо
-const hero = document.querySelector('.hero');
-const parallaxFactor = -0.5; // Now negative to invert the direction
+  // Изменения кнопок каталога
+  const favoriteButtons = document.querySelectorAll('.favorite-button');
 
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const bgPositionY = scrollY * parallaxFactor;
-  hero.style.backgroundPositionY = `${bgPositionY}px`;
+  favoriteButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('catalog__card-button--favorite-add');
+      button.classList.toggle('catalog__card-button--favorite-added');
+    });
+  });
+
+  const cartButtons = document.querySelectorAll('.cart-button');
+
+  cartButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('catalog__card-button--add-to-cart');
+      button.classList.toggle('catalog__card-button--added-to-cart');
+    });
+  });
+
 });
