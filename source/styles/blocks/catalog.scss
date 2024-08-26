@@ -5,7 +5,7 @@
   padding: 50px 20px;
 }
 
-.catalog__popular {
+.catalog-popular {
   background-color: rgba($company-light-color, 0.2);
 }
 
@@ -13,7 +13,7 @@
   background-color: rgba($company-light-violet, 0.6);
 }
 
-.catalog__title{
+.catalog__title {
   margin: 0 auto;
 
   font-size: 25px;
@@ -42,7 +42,7 @@
   box-sizing: border-box;
 
   background-color: $basic-white;
-  box-shadow: 4px 4px 8px 0px rgba($company-dark-color, 0.5);
+  box-shadow: 4px 4px 8px 0 rgba($company-dark-color, 0.5);
 }
 
 // Фото товара
@@ -61,7 +61,7 @@
 
   border-radius: 5%;
 }
-/*для того чтоб изображение растягивалось на всю поверхность */
+/* для того чтоб изображение растягивалось на всю поверхность */
 
 // Название
 .catalog__card-title {
@@ -90,14 +90,16 @@
 
     text-align: center;
   }
+}
 
-  &--set .catalog__card-properties-item-value {
+.catalog__card-properties-item-value {
+  &--set-discription {
     color: $sets-color;
 
-    // display: -webkit-box;
-    // -webkit-line-clamp: 3;
-    // -webkit-box-orient: vertical;
-    // overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 

@@ -47,7 +47,7 @@
   justify-content: space-between;
   align-items: center;
 
-  &:before {
+  &::before {
     content: "";
     display: none;
     width: 60px;
