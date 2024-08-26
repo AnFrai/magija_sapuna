@@ -82,5 +82,4 @@ document.addEventListener('DOMContentLoaded', () => {
       button.classList.toggle('catalog__card-button--added-to-cart');
     });
   });
-
 });
