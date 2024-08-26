@@ -45,35 +45,7 @@
 
   &--user-communication-cart {
     --icon-button: url("../../images/icons/stack.svg#icon-cart");
-  }
-
-  // Каталог
-  &--catalog-favorite {
-    --icon-button: url("../../images/icons/stack.svg#icon-wishlist");
-    background-color: $company-dark-color;
-  }
-
-  &--catalog-favorite-added {
-    --icon-button: url("../../images/icons/stack.svg#icon-wishlist-added");
-    background-color: $basic-pink;
-
-    // Заменить сердце на другое
-
-    // mask: none;
-    // background-image: url("../../images/icons/icon-wishlist-added.svg");
-    // background-size: 35px 35px;
-    // background-repeat: no-repeat;
-    // background-position: 50% 50%;
-  }
-
-  &--catalog-add-to-cart {
-    --icon-button: url("../../images/icons/stack.svg#icon-cart");
-    background-color: $company-dark-color;
-  }
-
-  &--catalog-added-to-cart {
-    --icon-button: url("../../images/icons/stack.svg#icon-cart-added");
-    background-color: $company-dark-color;
+    transform: scaleX(-1);
   }
 
   // состояния

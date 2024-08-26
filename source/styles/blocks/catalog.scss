@@ -108,6 +108,32 @@
 .catalog__card-button {
   width: 40px;
   height: 40px;
+
+  background-image: var(--icon-background-image);
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  &--favorite-add {
+    --icon-background-image: url("../../images/icons/stack.svg#icon-wishlist");
+  }
+
+  &--favorite-added {
+    --icon-background-image: url("../../images/icons/stack.svg#icon-wishlist-added");
+  }
+
+  &--add-to-cart {
+    --icon-background-image: url("../../images/icons/stack.svg#icon-cart");
+    transform: scaleX(-1);
+  }
+
+  &--added-to-cart {
+    --icon-background-image: url("../../images/icons/stack.svg#icon-cart-added");
+  }
 }
 
 @media (min-width: $desktop-width) {

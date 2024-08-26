@@ -2,19 +2,8 @@
 .main-header {
   position: fixed;
   width: 100%;
-}
 
-.main-header__main-part {
-  position: relative;
-  display: grid;
-  padding: 10px;
-
-  grid-template-columns: 80px auto 40px;
-  row-gap: 10px;
-
-  box-sizing: border-box;
-
-  &::after {
+  &::before {
     @include pseudo-element;
     position: absolute;
     top: 0;
@@ -29,6 +18,19 @@
     background-color: $basic-white;
     background-image: $company-gradient;
   }
+}
+
+.main-header__main-part {
+  position: relative;
+  display: grid;
+  padding: 10px;
+
+  grid-template-columns: 80px auto 40px;
+  row-gap: 10px;
+
+  box-sizing: border-box;
+
+
 }
 
 //разобраться че за хуйня
