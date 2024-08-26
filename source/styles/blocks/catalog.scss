@@ -41,6 +41,8 @@
   padding: 15px;
   box-sizing: border-box;
 
+  flex-grow: 1;
+
   background-color: $basic-white;
   box-shadow: 4px 4px 8px 0 rgba($company-dark-color, 0.5);
 }
@@ -61,7 +63,6 @@
 
   border-radius: 5%;
 }
-/* для того чтоб изображение растягивалось на всю поверхность */
 
 // Название
 .catalog__card-title {
@@ -72,8 +73,22 @@
 .catalog__card-properties {
   display: flex;
   flex-direction: column;
+  margin-top: auto;
   width: 80%;
   row-gap: 30px;
+
+  &--set {
+    display: grid;
+    margin-top: 0;
+    flex-grow: 1;
+
+    align-items: start;
+    row-gap: 15px;
+  }
+}
+
+.catalog__card-properties--set .catalog__card-properties-item--price {
+  margin-top: auto;
 }
 
 .catalog__card-properties-item {
@@ -92,14 +107,13 @@
   }
 }
 
+.catalog__card-properties-item--price {
+  margin-top: auto;
+}
+
 .catalog__card-properties-item-value {
   &--set-discription {
     color: $sets-color;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 }
 
@@ -108,13 +122,11 @@
 .catalog__card-button-wrapper {
   display: flex;
   width: 100%;
-  margin: auto 0 0;
   justify-content: space-evenly;
-
-  align-self: flex-end; // не работает. надо чтоб работало
 }
 
 .catalog__card-button {
+  position: relative;
   width: 40px;
   height: 40px;
 
@@ -127,21 +139,83 @@
   background-color: transparent;
   padding: 0;
 
+  &::before {
+    @include pseudo-element;
+    width: 70px;
+    height: 32px;
+    padding: 8px 3px;
+
+    position: absolute;
+    top: -47px;
+    left: 30px;
+
+    color: $company-dark-color;
+    text-align: center;
+
+    opacity: 0;
+
+    background-color: rgba($basic-white, 0.7);
+    border: 2px solid $company-dark-color;
+    border-radius: 15%;
+  }
+
+  &::after {
+    @include pseudo-element;
+    width: 40px;
+    height: 40px;
+
+    opacity: 0;
+
+    background-color: $basic-white;
+    border-radius: 50%;
+  }
+
   &--favorite-add {
     --icon-background-image: url("../../images/icons/stack.svg#icon-wishlist");
+
+    &::before {
+      content: "Dodaj u listu želja";
+    }
   }
 
   &--favorite-added {
     --icon-background-image: url("../../images/icons/stack.svg#icon-wishlist-added");
+
+    &::before {
+      content: "Dodato u listu želja";
+    }
   }
 
   &--add-to-cart {
     --icon-background-image: url("../../images/icons/stack.svg#icon-cart");
-    transform: scaleX(-1);
+
+    &::before {
+      content: "Dodaj u korpu";
+    }
   }
 
   &--added-to-cart {
     --icon-background-image: url("../../images/icons/stack.svg#icon-cart-added");
+
+    &::before {
+      content: "Obriši iz korpe";
+    }
+  }
+
+  &:hover {
+    &::after {
+      opacity: calc( 1 - $hover-opacity);
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: calc( 1 - $active-opacity);
+    }
   }
 }
 
