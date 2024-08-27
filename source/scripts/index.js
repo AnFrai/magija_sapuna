@@ -69,13 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateShadow() {
     const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+    // Добавляем буфер 5 пикселей, чтобы учесть возможное округление
+    if (slider.scrollLeft >= maxScrollLeft - 5) {
+      slider.style.setProperty('--shadow-end-opacity', '0');
+    } else {
+      slider.style.setProperty('--shadow-end-opacity', '1');
+    }
 
-    slider.style.setProperty('--shadow-end-opacity', slider.scrollLeft >= maxScrollLeft ? '0' : '1');
-    slider.style.setProperty('--shadow-start-opacity', slider.scrollLeft <= 0 ? '0' : '1');
+    // Проверка на начало списка
+    if (slider.scrollLeft <= 5) {
+      slider.style.setProperty('--shadow-start-opacity', '0');
+    } else {
+      slider.style.setProperty('--shadow-start-opacity', '1');
+    }
   }
-
-  updateShadow();
-  slider.addEventListener('scroll', updateShadow);
 
   updateShadow();
   slider.addEventListener('scroll', updateShadow);
