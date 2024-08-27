@@ -85,6 +85,36 @@
 
   background-color: rgb(255, 255, 255);
 
+  --shadow-start-opacity: 1;
+  --shadow-end-opacity: 1;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+
+    height: 44px;
+    width: 30px;
+
+    pointer-events: none;
+    transition: opacity 0.3s;
+
+    background: linear-gradient(to right, rgba($company-dark-color, 0.7), transparent);
+  }
+
+  &::before {
+    left: 0;
+    opacity: var(--shadow-start-opacity);
+  }
+
+  &::after {
+    right: 0;
+    opacity: var(--shadow-end-opacity);
+
+    transform: scaleX(-1);
+  }
+
   // scrollbar-width: none; /* Для Firefox */
   // -ms-overflow-style: none; /* Для Internet Explorer и Edge */
 }

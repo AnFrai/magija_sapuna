@@ -64,25 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // Тень слайдера категорий шапки
+  // Тень прокрутки слайдера категорий в хедере
   const slider = document.querySelector('.main-header__category-slider');
-  const sliderList = document.querySelector('.category-slider-list');
 
   function updateShadow() {
     const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-    if (slider.scrollLeft >= maxScrollLeft) {
-      // Удаление тени, когда список прокручен до конца
-      sliderList.style.setProperty('box-shadow', 'none');
-    } else {
-      // Добавление тени, если есть скрытый контент справа
-      sliderList.style.setProperty('box-shadow', 'inset -30px 0 10px -20px rgba(0,0,0,0.5)');
-    }
+
+    slider.style.setProperty('--shadow-end-opacity', slider.scrollLeft >= maxScrollLeft ? '0' : '1');
+    slider.style.setProperty('--shadow-start-opacity', slider.scrollLeft <= 0 ? '0' : '1');
   }
 
-  // Инициализация тени при загрузке страницы
   updateShadow();
+  slider.addEventListener('scroll', updateShadow);
 
-  // Обновление тени при прокрутке
+  updateShadow();
   slider.addEventListener('scroll', updateShadow);
 
 
