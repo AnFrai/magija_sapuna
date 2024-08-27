@@ -84,6 +84,8 @@
   white-space: nowrap;
 
   background-color: rgb(255, 255, 255);
+  scrollbar-color: $company-dark-color #f1f1f1;
+
 
   --shadow-start-opacity: 1;
   --shadow-end-opacity: 1;
@@ -114,11 +116,4 @@
 
     transform: scaleX(-1);
   }
-
-  // scrollbar-width: none; /* Для Firefox */
-  // -ms-overflow-style: none; /* Для Internet Explorer и Edge */
 }
-
-// .main-header__category-slider::-webkit-scrollbar {
-//   display: none; /* Для WebKit-браузеров (Chrome, Safari) */
-// }
