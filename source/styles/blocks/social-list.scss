@@ -12,14 +12,10 @@
 
 .social-list__link {
   display: inline-block;
+  width: 32px;
+  height: 32px;
 
-  font-size: 32px;
-  color: inherit;
   transition: 0.5s;
-
-  &--email {
-    background-color: transparent;
-  }
 
   &:hover {
     transform: translateY(-10px);

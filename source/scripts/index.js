@@ -64,6 +64,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  // Тень слайдера категорий шапки
+  const slider = document.querySelector('.main-header__category-slider');
+  const sliderList = document.querySelector('.category-slider-list');
+
+  function updateShadow() {
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+    if (slider.scrollLeft >= maxScrollLeft) {
+      // Удаление тени, когда список прокручен до конца
+      sliderList.style.setProperty('box-shadow', 'none');
+    } else {
+      // Добавление тени, если есть скрытый контент справа
+      sliderList.style.setProperty('box-shadow', 'inset -30px 0 10px -20px rgba(0,0,0,0.5)');
+    }
+  }
+
+  // Инициализация тени при загрузке страницы
+  updateShadow();
+
+  // Обновление тени при прокрутке
+  slider.addEventListener('scroll', updateShadow);
+
+
   // Изменения кнопок каталога
   const favoriteButtons = document.querySelectorAll('.favorite-button');
 

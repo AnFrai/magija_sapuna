@@ -47,6 +47,20 @@
     --icon-button: url("../../images/icons/stack.svg#icon-cart");
   }
 
+  // футер
+  &--footer-instagram {
+    --icon-button: url("../../images/icons/stack.svg#icon-instagram");
+  }
+
+  &--footer-facebook {
+    --icon-button: url("../../images/icons/stack.svg#icon-facebook");
+  }
+
+  &--footer-email {
+    --icon-button: url("../../images/icons/stack.svg#icon-email");
+  }
+
+
   // состояния
   &:hover {
     opacity: $hover-opacity;
