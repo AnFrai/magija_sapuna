@@ -12,6 +12,12 @@
   background: $company-dark-color;
 }
 
+.main-footer__menu {
+  margin: 10px 0 20px;
+  z-index: 10;
+}
+
+
 .main-footer__copyright {
   margin: 0;
   padding-top: 15px;
