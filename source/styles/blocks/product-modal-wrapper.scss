@@ -1,0 +1,27 @@
+.product-modal-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+
+  z-index: 20;
+
+  background-color: rgba($basic-white, 0.8);
+}
+
+.product-modal-wrapper__container {
+  width: 100%;
+  height: 550px;
+
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 25px;
+  box-sizing: border-box;
+
+  border-radius: 20px;
+  background-color: $basic-white;
+}

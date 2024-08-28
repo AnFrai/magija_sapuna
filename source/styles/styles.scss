@@ -33,8 +33,12 @@
 //Каталог
 @import "./blocks/catalog.scss";
 
+// Модалка карточки каталога
+@import "./blocks/product-modal-wrapper.scss";
+@import "./blocks/product-modal.scss";
+
 // подвал
-@import "./blocks/footer.scss";
+@import "./blocks/main-footer.scss";
 @import "./blocks/waves.scss";
 @import "./blocks/social-list.scss";
 @import "./blocks/footer-menu.scss";

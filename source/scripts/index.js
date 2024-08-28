@@ -106,4 +106,23 @@ document.addEventListener('DOMContentLoaded', () => {
       button.classList.toggle('catalog__card-button--added-to-cart');
     });
   });
+
+
+  // открытие-закрытие модального окна по клику на ссылку товара
+  // document.querySelectorAll('.catalog__card-title-link, .catalog__card-image-link').forEach((element) => {
+  //   element.addEventListener('click', (event) => {
+  //     event.preventDefault();
+  //     openModal();
+  //   });
+  // });
+
+  // function openModal() {
+  //   const modal = document.querySelector('#your-modal-id');
+  //   modal.style.display = 'block';
+  // }
+
+  // document.querySelector('.close-modal-button').addEventListener('click', () => {
+  //   const modal = document.querySelector('#your-modal-id');
+  //   modal.style.display = 'none';
+  // });
 });
