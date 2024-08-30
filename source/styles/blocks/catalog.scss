@@ -49,11 +49,17 @@
 
 // Фото товара
 .catalog__card-image-link {
-  height: 260px;
-  width: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 260px;
+  width: 260px;
+}
+
+.catalog__card-image-container {
+  display: block;
+  height: 100%;
+  width: 260px;
 }
 
 .catalog__card-image {

@@ -84,7 +84,7 @@
   }
 
   &--valentines-day {
-    --category-item-photo: url("../../images/icon-cupid.png");
+    --category-item-photo: url("../../images/icon-cupid@1x.png");
 
     &::after {
       transform: scaleX(-1);
@@ -92,7 +92,7 @@
   }
 
   &--womens-day {
-    --category-item-photo: url("../../images/icon-womens-day.png");
+    --category-item-photo: url("../../images/icon-womens-day@1x.png");
   }
 
   &--easter {
@@ -108,19 +108,19 @@
   }
 
   &--for-him {
-    --category-item-photo: url("../../images/icon-for-him.png");
+    --category-item-photo: url("../../images/icon-for-him@1x.png");
   }
 
   &--sweets {
-    --category-item-photo: url("../../images/icon-sweets.png");
+    --category-item-photo: url("../../images/icon-sweets@1x.png");
   }
 
   &--newborns {
-    --category-item-photo: url("../../images/icon-newborn.png");
+    --category-item-photo: url("../../images/icon-newborn@1x.png");
   }
 
   &--horoscope-signs {
-    --category-item-photo: url("../../images/horoscope.png");
+    --category-item-photo: url("../../images/horoscope@1x.png");
   }
 
   &--adults-18 {
