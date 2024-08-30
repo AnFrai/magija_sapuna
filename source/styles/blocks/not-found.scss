@@ -32,24 +32,24 @@
   }
 }
 
-.not-found__link span {
-  text-transform: uppercase;
-  font-weight: 500;
-}
+// .not-found__link span {
+//   text-transform: uppercase;
+//   font-weight: 500;
+// }
 
-.not-found__heart-wrapper {
-  width: 500px;
-  height: 500px;
+// .not-found__heart-wrapper {
+//   width: 500px;
+//   height: 500px;
 
-  background-image: url("../../images/kitten-licks.gif");
-  mask: url("../../images/icons/stack.svg#icon-wishlist-added") no-repeat center;
+//   background-image: url("../../images/kitten-licks.gif");
+//   mask: url("../../images/icons/stack.svg#icon-wishlist-added") no-repeat center;
 
-  transition: background 1.2s ease, color 0.6s ease;
+//   transition: background 1.2s ease, color 0.6s ease;
 
-  &:hover {
-    @include heartbeat-animation;
-    width: 400px;
-    height: 400px;
-    margin-top: 30px;
-  }
-}
+//   &:hover {
+//     @include heartbeat-animation;
+//     width: 400px;
+//     height: 400px;
+//     margin-top: 30px;
+//   }
+// }
