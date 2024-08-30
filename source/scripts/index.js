@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchOpenButton = document.getElementById('search-open-button');
   const searchActivationButton = document.getElementById('search-activation-button');
   const searchInput = document.getElementById('search');
+  const cartButtonWrapper = document.querySelector('.user-communication__button-wrapper--cart');
 
 
   searchOpenButton.addEventListener('click', () => {
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.classList.toggle('visually-hidden');
     searchOpenButton.classList.toggle('icon-button--user-communication-search-opened');
     searchOpenButton.classList.toggle('user-communication__button--search-opened');
+    cartButtonWrapper.classList.toggle('visually-hidden');
   });
 
   // Кнопка меню
