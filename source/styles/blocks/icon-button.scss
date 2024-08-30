@@ -23,13 +23,14 @@
   &--user-communication-search {
     cursor: pointer;
     --icon-button: url("../../images/icons/stack.svg#icon-search");
+    mask-size: 24px 24px;
   }
 
   &--user-communication-search-opened {
-    background-color: rgb(153, 153, 153);
+    background-color: rgb(233, 230, 230);
 
     --icon-button: url("../../images/icons/stack.svg#icon-form-cross");
-    mask-size: 18px 18px;
+
   }
 
   &--user-communication-activation-search {

@@ -3,19 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchOpenButton = document.getElementById('search-open-button');
   const searchActivationButton = document.getElementById('search-activation-button');
   const searchInput = document.getElementById('search');
-  const loginButtonWrapper = document.querySelector('.user-communication__button-wrapper--login');
-  const cartButtonWrapper = document.querySelector('.user-communication__button-wrapper--cart');
+
 
   searchOpenButton.addEventListener('click', () => {
     searchActivationButton.classList.toggle('visually-hidden');
     searchInput.classList.toggle('visually-hidden');
-    loginButtonWrapper.classList.toggle('visually-hidden');
-    cartButtonWrapper.classList.toggle('visually-hidden');
     searchOpenButton.classList.toggle('icon-button--user-communication-search-opened');
+    searchOpenButton.classList.toggle('user-communication__button--search-opened');
   });
 
   // Кнопка меню
-  const menuButton = document.querySelector('.main-header__menu-button');
+  const menuButton = document.querySelector('.user-communication__menu-button');
   const navigationList = document.querySelector('.main-nav__list');
 
   menuButton.addEventListener('click', () => {
