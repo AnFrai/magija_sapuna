@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
       clearInputButton.classList.toggle('visually-hidden', searchInput.value.trim() === '');
     }
     if (searchInput.value.trim() !== '') {
-      localStorage.setItem('searchValue', searchInput.value); // Сохранение введённого пользователем значения
+      localStorage.setItem('searchValue', searchInput.value);
     } else {
-      localStorage.removeItem('searchValue'); // Удаление значения, если поле очищено
+      localStorage.removeItem('searchValue');
     }
   });
 
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
   slider.addEventListener('scroll', updateShadow);
 
 
-  // Изменения кнопок каталога
+  // Обновление иконки кол-ва товаров в корзине, изменения кнопок каталога
   const favoriteButtons = document.querySelectorAll('.favorite-button');
 
   favoriteButtons.forEach((button) => {
@@ -150,12 +150,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  // Получаем ссылку на кнопку корзины
+  const cartButton = document.querySelector('.user-communication__button--cart');
+  const cartCounterSpan = document.querySelector('.user-communication__button-counter--cart');
+
+  // Инициализируем счетчик, преобразовав его текущее значение или установив 0
+  let itemCount = parseInt(cartCounterSpan.textContent, 10) || 0;
+
+  // Функция для обновления состояния кнопки и счётчика
+  function updateCartStatus() {
+    if (itemCount > 0) {
+      cartButton.classList.add('user-communication__button--cart-added');
+      cartCounterSpan.classList.remove('visually-hidden');
+      cartCounterSpan.textContent = itemCount; // Обновляем текст счетчика
+      cartButton.title = `Artikala u korpi: ${itemCount}`;
+    } else {
+      cartButton.classList.remove('user-communication__button--cart-added');
+      cartCounterSpan.classList.add('visually-hidden');
+      cartButton.title = 'Nema artikala u korpi';
+    }
+  }
+
+  updateCartStatus(); // Вызываем функцию при загрузке страницы для инициализации состояния
+
   const cartButtons = document.querySelectorAll('.cart-button');
 
   cartButtons.forEach((button) => {
     button.addEventListener('click', () => {
+      // Переключаем стили кнопок, указывающих на добавление или удаление товара
       button.classList.toggle('catalog__card-button--add-to-cart');
       button.classList.toggle('catalog__card-button--added-to-cart');
+
+      // Обновляем счетчик в зависимости от добавления или удаления товара
+      if (button.classList.contains('catalog__card-button--added-to-cart')) {
+        itemCount++; // Увеличиваем счетчик
+      } else {
+        itemCount--; // Уменьшаем счетчик
+      }
+
+      updateCartStatus(); // Обновляем интерфейс
     });
   });
 

@@ -92,19 +92,44 @@
     grid-column: 1;
 
     mask-size: 10px 10px;
+
+  }
+
+  &--cart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("../../images/icons/stack.svg#icon-cart-white");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+
+    &:hover {
+      opacity: $hover-opacity;
+    }
+
+    &:active {
+      opacity: $active-opacity;
+    }
+  }
+
+  &--cart-added {
+    background-image: url("../../images/icons/stack.svg#icon-cart-white-added");
   }
 }
 
-// .user-communication__button-counter {
-//   // @include superscript;
 
-//   position: relative;
+.user-communication__button-counter {
+  position: absolute;
+  min-width: 20px;
+  top: -6px;
+  right: -4px;
+  text-align: center;
 
-//   // top: -10px;
-//   // right: -7px;
-//   // color: $basic-red;
-//   color: $basic-white;
-// }
+  font-size: 10px;
+  color: $basic-white;
+}
 
 /* навигация */
 .main-header__navigation {
