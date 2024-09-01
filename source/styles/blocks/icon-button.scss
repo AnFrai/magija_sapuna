@@ -37,7 +37,12 @@
     background-color: $company-dark-color;
 
     --icon-button: url("../../images/icons/stack.svg#icon-search");
-    mask-size: 18px 18px;
+  }
+
+  &--user-communication-clear-input {
+    background-color: $company-dark-color;
+
+    --icon-button: url("../../images/icons/stack.svg#icon-form-cross");
   }
 
   &--user-communication-login {

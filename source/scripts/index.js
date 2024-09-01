@@ -2,17 +2,69 @@ document.addEventListener('DOMContentLoaded', () => {
   // Кнопка поиска
   const searchOpenButton = document.getElementById('search-open-button');
   const searchActivationButton = document.getElementById('search-activation-button');
+  const clearInputButton = document.getElementById('clear-input-button');
   const searchInput = document.getElementById('search');
   const cartButtonWrapper = document.querySelector('.user-communication__button-wrapper--cart');
 
+  let isSearchOpen = false;
+  const defaultValue = searchInput.value;
 
+  function toggleVisibility(element) {
+    element.classList.toggle('visually-hidden');
+  }
+
+  searchInput.value = localStorage.getItem('searchValue') || defaultValue;
+
+  // Обработчик клика по кнопке открытия поиска
   searchOpenButton.addEventListener('click', () => {
-    searchActivationButton.classList.toggle('visually-hidden');
-    searchInput.classList.toggle('visually-hidden');
+    toggleVisibility(searchActivationButton);
+    toggleVisibility(searchInput);
+    toggleVisibility(cartButtonWrapper);
     searchOpenButton.classList.toggle('icon-button--user-communication-search-opened');
     searchOpenButton.classList.toggle('user-communication__button--search-opened');
-    cartButtonWrapper.classList.toggle('visually-hidden');
+
+    isSearchOpen = !searchInput.classList.contains('visually-hidden');
+
+    if (isSearchOpen) {
+      searchInput.focus();
+    }
+    clearInputButton.classList.toggle('visually-hidden', searchInput.value.trim() === '');
   });
+
+
+  document.addEventListener('click', (event) => {
+    if (isSearchOpen && !searchInput.contains(event.target) && !searchOpenButton.contains(event.target) && !clearInputButton.contains(event.target)) {
+      searchActivationButton.classList.add('visually-hidden');
+      clearInputButton.classList.add('visually-hidden');
+      searchInput.classList.add('visually-hidden');
+      searchOpenButton.classList.remove('icon-button--user-communication-search-opened');
+      searchOpenButton.classList.remove('user-communication__button--search-opened');
+      cartButtonWrapper.classList.remove('visually-hidden');
+      isSearchOpen = false;
+    }
+  });
+
+  // Обработчик клика по кнопке очистки
+  clearInputButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    searchInput.value = '';
+    searchInput.focus();
+    clearInputButton.classList.add('visually-hidden');
+    localStorage.setItem('searchValue', defaultValue);
+  });
+
+  // Обработчик изменения текста в поле ввода
+  searchInput.addEventListener('input', () => {
+    if (isSearchOpen) {
+      clearInputButton.classList.toggle('visually-hidden', searchInput.value.trim() === '');
+    }
+    if (searchInput.value.trim() !== '') {
+      localStorage.setItem('searchValue', searchInput.value); // Сохранение введённого пользователем значения
+    } else {
+      localStorage.removeItem('searchValue'); // Удаление значения, если поле очищено
+    }
+  });
+
 
   // Кнопка меню
   const menuButton = document.querySelector('.user-communication__menu-button');
