@@ -14,6 +14,8 @@
   // user-communication
   &--user-communication {
     background-color: $company-dark-color;
+
+    transition: transform 0.3s ease-in-out;
   }
 
   &--user-communication-login {
@@ -78,6 +80,8 @@
   // состояния
   &:hover {
     opacity: $hover-opacity;
+
+    transform: scale(1.2);
   }
 
   &:active {
