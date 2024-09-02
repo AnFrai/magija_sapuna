@@ -163,9 +163,13 @@
     background-color: rgba($basic-white, 0.7);
     border: 2px solid $company-dark-color;
     border-radius: 15%;
+
+    transition: opacity 0.3s ease-in-out;
   }
 
   &::after {
+    // белое наложение на иконку чтоб была прозрачность.
+    // т.к. из за бабл перенимает прозрачность состояния
     @include pseudo-element;
     width: 40px;
     height: 40px;
@@ -215,6 +219,7 @@
 
     &::before {
       opacity: 1;
+      transition-delay: 1.5s;
     }
   }
 
