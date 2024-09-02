@@ -1,0 +1,12 @@
+.index-hero {
+  height: 670px;
+
+  background-image: url("../../images/hero-new-year-mobile-3.webp");
+  background-size: 130%;
+}
+
+.index-hero__button {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+}

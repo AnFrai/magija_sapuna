@@ -1,5 +1,4 @@
 .hero {
-  height: 670px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,9 +7,7 @@
 
   text-align: center;
 
-  background-image: url("../../images/hero-new-year-mobile-3.webp");
   background-repeat: no-repeat;
-  background-size: 130%;
   background-position: center 0;
   background-attachment: scroll;
 }
@@ -34,10 +31,6 @@
 
   font-size: 25px;
   background-color: rgba($basic-white, 0.6);
-
-  transition: opacity 0.5s ease;
-  opacity: 0;
-  pointer-events: none;
 }
 
 @media (min-width: $tablet-width) {

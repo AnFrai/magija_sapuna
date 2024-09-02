@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // прокручивающийся фон херо
   // появление кнопки каталога при прокрутке
-  const hero = document.querySelector('.hero');
-  const heroButton = document.querySelector('.hero__button');
+  const hero = document.querySelector('.index-hero');
+  const heroButton = document.querySelector('.index-hero__button');
   const parallaxFactor = -0.2;
 
   window.addEventListener('scroll', () => {
