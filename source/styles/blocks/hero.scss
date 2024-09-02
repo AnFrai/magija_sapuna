@@ -1,15 +1,15 @@
 .hero {
-  height: auto;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0 200px;
+  padding-top: 70px;
 
-  gap: 150px;
   text-align: center;
 
-  background-image: url("../../images/hero.webp");
+  background-image: url("../../images/hero-new-year-mobile-2.webp");
   background-repeat: no-repeat;
+  background-size: 130%;
   background-attachment: scroll;
 }
 
@@ -27,13 +27,19 @@
 
 .hero__button {
   padding: 40px;
+  margin: auto;
+  margin-bottom: 80px;
 
   font-size: 25px;
   background-color: rgba($basic-white, 0.6);
+
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (min-width: $tablet-width) {
   .hero {
-    background-image: url("../../images/hero-desktop.webp");
+    background-image: url("../../images/hero-new-year-desktop.webp ");
   }
 }

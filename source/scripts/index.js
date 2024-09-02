@@ -106,13 +106,25 @@ document.addEventListener('DOMContentLoaded', () => {
   main.style.paddingTop = `${headerHeight}px`;
 
   // прокручивающийся фон херо
+  // появление кнопки каталога при прокрутке
   const hero = document.querySelector('.hero');
-  const parallaxFactor = -0.7;
+  const heroButton = document.querySelector('.hero__button');
+  const parallaxFactor = -0.2;
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
+
+    // Параллакс-эффект для фона
     const bgPositionY = scrollY * parallaxFactor;
     hero.style.backgroundPositionY = `${bgPositionY}px`;
+
+    // Вычисляем прозрачность на основе прокрутки
+    let opacity = (scrollY - 25) / 230;
+    opacity = Math.max(0, Math.min(opacity, 1));
+
+    // Применяем вычисленную прозрачность к кнопке
+    heroButton.style.opacity = opacity;
+    heroButton.style.pointerEvents = opacity > 0 ? 'auto' : 'none';
   });
 
 

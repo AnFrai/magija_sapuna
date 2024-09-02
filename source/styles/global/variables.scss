@@ -56,6 +56,7 @@ $company-gradient-vertical: linear-gradient(0.5turn, $company-dark-color, rgba($
 
 // Состояния
 $hover-opacity: 0.6;
+$hover-transition: transform 0.3s ease-in-out;
 
 $active-opacity: 0.3;
 $active-transition: 0.2s;

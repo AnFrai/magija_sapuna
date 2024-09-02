@@ -4,7 +4,6 @@
   justify-content: start;
 
   margin: 0 auto;
-  margin-bottom: 4px;
   max-width: 100%;
 }
 
@@ -33,7 +32,7 @@
   white-space: nowrap;
   border-radius: $border-radius;
 
-  transition: transform 0.3s ease-in-out;
+  transition: $hover-transition;
 
   &--superscript {
     padding-right: 20px;

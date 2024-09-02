@@ -127,7 +127,7 @@
     --category-item-photo: url("../../images/icon-age-18@1x.png");
 
     &::after {
-      transition: transform 0.3s ease-in-out;
+      transition: $hover-transition;
     }
 
     &:hover::after {
