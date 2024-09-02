@@ -49,7 +49,11 @@
     bottom: 100%;
     width: 100vw;
 
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid rgba($company-dark-color, 0.2);
+  }
+
+  &:hover {
+    box-shadow: 0 0 26px 6px rgba($company-dark-color, 0.3) inset;
   }
 }
 
@@ -61,6 +65,16 @@
   line-height: inherit;
 
   background-color: transparent;
+
+  transition: font-size 0.3s ease-in-out;
+
+  &:hover {
+    font-size: 22px;
+  }
+
+  &:active {
+    opacity: $active-opacity;
+  }
 }
 
 .main-nav__main-list-text {
