@@ -39,13 +39,13 @@ $drop-down-submenu-color:  rgba($company-medium-color, $background-color-opacity
 // $drop-down-submenu-color:  rgba(#8fe0cc, 0.7);
 
 $company-gradient: linear-gradient(
-    to right,
-    $company-dark-color 0%,
-    rgba($company-dark-color, 0.5) 30%,
-    rgba($company-light-violet, 0.3) 60%,
-    rgba($company-light-color, 0.1) 75%,
-    rgba($company-light-color, 0.3) 82%,
-    rgba($company-light-color, 0.4) 100%
+  to right,
+  $company-dark-color 0%,
+  rgba($company-dark-color, 0.5) 30%,
+  rgba($company-light-violet, 0.3) 60%,
+  rgba($company-light-color, 0.1) 75%,
+  rgba($company-light-color, 0.3) 82%,
+  rgba($company-light-color, 0.4) 100%
 );
 
 // $company-gradient: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5) 25%, rgba($company-light-violet, 0.3), $basic-white, rgb($company-light-color, 0.4));
