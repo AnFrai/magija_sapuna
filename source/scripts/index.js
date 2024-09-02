@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
     hero.style.backgroundPositionY = `${bgPositionY}px`;
 
     // Вычисляем прозрачность на основе прокрутки
-    let opacity = (scrollY - 30) / 300;
-    opacity = Math.max(0, Math.min(opacity, 1));
+    let opacity = (scrollY - 15) / 90;
+    opacity = Math.max(0.1, Math.min(opacity, 1));
 
     // Применяем вычисленную прозрачность к кнопке
     heroButton.style.opacity = opacity;
