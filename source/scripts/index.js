@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const navigationList = document.querySelector('.main-nav__list');
 
   menuButton.addEventListener('click', () => {
-    menuButton.classList.toggle('icon-button--header-menu-button-opened');
-    menuButton.classList.toggle('icon-button--header-menu-button-closed');
+    menuButton.classList.toggle('icon-button--user-communication-menu-opened');
+    menuButton.classList.toggle('icon-button--user-communication-menu-closed');
     navigationList.classList.toggle('main-nav__list--mobile-opened');
     navigationList.classList.toggle('main-nav__list--mobile-closed');
   });
@@ -161,12 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Функция для обновления состояния кнопки и счётчика
   function updateCartStatus() {
     if (itemCount > 0) {
-      cartButton.classList.add('user-communication__button--cart-added');
+      cartButton.classList.add('icon-button--user-communication-cart-added');
       cartCounterSpan.classList.remove('visually-hidden');
       cartCounterSpan.textContent = itemCount; // Обновляем текст счетчика
       cartButton.title = `Artikala u korpi: ${itemCount}`;
     } else {
-      cartButton.classList.remove('user-communication__button--cart-added');
+      cartButton.classList.remove('icon-button--user-communication-cart-added');
       cartCounterSpan.classList.add('visually-hidden');
       cartButton.title = 'Nema artikala u korpi';
     }

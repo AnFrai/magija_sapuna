@@ -4,6 +4,12 @@ $phone-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 
+// Размеры
+$icon-mini: 10px 10px;
+$icon-small: 18px 18px;
+$icon-medium: 24px 24px;
+$icon-huge: 32px 32px;
+
 // Типографика
 $basic-font-size: 14px;
 $basic-line-height: 18px;
@@ -25,18 +31,27 @@ $company-dark-color: #120d43;
 $company-medium-color: #4719e4;
 $sets-color: #1d6e8e;
 $company-light-color: #8fe0cc;
-$company-light-violet: #cdc2f7;
+$company-light-violet: #c7b9f8;
 
 $drop-down-menu-color: #cac4f6;
 $drop-down-submenu-color:  rgba($company-medium-color, $background-color-opacity);
 // $drop-down-menu-color: #efc7d9;
 // $drop-down-submenu-color:  rgba(#8fe0cc, 0.7);
 
+$company-gradient: linear-gradient(
+    to right,
+    $company-dark-color 0%,
+    rgba($company-dark-color, 0.5) 30%,
+    rgba($company-light-violet, 0.3) 60%,
+    rgba($company-light-color, 0.1) 75%,
+    rgba($company-light-color, 0.3) 82%,
+    rgba($company-light-color, 0.4) 100%
+);
 
-// $company-gradient: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
-$company-gradient: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5), rgba($company-light-color, 0.3) 42%, $basic-white 50%, rgba($company-light-color, 0.3) 58%, rgba($company-dark-color, 0.5), $company-dark-color);
-$company-gradient-reverse: linear-gradient(0.25turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3) 40%, rgb(140, 222, 204, 0.3) 60%, rgb(69, 24, 231, 0.3), rgb(19, 14, 68, 0.5), rgb(19, 14, 68));
-$company-gradient-vertical: linear-gradient(0.5turn, rgb(19, 14, 68), rgb(19, 14, 68, 0.5), rgb(69, 24, 231, 0.3), rgb(140, 222, 204, 0.3));
+// $company-gradient: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5) 25%, rgba($company-light-violet, 0.3), $basic-white, rgb($company-light-color, 0.4));
+// $company-gradient: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5), rgba($company-light-color, 0.3) 42%, $basic-white 50%, rgba($company-light-color, 0.3) 58%, rgba($company-dark-color, 0.5), $company-dark-color);
+$company-gradient-reverse: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5), rgba($company-light-violet, 0.3), rgb($company-light-color, 0.3) 40%, rgb($company-light-color, 0.3) 60%, rgba($company-light-violet, 0.3), rgba($company-dark-color, 0.5), $company-dark-color);
+$company-gradient-vertical: linear-gradient(0.5turn, $company-dark-color, rgba($company-dark-color, 0.5), rgba($company-light-violet, 0.3), rgb($company-light-color, 0.3));
 
 
 // Состояния

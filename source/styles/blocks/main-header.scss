@@ -76,7 +76,7 @@
     pointer-events: none;
     transition: opacity 0.3s;
 
-    background: linear-gradient(to right, rgba($company-dark-color, 0.9), rgba($company-dark-color, 0.7)20%, transparent);
+    background: linear-gradient(to right, rgba($company-dark-color, 0.9), rgba($company-dark-color, 0.7) 20%, transparent);;
   }
 
   &::before {
@@ -88,6 +88,6 @@
     right: 0;
     opacity: var(--shadow-end-opacity);
 
-    transform: scaleX(-1);
+    background: linear-gradient(-0.25turn, rgba($company-light-color, 0.6), transparent);
   }
 }

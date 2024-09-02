@@ -6,49 +6,62 @@
 
   border: none;
 
-  background-color: $basic-white;
   mask: var(--icon-button) no-repeat center;
+  mask-size: $icon-medium;
 
-  &--header-menu-button-opened {
-    --icon-button: url("../../images/icons/stack.svg#icon-form-cross");
-    mask-size: 18px 18px;
-  }
 
-  &--header-menu-button-closed {
-    --icon-button: url("../../images/icons/stack.svg#icon-menu-burger");
-    mask-size: 24px 24px;
-  }
-
+  // HEADER
   // user-communication
-  &--user-communication-search {
-    cursor: pointer;
-    --icon-button: url("../../images/icons/stack.svg#icon-search");
-    mask-size: 24px 24px;
-  }
-
-  &--user-communication-search-opened {
-    background-color: rgb(233, 230, 230);
-
-    --icon-button: url("../../images/icons/stack.svg#icon-form-cross");
-  }
-
-  &--user-communication-activation-search {
+  &--user-communication {
     background-color: $company-dark-color;
-
-    --icon-button: url("../../images/icons/stack.svg#icon-search");
-  }
-
-  &--user-communication-clear-input {
-    background-color: $company-dark-color;
-
-    --icon-button: url("../../images/icons/stack.svg#icon-form-cross");
   }
 
   &--user-communication-login {
     --icon-button: url("../../images/icons/stack.svg#icon-login");
   }
 
+  &--user-communication-cart {
+    background-image: url("../../images/icons/stack.svg#icon-cart");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $icon-medium;
+  }
+
+  &--user-communication-cart-added {
+    background-image: url("../../images/icons/stack.svg#icon-cart-added");
+  }
+
+
+  &--user-communication-search {
+    cursor: pointer;
+    --icon-button: url("../../images/icons/stack.svg#icon-search");
+  }
+
+  &--user-communication-activation-search {
+    --icon-button: url("../../images/icons/stack.svg#icon-search");
+    mask-size: $icon-small;
+  }
+
+  &--user-communication-menu-closed {
+    --icon-button: url("../../images/icons/stack.svg#icon-menu-burger");
+  }
+
+  &--user-communication-menu-opened {
+    --icon-button: url("../../images/icons/stack.svg#icon-form-cross");
+  }
+
+  &--user-communication-clear-input {
+    --icon-button: url("../../images/icons/stack.svg#icon-form-cross");
+    mask-size: $icon-mini;
+  }
+
+
   // футер
+  &--footer {
+    background-color: $basic-white;
+    mask-size: $icon-huge;
+  }
+
   &--footer-instagram {
     --icon-button: url("../../images/icons/stack.svg#icon-instagram");
   }
