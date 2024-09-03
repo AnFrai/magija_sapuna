@@ -14,14 +14,9 @@
 }
 
 .faq__title-container {
-  width: 100%;
-  padding-bottom: 60px;
-
-  background-image: url("../../images/faq-title-mobile.webp");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  @include title-container("../../images/faq-title-mobile.webp");
 }
+
 
 @keyframes slideAndFade {
   from {
