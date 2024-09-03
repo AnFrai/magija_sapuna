@@ -1,0 +1,80 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // padding: 0 $mobile-container-padding;
+
+  flex-grow: 1;
+}
+
+.faq__list {
+  width: 100%;
+}
+
+.faq__title-container {
+  width: 100%;
+  padding-bottom: 40px;
+
+  background-image: url("../../images/faq-title-mobile.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.faq__card {
+  display: block;
+  width: 100%;
+  padding: 10px 30px;
+
+  box-sizing: border-box;
+
+  background-color: rgba($company-light-color, 0.2);
+
+  &:nth-child(odd) {
+    background-color: $basic-white;
+  }
+}
+
+.faq__card-title {
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  width: 100%;
+
+  color: $company-dark-color;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 9px;
+    margin: auto 10px auto;
+
+    background-color: $company-dark-color;
+    mask: url("../../images/icons/stack.svg#icon-arrow-down") no-repeat center;
+  }
+}
+
+// .faq__card-text-wrapper {
+
+// }
+
+.faq__card-text {
+  margin: 0;
+}
+
+
+.faq__contacts {
+  margin-top: auto;
+  margin-bottom: 50px;
+
+  padding: 0 50px;
+
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}

@@ -29,10 +29,13 @@
 // главная часть
 @import "./blocks/main-container.scss";
 @import "./blocks/hero.scss";
-@import "./blocks/index-hero.scss";
 
 //Каталог
 @import "./blocks/catalog.scss";
+
+
+// FAQ
+@import "./blocks/faq.scss";
 
 // Модалка карточки каталога
 @import "./blocks/product-modal-wrapper.scss";

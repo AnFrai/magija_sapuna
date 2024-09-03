@@ -206,6 +206,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  // Аккардеон FAQ
+  document.querySelectorAll('.faq__card-title').forEach((button) => {
+    button.addEventListener('click', function() {
+      const answer = this.nextElementSibling;
+
+      toggleVisibility(answer);
+    });
+  });
+
+
   // открытие-закрытие модального окна по клику на ссылку товара
   // document.querySelectorAll('.catalog__card-title-link, .catalog__card-image-link').forEach((element) => {
   //   element.addEventListener('click', (event) => {
