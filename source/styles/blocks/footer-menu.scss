@@ -20,9 +20,11 @@
   opacity: 0.65;
   transition: 0.5s;
 
+  border-bottom: 1px dashed transparent;
+
   &--active {
     opacity: 1;
-    border-bottom: 2px solid $basic-white;
+    border-bottom: 1px solid $basic-white;
   }
 
   &:hover {
