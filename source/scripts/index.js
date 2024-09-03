@@ -207,11 +207,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Аккардеон FAQ
-  document.querySelectorAll('.faq__card-title').forEach((button) => {
+
+  const cardTitles = document.querySelectorAll('.faq__card-title');
+
+  cardTitles.forEach((button) => {
     button.addEventListener('click', function() {
       const answer = this.nextElementSibling;
 
       toggleVisibility(answer);
+      this.classList.toggle('faq__card-title--opened');
     });
   });
 

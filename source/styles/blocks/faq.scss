@@ -10,11 +10,12 @@
 
 .faq__list {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .faq__title-container {
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 
   background-image: url("../../images/faq-title-mobile.webp");
   background-repeat: no-repeat;
@@ -22,27 +23,46 @@
   background-position: center;
 }
 
+@keyframes slideAndFade {
+  from {
+    background-size: 0% 100%;
+    background-color: var(--bg-color);
+  }
+
+  to {
+    background-size: 100% 100%;
+    background-color: rgba(var(--bg-color), 0);
+  }
+}
+
 .faq__card {
   display: block;
   width: 100%;
   padding: 10px 30px;
-
   box-sizing: border-box;
+  --bg-color: #ffffff;
+  background-color: var(--bg-color);
 
-  background-color: rgba($company-light-color, 0.2);
+  &:nth-child(even) {
+    --bg-color: #e9f9f5;
+    background-color: var(--bg-color);
+  }
 
-  &:nth-child(odd) {
-    background-color: $basic-white;
+  &:hover {
+    background-image: linear-gradient(to right, rgba($company-light-violet, 0.9) 0%, transparent 100%);
+    background-repeat: no-repeat;
+    animation: slideAndFade 1s ease-in forwards;
   }
 }
 
 .faq__card-title {
   display: flex;
   justify-content: space-between;
-  text-align: start;
+  gap: 20px;
   width: 100%;
 
   color: $company-dark-color;
+  text-align: start;
   font-family: inherit;
   font-size: 20px;
   font-weight: 500;
@@ -50,21 +70,31 @@
   &::after {
     content: "";
     display: block;
-    width: 12px;
-    height: 9px;
-    margin: auto 10px auto;
+    width: 30px;
+    height: 30px;
+    margin: auto 0;
 
     background-color: $company-dark-color;
     mask: url("../../images/icons/stack.svg#icon-arrow-down") no-repeat center;
+    mask-size: 12px 9px;
+  }
+
+  &--opened {
+    &::after {
+      transform: scaleY(-1);
+    }
   }
 }
 
-// .faq__card-text-wrapper {
-
-// }
+.faq__card-text-wrapper {
+  padding-top: 10px;
+  padding-right: 30px;
+}
 
 .faq__card-text {
   margin: 0;
+
+  line-height: 18px;
 }
 
 
