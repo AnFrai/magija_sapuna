@@ -160,19 +160,19 @@
 
 
 //вариант с тенью
-.snake-animation {
-  position: relative;
+// .snake-animation {
+//   position: relative;
 
-  background: #fff;  /* Фон элемента */
-  animation: shadowPulse 3s infinite ease-in-out;
-}
+//   background: #fff;  /* Фон элемента */
+//   animation: shadowPulse 3s infinite ease-in-out;
+// }
 
-/* Определения анимации для тени */
-@keyframes shadowPulse {
-  0%, 100% {
-    box-shadow: 0 0 20px $snake-color;
-  }
-  50% {
-    box-shadow: 0 0 40px $snake-color;
-  }
-}
+// /* Определения анимации для тени */
+// @keyframes shadowPulse {
+//   0%, 100% {
+//     box-shadow: 0 0 20px $snake-color;
+//   }
+//   50% {
+//     box-shadow: 0 0 40px $snake-color;
+//   }
+// }
