@@ -45,6 +45,21 @@
 
   background-color: $basic-white;
   box-shadow: 4px 4px 8px 0 rgba($company-dark-color, 0.5);
+
+  &--sale {
+    // &::after {
+    //   // белое наложение на иконку чтоб была прозрачность.
+    //   // т.к. из за бабл перенимает прозрачность состояния
+    //   @include pseudo-element;
+    //   width: 42px;
+    //   height: 42px;
+
+    //   opacity: 0;
+
+    //   background-color: $basic-white;
+    //   border-radius: 50%;
+    // }
+  }
 }
 
 // Фото товара

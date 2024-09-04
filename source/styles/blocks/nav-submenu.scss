@@ -48,7 +48,7 @@
   align-items: center;
 
   &::before {
-    content: "";
+    @include empty-content;
     display: none;
     width: 60px;
     height: 60px;
@@ -62,7 +62,7 @@
   }
 
   &::after {
-    content: "";
+    @include empty-content;
     display: inline-block;
     width: 30px;
     height: 30px;

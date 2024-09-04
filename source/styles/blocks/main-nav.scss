@@ -90,8 +90,7 @@
 
   &--list-down {
     &::after {
-      content: "";
-      display: block;
+      @include pseudo-element;
       width: 12px;
       height: 9px;
       margin-top: 5px;
@@ -135,8 +134,7 @@
       border-radius: $border-radius $border-radius 0 0;
 
       &::after {
-        content: "";
-        display: block;
+        @include pseudo-element;
         width: 12px;
         height: 9px;
 
