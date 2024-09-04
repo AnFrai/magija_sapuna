@@ -81,13 +81,13 @@
     left: 0;
     opacity: var(--shadow-start-opacity);
 
-    background: linear-gradient(to right, rgba($company-dark-color, 0.9), rgba($company-dark-color, 0.7) 20%, transparent);
+    background: linear-gradient(to right, rgba($company-dark-color, 0.6), rgba($company-dark-color, 0.5) 20%, transparent);
   }
 
   &::after {
     right: 0;
     opacity: var(--shadow-end-opacity);
 
-    background: linear-gradient(-0.25turn, rgba($company-light-color, 0.6), transparent);
+    background: linear-gradient(-0.25turn, rgba($company-dark-color, 0.6), rgba($company-dark-color, 0.5) 20%, transparent);
   }
 }
