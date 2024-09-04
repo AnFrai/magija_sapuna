@@ -72,90 +72,107 @@
 // }
 
 //2 вариант
+// .snake-animation {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// .snake-animation__card {
+//   position: absolute;
+//   opacity: 0;
+
+//   animation-duration: 2s;
+//   animation-timing-function: linear;
+//   animation-iteration-count: infinite;
+
+//   &--horizontal {
+//     height: 2px;
+//     width: 100%;
+//   }
+
+
+//   &--vertical {
+//     height: 100%;
+//     width: 2px;
+//   }
+
+//   &--top{
+//     top: 0;
+//     left: 0;
+//     animation-name: slideRight;
+
+//     background: linear-gradient(90deg, transparent, $snake-color);
+//   }
+
+//   &--right {
+//     right: 0;
+//     top: 0;
+//     animation-name: slideDown;
+
+//     background: linear-gradient(180deg, transparent, $snake-color);
+//   }
+
+//   &--bottom {
+//     bottom: 0;
+//     right: 0;
+//     animation-name: slideLeft;
+
+//     background: linear-gradient(270deg, transparent, $snake-color);
+//   }
+
+//   &--left {
+//     bottom: 0;
+//     left: 0;
+//     animation-name: slideUp;
+
+//     background: linear-gradient(180deg, $snake-color, transparent);
+//   }
+// }
+
+// /* Определения анимаций */
+// @keyframes slideRight {
+//   0%, 100% { opacity: 0; }
+//   50% { opacity: 1; }
+//   from { left: -100%; }
+//   to { left: 100%; }
+// }
+
+// @keyframes slideDown {
+//   0%, 100% { opacity: 0; }
+//   50% { opacity: 1; }
+//   from { top: -100%; }
+//   to { top: 100%; }
+// }
+
+// @keyframes slideLeft {
+//   0%, 100% { opacity: 0; }
+//   50% { opacity: 1; }
+//   from { right: -100%; }
+//   to { right: 100%; }
+// }
+
+// @keyframes slideUp {
+//   0%, 100% { opacity: 0; }
+//   50% { opacity: 1; }
+//   from { bottom: -100%; }
+//   to { bottom: 100%; }
+// }
+
+
+//вариант с тенью
 .snake-animation {
   position: relative;
-  overflow: hidden;
+
+  background: #fff;  /* Фон элемента */
+  animation: shadowPulse 3s infinite ease-in-out;
 }
 
-.snake-animation__card {
-  position: absolute;
-  opacity: 0;
-
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-
-  &--horizontal {
-    width: 100%;
-    height: 3px;
+/* Определения анимации для тени */
+@keyframes shadowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px $snake-color;
   }
-
-  &--top{
-    top: 0;
-    left: 0;
-    animation-name: slideRight;
-
-    background: linear-gradient(90deg, transparent, $snake-color);
+  50% {
+    box-shadow: 0 0 40px $snake-color;
   }
-
-
-  &--bottom {
-    bottom: 0;
-    right: 0;
-    animation-name: slideLeft;
-
-    background: linear-gradient(270deg, transparent, $snake-color);
-  }
-
-  &--vertical {
-    width: 3px;
-    height: 100%;
-    animation-delay: 1s;
-  }
-
-  &--right {
-    right: 0;
-    top: 0;
-    animation-name: slideDown;
-
-    background: linear-gradient(180deg, transparent, $snake-color);
-  }
-
-
-  &--left {
-    bottom: 0;
-    left: 0;
-    animation-name: slideUp;
-
-    background: linear-gradient(180deg, $snake-color, transparent);
-  }
-}
-
-/* Определения анимаций */
-@keyframes slideRight {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
-  from { left: -100%; }
-  to { left: 100%; }
-}
-
-@keyframes slideDown {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
-  from { top: -100%; }
-  to { top: 100%; }
-}
-
-@keyframes slideLeft {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
-  from { right: -100%; }
-  to { right: 100%; }
-}
-
-@keyframes slideUp {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
-  from { bottom: -100%; }
-  to { bottom: 100%; }
 }
