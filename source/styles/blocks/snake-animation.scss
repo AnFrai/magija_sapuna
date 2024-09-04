@@ -1,0 +1,71 @@
+/* Основные стили для анимации */
+.snake-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.snake-animation__card {
+  position: absolute;
+  opacity: 0;
+
+  animation-duration: 1.6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+}
+
+
+.snake-animation__card {
+  &--top,
+  &--bottom {
+    left: 0;
+    width: 100%;
+    height: 2px;
+    animation-name: slideRight;
+
+    background: linear-gradient(90deg, transparent, $snake-color);
+  }
+
+  &--top {
+    top: 0;
+    animation-delay: 0.7s;
+  }
+
+  &--bottom {
+    bottom: 0;
+  }
+
+  &--right,
+  &--left {
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    animation-name: slideUp;
+
+    background: linear-gradient(180deg,  $snake-color, transparent);
+  }
+
+  &--right {
+    right: 0;
+    animation-delay: 0.7s;
+  }
+
+  &--left {
+    left: 0;
+  }
+}
+
+/* Определения анимаций */
+@keyframes slideRight {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+  from { left: -100%; }
+  to { left: 100%; }
+}
+
+@keyframes slideUp {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+  from { bottom: -100%; }
+  to { bottom: 100%; }
+}

@@ -31,36 +31,24 @@
 }
 
 .catalog__card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
 
-  width: 310px;
-  padding: 15px;
-  box-sizing: border-box;
+    position: relative;
 
-  flex-grow: 1;
+    min-width: 310px;
+    padding: 15px;
+    box-sizing: border-box;
 
-  background-color: $basic-white;
-  box-shadow: 4px 4px 8px 0 rgba($company-dark-color, 0.5);
+    flex-grow: 1;
 
-  &--sale {
-    // &::after {
-    //   // белое наложение на иконку чтоб была прозрачность.
-    //   // т.к. из за бабл перенимает прозрачность состояния
-    //   @include pseudo-element;
-    //   width: 42px;
-    //   height: 42px;
-
-    //   opacity: 0;
-
-    //   background-color: $basic-white;
-    //   border-radius: 50%;
-    // }
+    background-color: $basic-white;
+    box-shadow: 4px 4px 8px 0 rgba($company-dark-color, 0.5);
   }
-}
+
 
 // Фото товара
 .catalog__card-image-link {
