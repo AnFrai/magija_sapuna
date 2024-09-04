@@ -42,25 +42,25 @@ $drop-down-submenu-color:  rgba($company-medium-color, $background-color-opacity
 // $drop-down-menu-color: #efc7d9;
 // $drop-down-submenu-color:  rgba(#8fe0cc, 0.7);
 
-// $company-gradient: linear-gradient(
-//   to right,
-//   $company-dark-color 0%,
-//   rgba($company-dark-color, 0.5) 30%,
-//   rgba($company-light-violet, 0.3) 60%,
-//   rgba($company-light-color, 0.1) 75%,
-//   rgba($company-light-color, 0.3) 82%,
-//   rgba($company-light-color, 0.4) 100%
-// );
-
-$company-gradient: radial-gradient(
-  circle at center 120%,
-  rgba($company-light-color, 0.4) 0%,
-  rgba($company-light-color, 0.3) 30%,
-  rgba($company-light-color, 0.1) 40%,
-  rgba($company-light-violet, 0.3) 53%,
-  rgba($company-dark-color, 0.5) 80%,
-  $company-dark-color 100%
+$company-gradient: linear-gradient(
+  to right,
+  $company-dark-color 0%,
+  rgba($company-dark-color, 0.5) 30%,
+  rgba($company-light-violet, 0.3) 60%,
+  rgba($company-light-color, 0.1) 75%,
+  rgba($company-light-color, 0.3) 82%,
+  rgba($company-light-color, 0.4) 100%
 );
+
+// $company-gradient: radial-gradient(
+//   circle at center 120%,
+//   rgba($company-light-color, 0.4) 0%,
+//   rgba($company-light-color, 0.3) 30%,
+//   rgba($company-light-color, 0.1) 40%,
+//   rgba($company-light-violet, 0.3) 53%,
+//   rgba($company-dark-color, 0.5) 80%,
+//   $company-dark-color 100%
+// );
 
 // $company-gradient: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5) 25%, rgba($company-light-violet, 0.3), $basic-white, rgb($company-light-color, 0.4));
 // $company-gradient: linear-gradient(0.25turn, $company-dark-color, rgba($company-dark-color, 0.5), rgba($company-light-color, 0.3) 42%, $basic-white 50%, rgba($company-light-color, 0.3) 58%, rgba($company-dark-color, 0.5), $company-dark-color);
