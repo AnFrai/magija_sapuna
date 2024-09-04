@@ -30,9 +30,17 @@
   font-size: 25px;
   background-color: rgba($basic-white, 0.6);
 
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   opacity: 0;
   pointer-events: none;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    background-color: rgba(188, 201, 201, 0.5);
+  }
 }
 
 @media (min-width: $tablet-width) {
