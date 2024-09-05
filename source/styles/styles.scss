@@ -16,6 +16,10 @@
 @import "./blocks/button.scss";
 @import "./blocks/catalog-button.scss";
 
+// Эффекты
+@import "./blocks/snake-animation.scss";
+
+// Основная
 @import "./blocks/page.scss";
 
 // шапка
@@ -27,14 +31,14 @@
 
 // главная часть
 @import "./blocks/main-container.scss";
+
+// INDEX
 @import "./blocks/hero.scss";
 
 //Каталог
 @import "./blocks/catalog.scss";
 @import "./blocks/catalog-popular.scss";
 @import "./blocks/catalog-favorite.scss";
-@import "./blocks/snake-animation.scss";
-
 
 // FAQ
 @import "./blocks/faq.scss";
