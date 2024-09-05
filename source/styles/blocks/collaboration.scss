@@ -1,0 +1,11 @@
+// .collaboration {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+
+  // flex-grow: 1;
+// }
+
+.collaboration__title-container {
+  @include title-container("../../images/collaboration-title-mobile.webp");
+}

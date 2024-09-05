@@ -8,26 +8,4 @@
 
 .about__title-container {
   @include title-container("../../images/about-title-mobile.webp");
-
-  // position: relative;
-  // width: 100%;
-  // padding: 60px 0 100px;
-
-  // background:
-  //   linear-gradient(0.5turn, $basic-white, transparent),
-  //   $company-gradient;
-  // background-size: cover, contain;
-
-  // &::after {
-  //   @include pseudo-element;
-  //   position: absolute;
-  //   bottom: 15px;
-  //   left: 15px;
-  //   width: 120px;
-  //   height: 120px;
-  //   // background-image: url("../../images/icons/company-logo-tablet.svg");
-  //   background-size: 90%;
-  //   background-repeat: no-repeat;
-  // }
-
 }
