@@ -1,5 +1,7 @@
+import { getMainHeaderCategorySlider } from './dom-utils.js';
+
 export const sliderShadowModule = (() => {
-  const slider = document.querySelector('.main-header__category-slider');
+  const slider = getMainHeaderCategorySlider;
 
   // Функция для обновления теней в зависимости от положения скролла
   const updateShadow = () => {
