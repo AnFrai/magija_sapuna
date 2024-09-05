@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Находим все элементы карточек товаров
   const cards = document.querySelectorAll('.catalog__card--sale');
 
-  cards.forEach(card => {
+  cards.forEach((card) => {
     // Получаем основную цену и размер скидки
     const originalPriceElement = card.querySelector('.catalog__card-properties-item-value--sale');
     const discountPercentageElement = card.querySelector('.catalog__card-image-superscript-text--sale');
