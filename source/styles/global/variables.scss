@@ -31,7 +31,11 @@ $title-mask-opacity: 0.6;
 
 $basic-black: #000000;
 $basic-white: #ffffff;
+$basic-grey: #808080;
+$basic-yellow: #ffff00;
+$basic-orange: #ffa500;
 $basic-red: #ff0000;
+$basic-green: #008000;
 $basic-pink: #ffc0cb;
 $company-dark-color: #120d43;
 $company-medium-color: #4719e4;
@@ -39,7 +43,7 @@ $sets-color: #1d6e8e;
 $company-light-color: #8fe0cc;
 $company-light-violet: #c7b9f8;
 
-$snake-color: green;
+$snake-color: $basic-green;
 
 $drop-down-menu-color: #cac4f6;
 $drop-down-submenu-color:  rgba($company-medium-color, $background-color-opacity);

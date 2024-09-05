@@ -230,11 +230,7 @@
           <h2 class="title catalog__title">Popularno</h2>
 
           <ul class="list catalog__list">
-            <li class="catalog__card catalog__card--sale snake-animation">
-              <!-- <span class="snake-animation__card snake-animation__card--horizontal snake-animation__card--top"></span>
-              <span class="snake-animation__card snake-animation__card--vertical snake-animation__card--right"></span>
-              <span class="snake-animation__card snake-animation__card--horizontal snake-animation__card--bottom"></span>
-              <span class="snake-animation__card snake-animation__card--vertical snake-animation__card--left"></span> -->
+            <li class="catalog__card catalog__card--sale">
               <a class="cancel-style catalog__card-image-link" href="#">
                 <picture class="catalog__card-image-container">
                   <source width="1019" height="1080" type="image/webp" srcset="images/catalog-photos/pile-2@1x.webp 1x">
@@ -242,7 +238,7 @@
                   <img class="catalog__card-image" width="1019" height="1080" src="images/catalog-photos/pile-2@1x.png" alt="Sapun u obliku malog pileta">
                 </picture>
                 <p class="catalog__card-image-superscript catalog__card-image-superscript--sale">
-                  <span class="catalog__card-image-superscript-text">30%</span>
+                  <span class="catalog__card-image-superscript-text catalog__card-image-superscript-text--sale">-30%</span>
                 </p>
               </a>
               <a class="cancel-style catalog__card-title-link" href="#" tabindex="-1">
@@ -253,9 +249,12 @@
                   <span class="catalog__card-properties-item-title">Gramaža</span>
                   <span class="catalog__card-properties-item-value">70g</span>
                 </li>
-                <li class="list-item catalog__card-properties-item catalog__card-properties-item--price">
+                <li class="list-item catalog__card-properties-item catalog__card-properties-item--price catalog__card-properties-item--price-sale">
                   <span class="catalog__card-properties-item-title">Cena</span>
-                  <span class="catalog__card-properties-item-value">400 rsd</span>
+                  <span class="catalog__card-properties-item-value catalog__card-properties-item-value--sale">400 rsd
+                    <span class="catalog__card-properties-item-value catalog__card-properties-item-value--sale-price">350 rsd</span>
+                  </span>
+
                 </li>
               </ul>
               <div class="catalog__card-button-wrapper">
@@ -263,7 +262,11 @@
                 <button class="catalog__card-button cart-button catalog__card-button--add-to-cart" type="button"><span class="visually-hidden">Dodati u korpu</span></button>
               </div>
             </li>
-            <li class="catalog__card">
+            <li class="catalog__card catalog__card--new snake-animation">
+              <span class="snake-animation__card snake-animation__card--horizontal snake-animation__card--top"></span>
+              <span class="snake-animation__card snake-animation__card--vertical snake-animation__card--right"></span>
+              <span class="snake-animation__card snake-animation__card--horizontal snake-animation__card--bottom"></span>
+              <span class="snake-animation__card snake-animation__card--vertical snake-animation__card--left"></span>
               <a class="cancel-style catalog__card-image-link" href="#">
                 <picture class="catalog__card-image-container">
                   <source width="160" height="160" type="image/webp" srcset="images/catalog-photos/zecic@1x.webp 1x">
