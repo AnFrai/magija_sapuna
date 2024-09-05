@@ -39,6 +39,7 @@
   gap: 20px;
 
   position: relative;
+  overflow: hidden;
 
   min-width: 310px;
   max-width: 350px;
@@ -77,18 +78,6 @@
 
   border-radius: 5%;
 }
-
-// @keyframes moveText {
-//   0% {
-//     transform: rotate(-5deg);
-//   }
-//   50% {
-//     transform: rotate(15deg);
-//   }
-//   100% {
-//     transform: rotate(-5deg);
-//   }
-// }
 
 @keyframes moveText {
   0% {
@@ -311,7 +300,7 @@
     --icon-background-image: url("../../images/icons/stack.svg#icon-cart-added");
 
     &::before {
-      content: "Obriši iz korpe";
+      display: none;
     }
   }
 
@@ -331,6 +320,81 @@
       opacity: calc(1 - $active-opacity);
     }
   }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40%, 100% {
+    transform: translateY(-450px);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.catalog__card-message {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -110px;
+
+  width: 200px;
+  height: 100px;
+
+  color: $basic-green;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+
+  background-color: rgba($basic-white, 0.7);
+  border: 2px solid $basic-green;
+  border-radius: $button-border-radius;
+
+
+  &--animate {
+    animation: moveUp 5s ease-in-out forwards;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.catalog__card-message-text {
+  &--added {
+    animation: shake 0.5s ease-in-out;
+  }
+}
+
+.catalog__card-button-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  min-width: 20px;
+  top: 9px;
+  right: 12px;
+
+  height: 20px;
+
+  font-size: 10px;
+  color: $basic-white;
 }
 
 @media (min-width: $desktop-width) {

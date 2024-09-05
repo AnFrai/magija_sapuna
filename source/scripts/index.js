@@ -167,15 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartButton = document.querySelector('.user-communication__button--cart');
   const cartCounterSpan = document.querySelector('.user-communication__button-counter--cart');
 
-  // Инициализируем счетчик, преобразовав его текущее значение или установив 0
   let itemCount = parseInt(cartCounterSpan.textContent, 10) || 0;
 
-  // Функция для обновления состояния кнопки и счётчика
   function updateCartStatus() {
     if (itemCount > 0) {
       cartButton.classList.add('icon-button--user-communication-cart-added');
       cartCounterSpan.classList.remove('visually-hidden');
-      cartCounterSpan.textContent = itemCount; // Обновляем текст счетчика
+      cartCounterSpan.textContent = itemCount;
       cartButton.title = `Artikala u korpi: ${itemCount}`;
     } else {
       cartButton.classList.remove('icon-button--user-communication-cart-added');
@@ -184,24 +182,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  updateCartStatus(); // Вызываем функцию при загрузке страницы для инициализации состояния
+  updateCartStatus();
 
   const cartButtons = document.querySelectorAll('.cart-button');
 
   cartButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      // Переключаем стили кнопок, указывающих на добавление или удаление товара
-      button.classList.toggle('catalog__card-button--add-to-cart');
-      button.classList.toggle('catalog__card-button--added-to-cart');
+      button.classList.add('catalog__card-button--added-to-cart');
+      button.classList.remove('catalog__card-button--add-to-cart');
 
-      // Обновляем счетчик в зависимости от добавления или удаления товара
-      if (button.classList.contains('catalog__card-button--added-to-cart')) {
-        itemCount++; // Увеличиваем счетчик
+      const messageDiv = button.closest('.catalog__card').querySelector('.catalog__card-message');
+      const messageText = messageDiv.querySelector('.catalog__card-message-text');
+
+      if (messageDiv.classList.contains('catalog__card-message--animate')) {
+        messageText.classList.add('catalog__card-message-text--added');
+        setTimeout(() => {
+          messageText.classList.remove('catalog__card-message-text--added');
+        }, 500);
       } else {
-        itemCount--; // Уменьшаем счетчик
+        messageDiv.classList.add('catalog__card-message--animate');
+        setTimeout(() => {
+          messageDiv.classList.remove('catalog__card-message--animate');
+        }, 4000);
       }
 
-      updateCartStatus(); // Обновляем интерфейс
+      const counterSpan = button.querySelector('.catalog__card-button-counter--cart');
+      const currentCount = parseInt(counterSpan.textContent, 10);
+      counterSpan.textContent = currentCount + 1;
+
+      itemCount++;
+      updateCartStatus();
     });
   });
 
