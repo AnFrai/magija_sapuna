@@ -37,6 +37,20 @@ export const cartModule = (() => {
     const counterSpan = button.querySelector('.catalog__card-button-counter--cart');
     counterSpan.textContent = productCount;
 
+    // Проверяем, есть ли этот товар в избранном и обновляем счетчик
+    const favoriteItem = document.querySelector(`#favoriteList [data-product-id="${productId}"]`);
+    if (favoriteItem) {
+      const favoriteCartCounter = favoriteItem.querySelector('.catalog__card-button-counter--cart');
+      favoriteCartCounter.textContent = productCount;
+    }
+
+    // Проверяем, есть ли этот товар в основном каталоге и обновляем счетчик
+    const originalItem = document.querySelector(`.catalog__list [data-product-id="${productId}"]`);
+    if (originalItem) {
+      const originalCartCounter = originalItem.querySelector('.catalog__card-button-counter--cart');
+      originalCartCounter.textContent = productCount;
+    }
+
     itemCount++;
     updateCartStatus();
 
@@ -78,5 +92,5 @@ export const cartModule = (() => {
     });
   };
 
-  return { init };
+  return { init, handleCartAddition };
 })();
