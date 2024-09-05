@@ -220,6 +220,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ВЫЧИСЛЕНИЕ СКИДКИ
+  // Находим все элементы карточек товаров
+
+  // Находим все элементы карточек товаров
+  const cards = document.querySelectorAll('.catalog__card--sale');
+
+  cards.forEach(card => {
+    // Получаем основную цену и размер скидки
+    const originalPriceElement = card.querySelector('.catalog__card-properties-item-value--sale');
+    const discountPercentageElement = card.querySelector('.catalog__card-image-superscript-text--sale');
+    const priceAfterDiscountElement = card.querySelector('.catalog__card-properties-item-value--sale-price');
+
+    if (originalPriceElement && discountPercentageElement && priceAfterDiscountElement) {
+      // Извлекаем числовые значения из текста
+      const originalPrice = parseFloat(originalPriceElement.textContent);
+      let discountPercentage = parseFloat(discountPercentageElement.textContent.replace(/[^0-9.-]+/g, ''));
+
+      // Преобразуем отрицательный процент скидки в положительное значение
+      discountPercentage = Math.abs(discountPercentage);
+
+      // Вычисляем скидку
+      const discountAmount = originalPrice * (discountPercentage / 100);
+
+      // Вычисляем новую цену и округляем ее до ближайших 10
+      let newPrice = originalPrice - discountAmount;
+      newPrice = Math.round(newPrice / 10) * 10; // Округление до десятков
+
+      // Обновляем текстовый контент с новой ценой
+      priceAfterDiscountElement.textContent = `${newPrice} rsd`;
+    }
+  });
 
   // Аккардеон FAQ
 
