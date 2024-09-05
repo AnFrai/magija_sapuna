@@ -1,7 +1,11 @@
+import { animationModule } from './card-added-animation-module.js';
+import { setCookie, getCookie } from './cookie-utils.js';
+
 export const cartModule = (() => {
   const cartButton = document.querySelector('.user-communication__button--cart');
   const cartCounterSpan = document.querySelector('.user-communication__button-counter--cart');
-  let itemCount = parseInt(cartCounterSpan.textContent, 10) || 0;
+
+  let itemCount = parseInt(getCookie('cartItemCount'), 10) || 0;
 
   const updateCartStatus = () => {
     if (itemCount > 0) {
@@ -14,48 +18,64 @@ export const cartModule = (() => {
       cartCounterSpan.classList.add('visually-hidden');
       cartButton.title = 'Nema artikala u korpi';
     }
+    setCookie('cartItemCount', itemCount, 7);
   };
 
   const handleCartAddition = (button) => {
+    const productId = button.dataset.productId;
+
+    // Добавляем класс "добавлено в корзину" и сохраняем состояние в куки
     button.classList.add('catalog__card-button--added-to-cart');
     button.classList.remove('catalog__card-button--add-to-cart');
+    setCookie(`product_${productId}_added`, 'true', 7);
 
-    const messageDiv = button.closest('.catalog__card').querySelector('.catalog__card-message');
-    const messageText = messageDiv.querySelector('.catalog__card-message-text');
+    let productCount = parseInt(getCookie(`product_${productId}_count`), 10) || 0;
+    productCount += 1;
 
-    messageText.classList.add('catalog__card-message-text--added');
-    setTimeout(() => {
-      messageText.classList.remove('catalog__card-message-text--added');
-    }, 500);
-
-    if (messageDiv.classList.contains('catalog__card-message--animate')) {
-      clearTimeout(messageDiv.timeoutId);
-      messageDiv.timeoutId = setTimeout(() => {
-        messageDiv.classList.remove('catalog__card-message--animate');
-      }, 4000);
-    } else {
-      messageDiv.classList.add('catalog__card-message--animate');
-      messageDiv.timeoutId = setTimeout(() => {
-        messageDiv.classList.remove('catalog__card-message--animate');
-      }, 4000);
-    }
+    setCookie(`product_${productId}_count`, productCount, 7);
 
     const counterSpan = button.querySelector('.catalog__card-button-counter--cart');
-    const currentCount = parseInt(counterSpan.textContent, 10);
-    counterSpan.textContent = currentCount + 1;
+    counterSpan.textContent = productCount;
 
     itemCount++;
     updateCartStatus();
+
+    animationModule.showMessage(button);
   };
 
   const bindCartButtonEvents = () => {
     const cartButtons = document.querySelectorAll('.cart-button');
-    cartButtons.forEach((button) => button.addEventListener('click', () => handleCartAddition(button)));
+    cartButtons.forEach((button) => {
+      button.addEventListener('click', () => handleCartAddition(button));
+    });
+  };
+
+  const restoreButtonState = (button, productId) => {
+    // Восстанавливаем состояние кнопки из куки
+    const isAdded = getCookie(`product_${productId}_added`) === 'true';
+    if (isAdded) {
+      button.classList.add('catalog__card-button--added-to-cart');
+      button.classList.remove('catalog__card-button--add-to-cart');
+    }
   };
 
   const init = () => {
     bindCartButtonEvents();
+
+    itemCount = parseInt(getCookie('cartItemCount'), 10) || 0;
     updateCartStatus();
+
+    const cartButtons = document.querySelectorAll('.cart-button');
+    cartButtons.forEach((button) => {
+      const productId = button.dataset.productId;
+      const productCount = parseInt(getCookie(`product_${productId}_count`), 10) || 0;
+
+      const counterSpan = button.querySelector('.catalog__card-button-counter--cart');
+      counterSpan.textContent = productCount;
+
+      // Восстанавливаем состояние каждой кнопки
+      restoreButtonState(button, productId);
+    });
   };
 
   return { init };
