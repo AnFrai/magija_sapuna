@@ -7,24 +7,27 @@
 // }
 
 .about__title-container {
-  position: relative;
-  width: 100%;
-  padding: 80px 0;
+  @include title-container("../../images/about-title-mobile.webp");
 
-  background:
-    linear-gradient(0.5turn, $basic-white, transparent),
-    $company-gradient;
-  background-size: cover, contain;
+  // position: relative;
+  // width: 100%;
+  // padding: 60px 0 100px;
 
-  &::after {
-    @include pseudo-element;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120px;
-    height: 120px;
-    background-image: url("../../images/icons/company-logo-tablet.svg");
-    background-size: 90%;
-    background-repeat: no-repeat;
-  }
+  // background:
+  //   linear-gradient(0.5turn, $basic-white, transparent),
+  //   $company-gradient;
+  // background-size: cover, contain;
+
+  // &::after {
+  //   @include pseudo-element;
+  //   position: absolute;
+  //   bottom: 15px;
+  //   left: 15px;
+  //   width: 120px;
+  //   height: 120px;
+  //   // background-image: url("../../images/icons/company-logo-tablet.svg");
+  //   background-size: 90%;
+  //   background-repeat: no-repeat;
+  // }
+
 }
