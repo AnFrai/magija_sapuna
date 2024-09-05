@@ -1,0 +1,24 @@
+.catalog-favorite {
+  gap: 15px;
+
+  background-color: rgba(rgb(253, 212, 218), 0.6);
+}
+
+.catalog-favorite__message {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.catalog-favorite__message-text {
+  margin: 5px 0;
+}
+
+.catalog-favorite__message-link {
+  display: inline-block;
+}
+
+.catalog-favorite__message-button {
+  width: 60%;
+  padding: 15px;
+}
