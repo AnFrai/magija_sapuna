@@ -206,7 +206,7 @@
   }
 
   &--sale-price {
-    color: green;
+    color: $basic-green;
     position: absolute;
     top: -22px;
     right: -36px;
@@ -325,16 +325,9 @@
 @keyframes moveUp {
   0% {
     transform: translateY(0);
-    opacity: 1;
   }
   40%, 100% {
-    transform: translateY(-450px);
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+    transform: translateY(-430px);
   }
 }
 
@@ -360,25 +353,22 @@
 
 
   &--animate {
-    animation: moveUp 5s ease-in-out forwards;
+    animation: moveUp 4s ease-in-out forwards;
   }
 }
 
-@keyframes shake {
+@keyframes pulse {
   0%, 100% {
-    transform: translateX(0);
+    transform: scale(1); /* Начальное и конечное состояние без изменений */
   }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(10px);
+  50% {
+    transform: scale(1.2); /* Увеличение размера элемента на 20% */
   }
 }
 
 .catalog__card-message-text {
   &--added {
-    animation: shake 0.5s ease-in-out;
+    animation: pulse 0.5s ease-in-out;
   }
 }
 
