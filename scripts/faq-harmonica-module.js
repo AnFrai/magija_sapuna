@@ -1,0 +1,1 @@
+var c=(()=>{let i=t=>{t.classList.toggle("visually-hidden")},n=t=>{let e=t.nextElementSibling;i(e),t.classList.toggle("faq__card-title--opened")},l=()=>{document.querySelectorAll(".faq__card-title").forEach(e=>{e.addEventListener("click",()=>n(e))})};return{init:()=>{l()}}})();export{c as faqHarmonicaModule};

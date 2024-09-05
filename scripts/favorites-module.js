@@ -1,0 +1,1 @@
+var n=(()=>{let e=t=>{t.classList.toggle("catalog__card-button--favorite-add"),t.classList.toggle("catalog__card-button--favorite-added")},a=()=>{document.querySelectorAll(".favorite-button").forEach(o=>{o.addEventListener("click",()=>e(o))})};return{init:()=>{a()}}})();export{n as favoritesModule};
