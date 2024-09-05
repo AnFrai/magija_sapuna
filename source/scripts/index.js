@@ -233,21 +233,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const priceAfterDiscountElement = card.querySelector('.catalog__card-properties-item-value--sale-price');
 
     if (originalPriceElement && discountPercentageElement && priceAfterDiscountElement) {
-      // Извлекаем числовые значения из текста
       const originalPrice = parseFloat(originalPriceElement.textContent);
       let discountPercentage = parseFloat(discountPercentageElement.textContent.replace(/[^0-9.-]+/g, ''));
 
-      // Преобразуем отрицательный процент скидки в положительное значение
       discountPercentage = Math.abs(discountPercentage);
 
-      // Вычисляем скидку
       const discountAmount = originalPrice * (discountPercentage / 100);
 
-      // Вычисляем новую цену и округляем ее до ближайших 10
-      let newPrice = originalPrice - discountAmount;
-      newPrice = Math.round(newPrice / 10) * 10; // Округление до десятков
 
-      // Обновляем текстовый контент с новой ценой
+      let newPrice = originalPrice - discountAmount;
+      newPrice = Math.round(newPrice / 10) * 10;
+
       priceAfterDiscountElement.textContent = `${newPrice} rsd`;
     }
   });
