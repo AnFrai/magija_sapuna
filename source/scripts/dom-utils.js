@@ -1,4 +1,4 @@
-export const getMainHeaderCategorySlider = () => document.querySelector('.main-header__category-slider');
+// export const getMainHeaderCategorySlider = () => document.querySelector('.main-header__category-slider');
 
 export const getCartButton = () => document.querySelector('.user-communication__button--cart');
 export const getCartCounterSpan = () => document.querySelector('.user-communication__button-counter--cart');
