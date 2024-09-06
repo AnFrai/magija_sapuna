@@ -284,7 +284,8 @@
     --icon-background-image: url("../../images/icons/stack.svg#icon-wishlist-added");
 
     &::before {
-      content: "Dodato u listu želja";
+      // content: "Dodato u listu želja";
+      display: none;
     }
   }
 
