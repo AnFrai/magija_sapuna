@@ -1,0 +1,54 @@
+.create-set__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 80px;
+
+  padding: 15px;
+  box-sizing: border-box;
+
+  background-color: rgba($basic-grey, 0.1);
+
+  border: 1px solid rgba($basic-grey, 0.2);
+
+  color: inherit;
+  font-family: inherit;
+  font-size: 22px;
+  text-align: center;
+
+  transition: font-size 0.3s ease;
+
+  &::after {
+    display: flex;
+    content: "+";
+    justify-content: center;
+    align-items: center;
+    height: 33px;
+    width: 33px;
+
+    opacity: 0.6;
+
+    color: $basic-grey;
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: 1px solid $basic-grey;
+  }
+
+  &:hover {
+    font-size: 23px;
+    box-shadow: 0 0 26px 6px rgba($basic-grey, 0.3) inset;
+    border: none;
+
+    &::after {
+      opacity: 1;
+      color: $company-dark-color;
+      border: 1px solid $company-dark-color;
+    }
+  }
+
+  &:active {
+    opacity: $active-opacity;
+  }
+}

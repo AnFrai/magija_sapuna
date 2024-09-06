@@ -68,14 +68,13 @@
 }
 
 // title страницы
-@mixin title-container($image-url: "", $vertical-offset: center, $horizontal-offset: -40px, $image-size: cover) {
+@mixin title-container($image-url: "", $vertical-offset: center, $horizontal-offset: 0, $image-size: cover) {
   width: 100%;
   padding: 80px 0;
 
   background:
-    linear-gradient(rgba($basic-white, $title-mask-opacity), rgba($basic-white, $title-mask-opacity)),
-    url($image-url) no-repeat $vertical-offset $horizontal-offset;
-  background-size: cover, $image-size;
+    linear-gradient(rgba($basic-white, $title-mask-opacity), rgba($basic-white, $title-mask-opacity)) no-repeat,
+    url($image-url) no-repeat $vertical-offset $horizontal-offset / $image-size;
 }
 
 // Анимация "сердцебиение"
