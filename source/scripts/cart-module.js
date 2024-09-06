@@ -37,17 +37,25 @@ export const cartModule = (() => {
     const counterSpan = button.querySelector('.catalog__card-button-counter--cart');
     counterSpan.textContent = productCount;
 
-    // Проверяем, есть ли этот товар в избранном и обновляем счетчик
+    // Обновляем состояние корзины в избранных
     const favoriteItem = document.querySelector(`#favoriteList [data-product-id="${productId}"]`);
     if (favoriteItem) {
-      const favoriteCartCounter = favoriteItem.querySelector('.catalog__card-button-counter--cart');
+      const favoriteCartButton = favoriteItem.querySelector('.cart-button');
+      favoriteCartButton.classList.add('catalog__card-button--added-to-cart');
+      favoriteCartButton.classList.remove('catalog__card-button--add-to-cart');
+
+      const favoriteCartCounter = favoriteCartButton.querySelector('.catalog__card-button-counter--cart');
       favoriteCartCounter.textContent = productCount;
     }
 
-    // Проверяем, есть ли этот товар в основном каталоге и обновляем счетчик
+    // Обновляем состояние корзины в основном каталоге
     const originalItem = document.querySelector(`.catalog__list [data-product-id="${productId}"]`);
     if (originalItem) {
-      const originalCartCounter = originalItem.querySelector('.catalog__card-button-counter--cart');
+      const originalCartButton = originalItem.querySelector('.cart-button');
+      originalCartButton.classList.add('catalog__card-button--added-to-cart');
+      originalCartButton.classList.remove('catalog__card-button--add-to-cart');
+
+      const originalCartCounter = originalCartButton.querySelector('.catalog__card-button-counter--cart');
       originalCartCounter.textContent = productCount;
     }
 
