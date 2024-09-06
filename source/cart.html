@@ -28,7 +28,7 @@
         </a>
         <div class="main-header__user-communication user-communication">
           <div class="user-communication__button-wrapper user-communication__button-wrapper--favorites">
-            <a class="cancel-style user-communication__button user-communication__button--favorites icon-button icon-button--user-communication icon-button--user-communication-favorites" href="#favorite-section" title="Vidi omiljeni proizvodi">
+            <a class="cancel-style user-communication__button user-communication__button--favorites icon-button icon-button--user-communication icon-button--user-communication-favorites" href="./index.html#favorite-section" title="Vidi omiljeni proizvodi">
               <span class="visually-hidden">Omiljeni proizvodi</span>
             </a>
           </div>
@@ -232,8 +232,52 @@
             <div class="cart__create-set create-set">
               <button class="create-set__button" type="button">Napravi svoj set</button>
             </div>
-            <div class="list cart__list cart__articles-list">
 
+            <div class="list cart__list">
+              <ul class="list cart__articles-list">
+                <li class="list-item cart__card" data-product-id="soap-malo-pile">
+                  <!-- <a class="cancel-style cart__card-image-link" href="#">
+                    <picture class="cart__card-image-container">
+                      <source width="1019" height="1080" type="image/webp" srcset="images/catalog-photos/pile-2@1x.webp 1x">
+
+                      <img class="cart__card-image" width="1019" height="1080" src="images/catalog-photos/pile-2@1x.png" alt="Sapun u obliku malog pileta">
+                    </picture>
+                  </a> -->
+                  <a class="cancel-style cart__card-title-link" href="#" tabindex="-1">
+                    <h3 class="title cart__card-title">Malo pile</h3>
+                  </a>
+                  <ul class="list " >
+                    <li class="list-item cart__card-radio-container">
+                    <input type="radio" id="radio1" name="options" value="option1" checked>
+                    <label for="radio1">Obicna kutija</label>
+
+                    <input type="radio" id="radio2" name="options" value="option2">
+                    <label for="radio2">
+                      Poklon kutija
+                      <span class="additional-info">+250 rsd</span>
+                    </label>
+                    </li>
+                    <li class="list-item cart__card-checkbox-container">
+                      <input type="checkbox" id="checkbox1" name="lables" value="option1">
+                      <label for="checkbox1">
+                        Pozdravna etiketa
+                        <span class="additional-info">+250 rsd</span>
+                      </label>
+                      </li>
+                  </ul>
+                  <ul class="list cart__card-properties">
+                    <li class="list-item cart__card-properties-item cart__card-properties-item--price">
+                      <span class="cart__card-properties-item-value">500 rsd</span>
+                    </li>
+                  </ul>
+                  <div class="cart__card-button-wrapper">
+                      <button class="cart__items-number-button cart__items-number-button--minus" id="adults-minus" type="button"><span class="visually-hidden">Smanjiti količinu na jedan proizvod.</span></button>
+                      <input class="cart__items-number-input" id="adults" type="number" name="adults" value="1" placeholder="1" title="Broj poručenih artikala" required>
+                      <button class="cart__items-number-button cart__items-number-button--plus" id="adults-plus" type="button"><span class="visually-hidden">Dodaj još jedan.</span></button>
+                  </div>
+                  <!-- Подумать над id -->
+                </li>
+              </ul>
             </div>
           </div>
         </section>
