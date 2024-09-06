@@ -11,15 +11,22 @@ export const searchModule = (() => {
     element.classList.toggle('visually-hidden');
   };
 
+  // Определяем функцию closeSearch перед ее использованием
+  function closeSearch() {
+    toggleVisibility(searchActivationButton);
+    toggleVisibility(searchInput);
+    toggleVisibility(cartButtonWrapper);
+    searchOpenButton.classList.remove('icon-button--user-communication-search-opened');
+    searchOpenButton.classList.remove('user-communication__button--search-opened');
+    isSearchOpen = false;
+
+    // Скрыть кнопку очистки
+    clearInputButton.classList.add('visually-hidden');
+  }
+
   const handleOutsideClick = (event) => {
     if (isSearchOpen && !searchInput.contains(event.target) && !searchOpenButton.contains(event.target) && !clearInputButton.contains(event.target)) {
-      toggleVisibility(searchActivationButton);
-      toggleVisibility(searchInput);
-      toggleVisibility(clearInputButton);
-      toggleVisibility(cartButtonWrapper);
-      searchOpenButton.classList.remove('icon-button--user-communication-search-opened');
-      searchOpenButton.classList.remove('user-communication__button--search-opened');
-      isSearchOpen = false;
+      closeSearch();
     }
   };
 
@@ -29,10 +36,12 @@ export const searchModule = (() => {
     toggleVisibility(cartButtonWrapper);
     searchOpenButton.classList.toggle('icon-button--user-communication-search-opened');
     searchOpenButton.classList.toggle('user-communication__button--search-opened');
-    isSearchOpen = !searchInput.classList.contains('visually-hidden');
+    isSearchOpen = true;
+
     if (isSearchOpen) {
       searchInput.focus();
     }
+
     clearInputButton.classList.toggle('visually-hidden', searchInput.value.trim() === '');
   };
 
