@@ -1,0 +1,1 @@
+var o=(()=>{let e=()=>{let t=document.querySelector("header"),n=document.querySelector("main");if(t&&n){let d=t.offsetHeight;n.style.paddingTop=`${d}px`}};return{init:()=>{e(),window.addEventListener("resize",e)}}})();export{o as headerPaddingModule};
