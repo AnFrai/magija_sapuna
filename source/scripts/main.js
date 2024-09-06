@@ -1,6 +1,7 @@
 import { searchModule } from './search-module.js';
 import { navigationModule } from './navigation-module.js';
 import { cartModule } from './cart-module.js';
+import { headerPaddingModule } from './header-padding-module.js';
 import { favoritesModule } from './favorites-module.js';
 import { discountModule } from './discount-module.js';
 import { toggleFavoriteMessage } from './favorite-text-visibility-module.js';
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   searchModule.init();
   navigationModule.init();
   cartModule.init();
+  headerPaddingModule.init();
 
   // Инициализация управления визуальными элементами и контентом
   favoritesModule.init();
