@@ -16,6 +16,13 @@
 
   justify-content: center;
 
+  &--favorites {
+    grid-row: 1;
+    grid-column: 3;
+
+    justify-self: flex-end;
+  }
+
   &--login {
     grid-row: 1;
     grid-column: 4;

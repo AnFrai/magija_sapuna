@@ -27,6 +27,11 @@
           </svg>
         </a>
         <div class="main-header__user-communication user-communication">
+          <div class="user-communication__button-wrapper user-communication__button-wrapper--favorites">
+            <a class="cancel-style user-communication__button user-communication__button--favorites icon-button icon-button--user-communication icon-button--user-communication-favorites" href="#favorite-section" title="Vidi omiljeni proizvodi">
+              <span class="visually-hidden">Omiljeni proizvodi</span>
+            </a>
+          </div>
           <div class="user-communication__button-wrapper user-communication__button-wrapper--login">
             <a class="cancel-style user-communication__button user-communication__button--login icon-button icon-button--user-communication icon-button--user-communication-login" href="#" title="Ulogovati se">
               <span class="visually-hidden">Ulogovati se</span>
@@ -375,7 +380,7 @@
           <a class="cancel-style button button-contrary catalog-button" href="catalog.html">Katalog</a>
         </section>
 
-        <section class="catalog catalog-favorite">
+        <section class="catalog catalog-favorite" id="favorite-section">
           <h2 class="title catalog__title">Omiljeno &#129505;</h2>
           <div class="catalog__message catalog-favorite__message">
             <p class="catalog__message-text catalog-favorite__message-text">Nema omiljenih artikala.</p>

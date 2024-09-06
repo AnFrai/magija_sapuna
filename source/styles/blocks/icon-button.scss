@@ -18,6 +18,11 @@
     transition: $hover-transition;
   }
 
+  &--user-communication-favorites {
+    --icon-button: url("../../images/icons/stack.svg#icon-wishlist");
+  }
+
+
   &--user-communication-login {
     --icon-button: url("../../images/icons/stack.svg#icon-login");
   }
