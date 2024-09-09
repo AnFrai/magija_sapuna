@@ -121,6 +121,7 @@
 }
 
 .cart__checkbox-radio-container-title {
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -252,10 +253,10 @@
   border: none;
 
   &--decrease {
-    --quantity-button: url("../../images/icons/icon-plus.svg");
+    --quantity-button: url("../../images/icons/icon-minus.svg");
   }
 
   &--increase {
-    --quantity-button: url("../../images/icons/icon-minus.svg");
+    --quantity-button: url("../../images/icons/icon-plus.svg");
   }
 }
