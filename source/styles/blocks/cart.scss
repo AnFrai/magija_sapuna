@@ -1,4 +1,261 @@
 
+.cart {
+  margin-bottom: 70px;
+}
+
 .cart__title-container {
   @include title-container("../../images/cart-title-mobile.webp");
+}
+
+.cart__product-list {
+  display: flex;
+  flex-direction: column;
+
+  & > .cart__product-card:nth-child(even) {
+    background-color: rgba($company-light-color, 0.2);
+  }
+}
+
+.cart__product-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  row-gap: 15px;
+  column-gap: 15px;
+
+  padding: 15px;
+}
+
+.cart__grid-element {
+  &--name {
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+
+  &--delete {
+    grid-row: 1;
+    grid-column: 2;
+
+    justify-self: flex-end;
+  }
+
+  &--image {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  &--options {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  &--properties {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  &--quantity {
+    grid-row: 3;
+    grid-column: 2;
+
+    align-self: flex-end;
+    justify-self: start;
+  }
+}
+
+.cart__product-card-title-link {
+  align-self: center;
+  justify-self: center;
+}
+
+.cart__product-card-title {
+  font-size: 24px;
+}
+
+.cart__product-card-image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  align-self: flex-start;
+
+  margin-left: -15px;
+
+  height: 95px;
+  width: 95px;
+}
+
+.cart__product-card-image-container {
+  display: block;
+}
+
+.cart__product-card-image {
+  @include image-stabilization;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 5%;
+}
+
+.cart__product-delete-button {
+  width: 30px;
+  height: 30px;
+
+  background-color: rgba($basic-grey, 0.4);
+}
+
+.cart__product-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart__option-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 5px;
+
+  word-wrap: break-word;
+  color: rgba($basic-grey, 0.7);
+}
+
+.cart__checkbox-radio-container-title {
+  font-weight: 500;
+}
+
+.cart__dropdown-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__checkbox-radio-container-dropdown {
+  display: flex;
+  width: 100%;
+
+  text-align: start;
+  font-family: inherit;
+
+  &::after {
+    @include pseudo-element;
+    width: 20px;
+    height: 20px;
+
+    margin-left: auto;
+    align-self: center;
+
+    background-color: $company-dark-color;
+    mask: url("../../images/icons/icon-arrow-down.svg") no-repeat center;
+    mask-size: $icon-mini;
+
+  }
+
+  &--opened {
+    &::after {
+      transform: scaleY(-1);
+    }
+  }
+}
+
+.cart__option-label {
+ display: flex;
+ gap: 10px;
+ width: 100%;
+ justify-content: space-between;
+}
+
+.cart__option-input {
+  accent-color: $basic-green;
+
+  &:checked + .cart__option-label {
+    color: $basic-green;
+    font-weight: 500;
+  }
+}
+
+.cart__product-option-name {
+  max-width: 170px;
+}
+
+.cart__product-option-price {
+  text-align: end;
+  align-self: flex-end;
+}
+
+.cart__card-properties {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: end;
+
+  &::before {
+    @include pseudo-element;
+    content: "";
+    width: 100%;
+    height: 1px;
+
+    background-color: $company-dark-color;
+    margin-bottom: 10px;
+  }
+}
+
+.cart__card-properties-item {
+  &--price{
+    margin-top: 20px;
+  }
+}
+
+.cart__quantity-control {
+  display: grid;
+  grid-template-columns: 20px 30px 20px;
+  max-width: 110px;
+  max-height: 50px;
+  padding: 8px;
+  margin-top: 10px;
+
+  box-sizing: border-box;
+  position: relative;
+
+  border: 1px solid $company-dark-color;
+  border-radius: 20px;
+}
+
+.cart__quantity-input {
+  position: relative;
+  align-self: flex-end;
+  text-align: center;
+  padding: 0;
+
+  font-family: inherit;
+  line-height: 20px;
+  appearance: textfield;
+
+  background-color: transparent;
+  border: none;
+}
+
+.cart__quantity-input::-webkit-outer-spin-button,
+.cart__quantity-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.cart__quantity-button {
+  width: 20px;
+  height: 20px;
+
+  align-self: center;
+
+  background-color: $company-dark-color;
+  mask: var(--quantity-button) no-repeat center;
+  mask-size: 10px 10px;
+
+  border: none;
+
+  &--decrease {
+    --quantity-button: url("../../images/icons/icon-plus.svg");
+  }
+
+  &--increase {
+    --quantity-button: url("../../images/icons/icon-minus.svg");
+  }
 }

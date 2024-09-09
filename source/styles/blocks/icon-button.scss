@@ -65,6 +65,14 @@
   }
 
 
+
+  // CART
+
+  &--cart-delete {
+    --icon-button: url("../../images/icons/stack.svg#icon-form-cross");
+    mask-size: $icon-small;
+  }
+
   // футер
   &--footer {
     background-color: $basic-white;

@@ -18,22 +18,3 @@
 //     mask: url("../../images/icons/stack.svg#icon-wishlist-added") no-repeat center;
 //   }
 // }
-
-.catalog-favorite__message {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.catalog-favorite__message-text {
-  margin: 5px 0;
-}
-
-.catalog-favorite__message-link {
-  display: inline-block;
-}
-
-.catalog-favorite__message-button {
-  width: 60%;
-  padding: 15px;
-}
