@@ -1,0 +1,1 @@
+function e(){document.querySelectorAll(".cart__checkbox-radio-container-dropdown").forEach(o=>{o.addEventListener("click",function(){this.closest("li").querySelectorAll(".cart__option-wrapper").forEach(t=>{t.classList.toggle("visually-hidden")}),o.classList.toggle("cart__checkbox-radio-container-dropdown--opened")})})}export{e as initCartDropdowns};
