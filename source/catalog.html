@@ -9,7 +9,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/favicon@1x.png" type="image/png" sizes="32x32">
     <link rel="manifest" href="manifest.webmanifest">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/main.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header container">
@@ -222,11 +222,155 @@
     </header>
 
     <main class="main-container">
-      <section class="catalog">
-        <div class="slider-catalog__div">
-          <h1 class="title ">Kuća čarobnih sapuna</h1>
-          <h2 class="title ">Katalog proizvoda</h2>
+      <section class="main-catalog">
+        <div class="main-catalog__title-container page__title-container">
+          <h1 class="title main-catalog__title page__title-text">Kuća čarobnih sapuna</h1>
+          <h2 class="title main-catalog__subtitle page__subtitle">Katalog proizvoda</h2>
         </div>
+
+        <ul class="list main-catalog__list">
+          <li class="main-catalog__card main-catalog__card--sale" data-product-id="soap-malo-pile">
+            <a class="cancel-style main-catalog__card-image-link" href="#">
+              <picture class="main-catalog__card-image-container">
+                <source width="1019" height="1080" type="image/webp" srcset="images/catalog-photos/pile-2@1x.webp 1x">
+
+                <img class="main-catalog__card-image" width="1019" height="1080" src="images/catalog-photos/pile-2@1x.png" alt="Sapun u obliku malog pileta">
+              </picture>
+              <p class="main-catalog__card-image-superscript main-catalog__card-image-superscript--sale">
+                <span class="main-catalog__card-image-superscript-text main-catalog__card-image-superscript-text--sale">-15%</span>
+              </p>
+            </a>
+            <a class="cancel-style main-catalog__card-title-link" href="#" tabindex="-1">
+              <h3 class="title main-catalog__card-title">Malo pile</h3>
+            </a>
+            <ul class="list main-catalog__card-properties">
+              <li class="list-item main-catalog__card-properties-item main-catalog__card-properties-item--weigth">
+                <span class="main-catalog__card-properties-item-title">Gramaža</span>
+                <span class="main-catalog__card-properties-item-value">70g</span>
+              </li>
+              <li class="list-item main-catalog__card-properties-item main-catalog__card-properties-item--price main-catalog__card-properties-item--price-sale">
+                <span class="main-catalog__card-properties-item-title">Cena</span>
+                <span class="main-catalog__card-properties-item-value main-catalog__card-properties-item-value--sale">500 rsd
+                  <span class="main-catalog__card-properties-item-value main-catalog__card-properties-item-value--sale-price"></span>
+                </span>
+              </li>
+            </ul>
+            <div class="main-catalog__card-button-wrapper">
+              <button class="main-catalog__card-button favorite-button main-catalog__card-button--favorite-add" type="button"><span class="visually-hidden">Dodati u listu želja</span></button>
+              <button class="main-catalog__card-button cart-button main-catalog__card-button--add-to-cart" data-product-id="soap-malo-pile" type="button">
+                <span class="visually-hidden">Dodati u korpu</span>
+                <span class="main-catalog__card-button-counter main-catalog__card-button-counter--cart">0</span>
+              </button>
+            </div>
+            <div class="main-catalog__card-message main-catalog__card-message--added-to-cart">
+              <span class="main-catalog__card-message-text">Proizvod je uspešno dodat u korpu</span>
+            </div>
+          </li>
+          <li class="main-catalog__card main-catalog__card--new snake-animation" data-product-id="soap-zekica">
+            <span class="snake-animation__card snake-animation__card--horizontal snake-animation__card--top"></span>
+            <span class="snake-animation__card snake-animation__card--vertical snake-animation__card--right"></span>
+            <span class="snake-animation__card snake-animation__card--horizontal snake-animation__card--bottom"></span>
+            <span class="snake-animation__card snake-animation__card--vertical snake-animation__card--left"></span>
+            <a class="cancel-style main-catalog__card-image-link" href="#">
+              <picture class="main-catalog__card-image-container">
+                <source width="160" height="160" type="image/webp" srcset="images/catalog-photos/zecic@1x.webp 1x">
+
+                <img class="main-catalog__card-image" width="160" height="160" src="images/catalog-photos/zecic@1x.jpg" alt="Sapun u obliku zekice">
+
+              </picture>
+              <p class="main-catalog__card-image-superscript main-catalog__card-image-superscript--new">
+                <span class="main-catalog__card-image-superscript-text">Novo!</span>
+              </p>
+            </a>
+            <a class="cancel-style main-catalog__card-title-link" href="#" tabindex="-1">
+              <h3 class="title main-catalog__card-title">Zekica</h3>
+            </a>
+            <ul class="list main-catalog__card-properties">
+              <li class="list-item main-catalog__card-properties-item main-catalog__card-properties-item--weigth">
+                <span class="main-catalog__card-properties-item-title">Gramaža</span>
+                <span class="main-catalog__card-properties-item-value">70g</span>
+              </li>
+              <li class="list-item main-catalog__card-properties-item main-catalog__card-properties-item--price">
+                <span class="main-catalog__card-properties-item-title">Cena</span>
+                <span class="main-catalog__card-properties-item-value">400 rsd</span>
+              </li>
+            </ul>
+            <div class="main-catalog__card-button-wrapper">
+              <button class="main-catalog__card-button favorite-button main-catalog__card-button--favorite-add" type="button"><span class="visually-hidden">Dodati u listu želja</span></button>
+              <button class="main-catalog__card-button cart-button main-catalog__card-button--add-to-cart" data-product-id="soap-zekica" type="button">
+                <span class="visually-hidden">Dodati u korpu</span>
+                <span class="main-catalog__card-button-counter main-catalog__card-button-counter--cart">0</span>
+              </button>
+            </div>
+            <div class="main-catalog__card-message main-catalog__card-message--added-to-cart">
+              <span class="main-catalog__card-message-text">Proizvod je uspešno dodat u korpu</span>
+            </div>
+          </li>
+          <li class="main-catalog__card" data-product-id="sets-uskrsnji-set">
+            <a class="cancel-style main-catalog__card-image-link" href="#">
+              <picture class="main-catalog__card-image-container">
+                <source width="736" height="981" type="image/webp" srcset="images/catalog-photos/uskrsnji-set@1x.webp 1x">
+
+                <img class="main-catalog__card-image" width="736" height="981" src="images/catalog-photos/uskrsnji-set@1x.jpg" alt="Set sapuna sa uskršnjim motivima">
+              </picture>
+            </a>
+            <a class="cancel-style main-catalog__card-title-link" href="#" tabindex="-1">
+              <h3 class="title main-catalog__card-title">Uskršnji set</h3>
+            </a>
+            <ul class="list main-catalog__card-properties main-catalog__card-properties--set">
+              <li class="list-item main-catalog__card-properties-item main-catalog__card-properties-item--set">
+                <span class="main-catalog__card-properties-item-title">Sastav seta:</span>
+                <span class="main-catalog__card-properties-item-value main-catalog__card-properties-item-value--set-discription">Jaje, Zeka, cvetic, poklon-kutija</span>
+              </li>
+              <li class="list-item main-catalog__card-properties-item main-catalog__card-properties-item--price">
+                <span class="main-catalog__card-properties-item-title">Cena</span>
+                <span class="main-catalog__card-properties-item-value">1200 rsd</span>
+              </li>
+            </ul>
+            <div class="main-catalog__card-button-wrapper">
+              <button class="main-catalog__card-button favorite-button main-catalog__card-button--favorite-add" type="button"><span class="visually-hidden">Dodati u listu želja</span></button>
+              <button class="main-catalog__card-button cart-button main-catalog__card-button--add-to-cart" data-product-id="sets-uskrsnji-set" type="button">
+                <span class="visually-hidden">Dodati u korpu</span>
+                <span class="main-catalog__card-button-counter main-catalog__card-button-counter--cart">0</span>
+              </button>
+            </div>
+            <div class="main-catalog__card-message main-catalog__card-message--added-to-cart">
+              <span class="main-catalog__card-message-text">Proizvod je uspešno dodat u korpu</span>
+            </div>
+          </li>
+          <li class="main-catalog__card" data-product-id="sets-mini-helloween-set">
+            <a class="cancel-style main-catalog__card-image-link" href="#">
+              <picture class="main-catalog__card-image-container">
+                <source width="576" height="675" type="image/webp" srcset="images/catalog-photos/mini-hell@1x.webp 1x">
+
+                <img class="main-catalog__card-image" width="576" height="675" src="images/catalog-photos/mini-hell@1x.jpg" alt="Set sapuna sa motivima Noći veštica">
+              </picture>
+            </a>
+            <a class="cancel-style main-catalog__card-title-link" href="#" tabindex="-1">
+              <h3 class="title main-catalog__card-title">Mini Helloween set</h3>
+            </a>
+            <ul class="list main-catalog__card-properties main-catalog__card-properties--set">
+              <li class="list-item main-catalog__card-properties-item main-catalog__card-properties-item--set">
+                <span class="main-catalog__card-properties-item-title">Sastav seta:</span>
+                <span class="main-catalog__card-properties-item-value main-catalog__card-properties-item-value--set-discription">Mini bundeva, lobanja na podlozi, poklon-kutija</span>
+              </li>
+              <li class="list-item main-catalog__card-properties-item main-catalog__card-properties-item--price">
+                <span class="main-catalog__card-properties-item-title">Cena</span>
+                <span class="main-catalog__card-properties-item-value">900 rsd</span>
+              </li>
+            </ul>
+            <div class="main-catalog__card-button-wrapper">
+              <button class="main-catalog__card-button favorite-button main-catalog__card-button--favorite-add" type="button"><span class="visually-hidden">Dodati u listu želja</span></button>
+              <button class="main-catalog__card-button cart-button main-catalog__card-button--add-to-cart" data-product-id="sets-mini-helloween-set" type="button">
+                <span class="visually-hidden">Dodati u korpu</span>
+                <span class="main-catalog__card-button-counter main-catalog__card-button-counter--cart">0</span>
+              </button>
+            </div>
+            <div class="main-catalog__card-message main-catalog__card-message--added-to-cart">
+              <span class="main-catalog__card-message-text">Proizvod je uspešno dodat u korpu</span>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
 

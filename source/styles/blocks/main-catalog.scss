@@ -1,42 +1,43 @@
-.catalog {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 20px 0 50px;
+.main-catalog__title-container {
+  @include title-container("../../images/catalog-title-mobile.webp");
 }
 
-.slider-catalog__title {
+.main-catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  padding: 20px 0 50px;
+
+  background-color: rgba($company-light-color, 0.2);
+}
+
+.main-catalog__title {
   margin: 0 auto;
   padding: 10px 0;
 
   font-size: 25px;
 }
 
-.slider-catalog__list {
+.main-catalog__list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   gap: 20px;
 
-  padding: 0 25px 35px 25px;
-
-  overflow-x: auto;
+  padding: 0 15px 35px 15px;
 }
 
-.slider-catalog__card {
+.main-catalog__card {
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 
   position: relative;
   overflow: hidden;
 
-  min-width: 310px;
-  max-width: 350px;
+  width: 100%;
   padding: 15px;
-  padding-top: 20px;
   box-sizing: border-box;
 
   flex-grow: 1;
@@ -47,23 +48,26 @@
 
 
 // Фото товара
-.slider-catalog__card-image-link {
+.main-catalog__card-image-link {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 
-  height: 260px;
-  width: 260px;
+  margin: -15px;
+  margin-right: 0;
+
+  height: 150px;
+  width: 150px;
 }
 
-.slider-catalog__card-image-container {
+.main-catalog__card-image-container {
   display: block;
   height: 100%;
   width: 260px;
 }
 
-.slider-catalog__card-image {
+.main-catalog__card-image {
   @include image-stabilization;
   height: 100%;
   object-fit: cover;
@@ -80,7 +84,7 @@
   }
 }
 
-.slider-catalog__card-image-superscript {
+.main-catalog__card-image-superscript {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +122,7 @@
   }
 }
 
-.slider-catalog__card-image-superscript-text {
+.main-catalog__card-image-superscript-text {
   position: relative;
   &--sale {
     text-shadow: -1px 1px 0 $basic-red ;
@@ -126,12 +130,12 @@
 }
 
 // Название
-.slider-catalog__card-title {
+.main-catalog__card-title {
   font-size: 22px;
 }
 
 // Описание и свойства
-.slider-catalog__card-properties {
+.main-catalog__card-properties {
   display: flex;
   flex-direction: column;
   margin-top: auto;
@@ -148,11 +152,11 @@
   }
 }
 
-.slider-catalog__card-properties--set .slider-catalog__card-properties-item--price {
+.main-catalog__card-properties--set .main-catalog__card-properties-item--price {
   margin-top: auto;
 }
 
-.slider-catalog__card-properties-item {
+.main-catalog__card-properties-item {
   display: flex;
   justify-content: space-between;
 
@@ -172,7 +176,7 @@
   }
 }
 
-.slider-catalog__card-properties-item-value {
+.main-catalog__card-properties-item-value {
   position: relative;
 
   &--set-discription {
@@ -209,13 +213,13 @@
 
 
 // Кнопки
-.slider-catalog__card-button-wrapper {
+.main-catalog__card-button-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
 }
 
-.slider-catalog__card-button {
+.main-catalog__card-button {
   position: relative;
   width: 40px;
   height: 40px;
@@ -324,7 +328,7 @@
   }
 }
 
-.slider-catalog__card-message {
+.main-catalog__card-message {
   display: flex;
   align-items: center;
   position: absolute;
@@ -359,13 +363,13 @@
   }
 }
 
-.slider-catalog__card-message-text {
+.main-catalog__card-message-text {
   &--added {
     animation: pulse 0.5s ease-in-out;
   }
 }
 
-.slider-catalog__card-button-counter {
+.main-catalog__card-button-counter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,7 +385,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .slider-catalog__list {
+  .main-catalog__list {
     flex-wrap: wrap;
     justify-content: center;
   }
