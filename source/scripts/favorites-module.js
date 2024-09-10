@@ -2,12 +2,18 @@ import { cartModule } from './cart-module.js'; // Импортируем мод�
 import { toggleFavoriteMessage } from './favorite-text-visibility-module.js';
 
 export const favoritesModule = (() => {
-  // Получение избранных товаров из localStorage
-  const getFavorites = () => JSON.parse(localStorage.getItem('favorites')) || [];
-
-  // Сохранение избранных товаров в localStorage
-  const saveFavorites = (favorites) => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+  // Функция для обновления всех кнопок избранного
+  const updateFavoriteButtons = (productId, isFavorite) => {
+    const catalogButtons = document.querySelectorAll(`[data-product-id="${productId}"] .favorite-button`);
+    catalogButtons.forEach((button) => {
+      if (isFavorite) {
+        button.classList.remove('catalog__card-button--favorite-add');
+        button.classList.add('catalog__card-button--favorite-added');
+      } else {
+        button.classList.remove('catalog__card-button--favorite-added');
+        button.classList.add('catalog__card-button--favorite-add');
+      }
+    });
   };
 
   // Удаление товара из избранного
@@ -16,42 +22,46 @@ export const favoritesModule = (() => {
     favorites = favorites.filter((id) => id !== productId);
     saveFavorites(favorites);
 
-    // Удаляем товар только из списка избранных, а не из основного каталога
+    // Обновляем состояние кнопок "Избранное" на всех страницах
+    updateFavoriteButtons(productId, false);
+
+    // Удаляем товар из списка избранных на главной странице
     const favoriteListItem = document.querySelector(`#favoriteList [data-product-id="${productId}"]`);
     if (favoriteListItem) {
       favoriteListItem.remove();
     }
 
-    // Обновляем состояние кнопки "Избранное" в основном каталоге
-    const catalogItem = document.querySelector(`.catalog__list [data-product-id="${productId}"] .favorite-button`);
-    if (catalogItem) {
-      catalogItem.classList.remove('catalog__card-button--favorite-added');
-      catalogItem.classList.add('catalog__card-button--favorite-add');
-    }
-
     toggleFavoriteMessage();
   };
 
-  // Обновление списка избранных товаров
+  // Функция для обновления списка избранных товаров на главной странице
   const updateFavoriteList = (productId, productCard) => {
     const favoriteList = document.getElementById('favoriteList');
-    const cardCopy = productCard.cloneNode(true);
+    if (favoriteList) {
+      const cardCopy = productCard.cloneNode(true);
 
-    // Обновляем класс кнопки избранного у новой карточки
-    const favoriteButton = cardCopy.querySelector('.favorite-button');
-    favoriteButton.classList.remove('catalog__card-button--favorite-add');
-    favoriteButton.classList.add('catalog__card-button--favorite-added');
+      // Обновляем кнопку избранного у новой карточки
+      const favoriteButton = cardCopy.querySelector('.favorite-button');
+      favoriteButton.classList.remove('catalog__card-button--favorite-add');
+      favoriteButton.classList.add('catalog__card-button--favorite-added');
 
-    // Привязываем обработчик для удаления товара из избранного
-    favoriteButton.addEventListener('click', () => removeFromFavorites(productId));
+      // Привязываем обработчик для удаления товара из избранного
+      favoriteButton.addEventListener('click', () => removeFromFavorites(productId));
 
-    // Привязываем обработчики для кнопки добавления в корзину, используя cartModule
-    const cartButton = cardCopy.querySelector('.cart-button');
-    cartButton.addEventListener('click', () => cartModule.handleCartAddition(cartButton));
+      // Привязываем обработчики для добавления в корзину, используя cartModule
+      const cartButton = cardCopy.querySelector('.cart-button');
+      cartButton.addEventListener('click', () => cartModule.handleCartAddition(cartButton));
 
-    favoriteList.appendChild(cardCopy);
+      favoriteList.appendChild(cardCopy);
+    }
+  };
 
-    toggleFavoriteMessage();
+  // Получение избранных товаров из localStorage
+  const getFavorites = () => JSON.parse(localStorage.getItem('favorites')) || [];
+
+  // Сохранение избранных товаров в localStorage
+  const saveFavorites = (favorites) => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
   };
 
   // Добавление товара в избранное
@@ -60,6 +70,11 @@ export const favoritesModule = (() => {
     if (!favorites.includes(productId)) {
       favorites.push(productId);
       saveFavorites(favorites);
+
+      // Обновляем состояние кнопок "Избранное" на всех страницах
+      updateFavoriteButtons(productId, true);
+
+      // Обновляем список избранного на главной странице (если он есть)
       updateFavoriteList(productId, productCard);
     }
   };
@@ -75,8 +90,6 @@ export const favoritesModule = (() => {
     } else {
       // Добавляем в избранное
       addToFavorites(productId, productCard);
-      button.classList.remove('catalog__card-button--favorite-add');
-      button.classList.add('catalog__card-button--favorite-added');
     }
   };
 
@@ -91,11 +104,19 @@ export const favoritesModule = (() => {
   // Инициализация: загрузка избранных товаров при загрузке страницы
   const initFavoritesFromStorage = () => {
     const favorites = getFavorites();
+
+    // Обновляем кнопки избранного на всех страницах
     favorites.forEach((productId) => {
       const productCard = document.querySelector(`[data-product-id="${productId}"]`);
       if (productCard) {
-        productCard.querySelector('.favorite-button').classList.remove('catalog__card-button--favorite-add');
-        productCard.querySelector('.favorite-button').classList.add('catalog__card-button--favorite-added');
+        const favoriteButton = productCard.querySelector('.favorite-button');
+
+        if (favoriteButton) {
+          favoriteButton.classList.remove('catalog__card-button--favorite-add');
+          favoriteButton.classList.add('catalog__card-button--favorite-added');
+        }
+
+        // Обновляем список избранного на главной странице (если он есть)
         updateFavoriteList(productId, productCard);
       }
     });
