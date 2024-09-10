@@ -1,11 +1,11 @@
 export const discountModule = (() => {
   const applyDiscounts = () => {
-    const cards = document.querySelectorAll('.slider-catalog__card--sale');
+    const cards = document.querySelectorAll('.catalog__card--sale');
 
     cards.forEach((card) => {
-      const originalPriceElement = card.querySelector('.slider-catalog__card-properties-item-value--sale');
-      const discountPercentageElement = card.querySelector('.slider-catalog__card-image-superscript-text--sale');
-      const priceAfterDiscountElement = card.querySelector('.slider-catalog__card-properties-item-value--sale-price');
+      const originalPriceElement = card.querySelector('.catalog__card-properties-item-value--sale');
+      const discountPercentageElement = card.querySelector('.catalog__card-image-superscript-text--sale');
+      const priceAfterDiscountElement = card.querySelector('.catalog__card-properties-item-value--sale-price');
 
       if (originalPriceElement && discountPercentageElement && priceAfterDiscountElement) {
         const originalPrice = parseFloat(originalPriceElement.textContent);
