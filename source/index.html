@@ -261,8 +261,80 @@
                 </li>
               </ul>
               <div class="catalog__card-button-wrapper">
-                <button class="catalog__card-button favorite-button slider-catalog__card-button--favorite-add" type="button"><span class="visually-hidden">Dodati u listu želja</span></button>
-                <button class="catalog__card-button cart-button slider-catalog__card-button--add-to-cart" data-product-id="soap-malo-pile" type="button">
+                <button class="catalog__card-button favorite-button catalog__card-button--favorite-add" type="button"><span class="visually-hidden">Dodati u listu želja</span></button>
+                <button class="catalog__card-button cart-button catalog__card-button--add-to-cart" data-product-id="soap-malo-pile" type="button">
+                  <span class="visually-hidden">Dodati u korpu</span>
+                  <span class="catalog__card-button-counter catalog__card-button-counter--cart">0</span>
+                </button>
+              </div>
+              <!-- <div class="catalog__card-message slider-catalog__card-message--added-to-cart">
+                <span class="catalog__card-message-text">Proizvod je uspešno dodat u korpu</span>
+              </div> -->
+            </li>
+            <li class="catalog__card slider-catalog__card" data-product-id="soap-malo-pile">
+              <a class="cancel-style catalog__card-image-link slider-catalog__card-image-link" href="#">
+                <picture class="catalog__card-image-container slider-catalog__card-image-container">
+                  <source width="1019" height="1080" type="image/webp" srcset="images/catalog-photos/pile-2@1x.webp 1x">
+
+                  <img class="catalog__card-image slider-catalog__card-image" width="1019" height="1080" src="images/catalog-photos/pile-2@1x.png" alt="Sapun u obliku malog pileta">
+                </picture>
+                <!-- <p class="slider-catalog__card-image-superscript slider-catalog__card-image-superscript--sale">
+                  <span class="slider-catalog__card-image-superscript-text slider-catalog__card-image-superscript-text--sale">-15%</span>
+                </p> -->
+              </a>
+              <a class="cancel-style catalog__card-title-link slider-catalog__card-title-link" href="#" tabindex="-1">
+                <h3 class="title catalog__card-title slider-catalog__card-title">Malo pile</h3>
+              </a>
+              <ul class="list catalog__card-properties slider-catalog__card-properties">
+                <li class="list-item catalog__card-properties-item slider-catalog__card-properties-item">
+                  <span class="catalog__card-properties-item-title slider-catalog__card-properties-item-title">Gramaža</span>
+                  <span class="catalog__card-properties-item-value slider-catalog__card-properties-item-value">70g</span>
+                </li>
+                <li class="list-item catalog__card-properties-item slider-catalog__card-properties-item">
+                  <span class="catalog__card-properties-item-title slider-catalog__card-properties-item-title">Cena</span>
+                  <span class="catalog__card-properties-item-value slider-catalog__card-properties-item-value">500 rsd
+                  </span>
+                </li>
+              </ul>
+              <div class="catalog__card-button-wrapper">
+                <button class="catalog__card-button favorite-button catalog__card-button--favorite-add" type="button"><span class="visually-hidden">Dodati u listu želja</span></button>
+                <button class="catalog__card-button cart-button catalog__card-button--add-to-cart" data-product-id="soap-malo-pile" type="button">
+                  <span class="visually-hidden">Dodati u korpu</span>
+                  <span class="catalog__card-button-counter catalog__card-button-counter--cart">0</span>
+                </button>
+              </div>
+              <!-- <div class="catalog__card-message slider-catalog__card-message--added-to-cart">
+                <span class="catalog__card-message-text">Proizvod je uspešno dodat u korpu</span>
+              </div> -->
+            </li>
+            <li class="catalog__card slider-catalog__card" data-product-id="soap-malo-pile">
+              <a class="cancel-style catalog__card-image-link slider-catalog__card-image-link" href="#">
+                <picture class="catalog__card-image-container slider-catalog__card-image-container">
+                  <source width="1019" height="1080" type="image/webp" srcset="images/catalog-photos/pile-2@1x.webp 1x">
+
+                  <img class="catalog__card-image slider-catalog__card-image" width="1019" height="1080" src="images/catalog-photos/pile-2@1x.png" alt="Sapun u obliku malog pileta">
+                </picture>
+                <!-- <p class="slider-catalog__card-image-superscript slider-catalog__card-image-superscript--sale">
+                  <span class="slider-catalog__card-image-superscript-text slider-catalog__card-image-superscript-text--sale">-15%</span>
+                </p> -->
+              </a>
+              <a class="cancel-style catalog__card-title-link slider-catalog__card-title-link" href="#" tabindex="-1">
+                <h3 class="title catalog__card-title slider-catalog__card-title">Malo pile</h3>
+              </a>
+              <ul class="list catalog__card-properties slider-catalog__card-properties">
+                <li class="list-item catalog__card-properties-item slider-catalog__card-properties-item">
+                  <span class="catalog__card-properties-item-title slider-catalog__card-properties-item-title">Gramaža</span>
+                  <span class="catalog__card-properties-item-value slider-catalog__card-properties-item-value">70g</span>
+                </li>
+                <li class="list-item catalog__card-properties-item slider-catalog__card-properties-item">
+                  <span class="catalog__card-properties-item-title slider-catalog__card-properties-item-title">Cena</span>
+                  <span class="catalog__card-properties-item-value slider-catalog__card-properties-item-value">500 rsd
+                  </span>
+                </li>
+              </ul>
+              <div class="catalog__card-button-wrapper">
+                <button class="catalog__card-button favorite-button catalog__card-button--favorite-add" type="button"><span class="visually-hidden">Dodati u listu želja</span></button>
+                <button class="catalog__card-button cart-button catalog__card-button--add-to-cart" data-product-id="soap-malo-pile" type="button">
                   <span class="visually-hidden">Dodati u korpu</span>
                   <span class="catalog__card-button-counter catalog__card-button-counter--cart">0</span>
                 </button>
@@ -379,15 +451,15 @@
           <a class="cancel-style button button-contrary catalog-button" href="catalog.html">Katalog</a>
         </section>
 
-        <section class="slider-catalog catalog-favorite" id="favorite-section">
-          <h2 class="title slider-catalog__title catalog-favorite__title">Omiljeno &#10084;</h2>
+        <section class="catalog slider-catalog slider-catalog--favorite" id="favorite-section">
+          <h2 class="title catalog__title">Omiljeno &#10084;</h2>
           <div class="no-articles">
             <p class="no-articles__message-text">Nema omiljenih artikala.</p>
             <p class="no-articles__message-text">Vidi ste sve imamo u <a class="cancel-style no-articles__message-link" href="catalog.html">ponudi</a></p>
             <a class="cancel-style button no-articles__button" href="catalog.html">Katalog</a>
           </div>
 
-          <ul class="list slider-catalog__list catalog-favorite__list" id="favoriteList">
+          <ul class="list catalog__list slider-catalog__list" id="favoriteList">
           </ul>
 
         </section>
