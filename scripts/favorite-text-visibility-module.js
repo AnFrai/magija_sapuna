@@ -1,1 +1,1 @@
-function s(){let t=document.getElementById("favoriteList"),e=document.querySelector(".catalog-favorite__message");t&&e&&(t.children.length>0?e.classList.add("visually-hidden"):e.classList.remove("visually-hidden"))}export{s as toggleFavoriteMessage};
+function s(){let t=document.getElementById("favoriteList"),e=document.querySelector(".no-articles");t&&e&&(t.children.length>0?e.classList.add("visually-hidden"):e.classList.remove("visually-hidden"))}export{s as toggleFavoriteMessage};
