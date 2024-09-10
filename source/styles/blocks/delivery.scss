@@ -11,10 +11,6 @@
   margin-bottom: 15px;
 }
 
-.delivery__title-container {
-  @include title-container("../../images/delivery-title-mobile-2.webp");
-}
-
 .delivery__info {
   display: flex;
   flex-direction: column;

@@ -3,10 +3,6 @@
   margin-bottom: 70px;
 }
 
-.cart__title-container {
-  @include title-container("../../images/cart-title-mobile.webp");
-}
-
 .cart__product-list {
   display: flex;
   flex-direction: column;

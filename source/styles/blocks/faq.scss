@@ -13,11 +13,6 @@
   margin-bottom: 15px;
 }
 
-.faq__title-container {
-  @include title-container("../../images/faq-title-mobile.webp");
-}
-
-
 @keyframes slideAndFade {
   from {
     background-size: 0% 100%;
