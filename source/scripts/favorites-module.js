@@ -23,10 +23,10 @@ export const favoritesModule = (() => {
     }
 
     // Обновляем состояние кнопки "Избранное" в основном каталоге
-    const catalogItem = document.querySelector(`.catalog__list [data-product-id="${productId}"] .favorite-button`);
+    const catalogItem = document.querySelector(`.slider-catalog__list [data-product-id="${productId}"] .favorite-button`);
     if (catalogItem) {
-      catalogItem.classList.remove('catalog__card-button--favorite-added');
-      catalogItem.classList.add('catalog__card-button--favorite-add');
+      catalogItem.classList.remove('slider-catalog__card-button--favorite-added');
+      catalogItem.classList.add('slider-catalog__card-button--favorite-add');
     }
 
     toggleFavoriteMessage();
@@ -39,8 +39,8 @@ export const favoritesModule = (() => {
 
     // Обновляем класс кнопки избранного у новой карточки
     const favoriteButton = cardCopy.querySelector('.favorite-button');
-    favoriteButton.classList.remove('catalog__card-button--favorite-add');
-    favoriteButton.classList.add('catalog__card-button--favorite-added');
+    favoriteButton.classList.remove('slider-catalog__card-button--favorite-add');
+    favoriteButton.classList.add('slider-catalog__card-button--favorite-added');
 
     // Привязываем обработчик для удаления товара из избранного
     favoriteButton.addEventListener('click', () => removeFromFavorites(productId));
@@ -66,17 +66,17 @@ export const favoritesModule = (() => {
 
   // Функция для переключения состояния кнопки добавления в избранное
   const toggleFavorite = (button) => {
-    const productCard = button.closest('.catalog__card');
+    const productCard = button.closest('.slider-catalog__card');
     const productId = productCard.querySelector('.cart-button').dataset.productId;
 
     // Если товар уже добавлен, удаляем из избранного
-    if (button.classList.contains('catalog__card-button--favorite-added')) {
+    if (button.classList.contains('slider-catalog__card-button--favorite-added')) {
       removeFromFavorites(productId);
     } else {
       // Добавляем в избранное
       addToFavorites(productId, productCard);
-      button.classList.remove('catalog__card-button--favorite-add');
-      button.classList.add('catalog__card-button--favorite-added');
+      button.classList.remove('slider-catalog__card-button--favorite-add');
+      button.classList.add('slider-catalog__card-button--favorite-added');
     }
   };
 
@@ -94,8 +94,8 @@ export const favoritesModule = (() => {
     favorites.forEach((productId) => {
       const productCard = document.querySelector(`[data-product-id="${productId}"]`);
       if (productCard) {
-        productCard.querySelector('.favorite-button').classList.remove('catalog__card-button--favorite-add');
-        productCard.querySelector('.favorite-button').classList.add('catalog__card-button--favorite-added');
+        productCard.querySelector('.favorite-button').classList.remove('slider-catalog__card-button--favorite-add');
+        productCard.querySelector('.favorite-button').classList.add('slider-catalog__card-button--favorite-added');
         updateFavoriteList(productId, productCard);
       }
     });

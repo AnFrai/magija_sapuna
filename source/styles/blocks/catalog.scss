@@ -5,14 +5,14 @@
   padding: 20px 0 50px;
 }
 
-.catalog__title {
+.slider-catalog__title {
   margin: 0 auto;
   padding: 10px 0;
 
   font-size: 25px;
 }
 
-.catalog__list {
+.slider-catalog__list {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -23,7 +23,7 @@
   overflow-x: auto;
 }
 
-.catalog__card {
+.slider-catalog__card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -47,7 +47,7 @@
 
 
 // Фото товара
-.catalog__card-image-link {
+.slider-catalog__card-image-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,13 +57,13 @@
   width: 260px;
 }
 
-.catalog__card-image-container {
+.slider-catalog__card-image-container {
   display: block;
   height: 100%;
   width: 260px;
 }
 
-.catalog__card-image {
+.slider-catalog__card-image {
   @include image-stabilization;
   height: 100%;
   object-fit: cover;
@@ -80,7 +80,7 @@
   }
 }
 
-.catalog__card-image-superscript {
+.slider-catalog__card-image-superscript {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +118,7 @@
   }
 }
 
-.catalog__card-image-superscript-text {
+.slider-catalog__card-image-superscript-text {
   position: relative;
   &--sale {
     text-shadow: -1px 1px 0 $basic-red ;
@@ -126,12 +126,12 @@
 }
 
 // Название
-.catalog__card-title {
+.slider-catalog__card-title {
   font-size: 22px;
 }
 
 // Описание и свойства
-.catalog__card-properties {
+.slider-catalog__card-properties {
   display: flex;
   flex-direction: column;
   margin-top: auto;
@@ -148,11 +148,11 @@
   }
 }
 
-.catalog__card-properties--set .catalog__card-properties-item--price {
+.slider-catalog__card-properties--set .slider-catalog__card-properties-item--price {
   margin-top: auto;
 }
 
-.catalog__card-properties-item {
+.slider-catalog__card-properties-item {
   display: flex;
   justify-content: space-between;
 
@@ -172,7 +172,7 @@
   }
 }
 
-.catalog__card-properties-item-value {
+.slider-catalog__card-properties-item-value {
   position: relative;
 
   &--set-discription {
@@ -209,13 +209,13 @@
 
 
 // Кнопки
-.catalog__card-button-wrapper {
+.slider-catalog__card-button-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
 }
 
-.catalog__card-button {
+.slider-catalog__card-button {
   position: relative;
   width: 40px;
   height: 40px;
@@ -324,7 +324,7 @@
   }
 }
 
-.catalog__card-message {
+.slider-catalog__card-message {
   display: flex;
   align-items: center;
   position: absolute;
@@ -359,13 +359,13 @@
   }
 }
 
-.catalog__card-message-text {
+.slider-catalog__card-message-text {
   &--added {
     animation: pulse 0.5s ease-in-out;
   }
 }
 
-.catalog__card-button-counter {
+.slider-catalog__card-button-counter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,7 +381,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .catalog__list {
+  .slider-catalog__list {
     flex-wrap: wrap;
     justify-content: center;
   }

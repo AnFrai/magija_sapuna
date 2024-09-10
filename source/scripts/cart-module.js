@@ -25,8 +25,8 @@ export const cartModule = (() => {
     const productId = button.dataset.productId;
 
     // Добавляем класс "добавлено в корзину" и сохраняем состояние в куки
-    button.classList.add('catalog__card-button--added-to-cart');
-    button.classList.remove('catalog__card-button--add-to-cart');
+    button.classList.add('slider-catalog__card-button--added-to-cart');
+    button.classList.remove('slider-catalog__card-button--add-to-cart');
     setCookie(`product_${productId}_added`, 'true', 7);
 
     let productCount = parseInt(getCookie(`product_${productId}_count`), 10) || 0;
@@ -34,28 +34,28 @@ export const cartModule = (() => {
 
     setCookie(`product_${productId}_count`, productCount, 7);
 
-    const counterSpan = button.querySelector('.catalog__card-button-counter--cart');
+    const counterSpan = button.querySelector('.slider-catalog__card-button-counter--cart');
     counterSpan.textContent = productCount;
 
     // Обновляем состояние корзины в избранных
     const favoriteItem = document.querySelector(`#favoriteList [data-product-id="${productId}"]`);
     if (favoriteItem) {
       const favoriteCartButton = favoriteItem.querySelector('.cart-button');
-      favoriteCartButton.classList.add('catalog__card-button--added-to-cart');
-      favoriteCartButton.classList.remove('catalog__card-button--add-to-cart');
+      favoriteCartButton.classList.add('slider-catalog__card-button--added-to-cart');
+      favoriteCartButton.classList.remove('slider-catalog__card-button--add-to-cart');
 
-      const favoriteCartCounter = favoriteCartButton.querySelector('.catalog__card-button-counter--cart');
+      const favoriteCartCounter = favoriteCartButton.querySelector('.slider-catalog__card-button-counter--cart');
       favoriteCartCounter.textContent = productCount;
     }
 
     // Обновляем состояние корзины в основном каталоге
-    const originalItem = document.querySelector(`.catalog__list [data-product-id="${productId}"]`);
+    const originalItem = document.querySelector(`.slider-catalog__list [data-product-id="${productId}"]`);
     if (originalItem) {
       const originalCartButton = originalItem.querySelector('.cart-button');
-      originalCartButton.classList.add('catalog__card-button--added-to-cart');
-      originalCartButton.classList.remove('catalog__card-button--add-to-cart');
+      originalCartButton.classList.add('slider-catalog__card-button--added-to-cart');
+      originalCartButton.classList.remove('slider-catalog__card-button--add-to-cart');
 
-      const originalCartCounter = originalCartButton.querySelector('.catalog__card-button-counter--cart');
+      const originalCartCounter = originalCartButton.querySelector('.slider-catalog__card-button-counter--cart');
       originalCartCounter.textContent = productCount;
     }
 
@@ -76,8 +76,8 @@ export const cartModule = (() => {
     // Восстанавливаем состояние кнопки из куки
     const isAdded = getCookie(`product_${productId}_added`) === 'true';
     if (isAdded) {
-      button.classList.add('catalog__card-button--added-to-cart');
-      button.classList.remove('catalog__card-button--add-to-cart');
+      button.classList.add('slider-catalog__card-button--added-to-cart');
+      button.classList.remove('slider-catalog__card-button--add-to-cart');
     }
   };
 
@@ -92,7 +92,7 @@ export const cartModule = (() => {
       const productId = button.dataset.productId;
       const productCount = parseInt(getCookie(`product_${productId}_count`), 10) || 0;
 
-      const counterSpan = button.querySelector('.catalog__card-button-counter--cart');
+      const counterSpan = button.querySelector('.slider-catalog__card-button-counter--cart');
       counterSpan.textContent = productCount;
 
       // Восстанавливаем состояние каждой кнопки

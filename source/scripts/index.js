@@ -157,8 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   favoriteButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      button.classList.toggle('catalog__card-button--favorite-add');
-      button.classList.toggle('catalog__card-button--favorite-added');
+      button.classList.toggle('slider-catalog__card-button--favorite-add');
+      button.classList.toggle('slider-catalog__card-button--favorite-added');
     });
   });
 
@@ -188,30 +188,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cartButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      button.classList.add('catalog__card-button--added-to-cart');
-      button.classList.remove('catalog__card-button--add-to-cart');
+      button.classList.add('slider-catalog__card-button--added-to-cart');
+      button.classList.remove('slider-catalog__card-button--add-to-cart');
 
-      const messageDiv = button.closest('.catalog__card').querySelector('.catalog__card-message');
-      const messageText = messageDiv.querySelector('.catalog__card-message-text');
+      const messageDiv = button.closest('.slider-catalog__card').querySelector('.slider-catalog__card-message');
+      const messageText = messageDiv.querySelector('.slider-catalog__card-message-text');
 
-      messageText.classList.add('catalog__card-message-text--added');
+      messageText.classList.add('slider-catalog__card-message-text--added');
       setTimeout(() => {
-        messageText.classList.remove('catalog__card-message-text--added');
+        messageText.classList.remove('slider-catalog__card-message-text--added');
       }, 500);
 
-      if (messageDiv.classList.contains('catalog__card-message--animate')) {
+      if (messageDiv.classList.contains('slider-catalog__card-message--animate')) {
         clearTimeout(messageDiv.timeoutId);
         messageDiv.timeoutId = setTimeout(() => {
-          messageDiv.classList.remove('catalog__card-message--animate');
+          messageDiv.classList.remove('slider-catalog__card-message--animate');
         }, 4000);
       } else {
-        messageDiv.classList.add('catalog__card-message--animate');
+        messageDiv.classList.add('slider-catalog__card-message--animate');
         messageDiv.timeoutId = setTimeout(() => {
-          messageDiv.classList.remove('catalog__card-message--animate');
+          messageDiv.classList.remove('slider-catalog__card-message--animate');
         }, 4000);
       }
 
-      const counterSpan = button.querySelector('.catalog__card-button-counter--cart');
+      const counterSpan = button.querySelector('.slider-catalog__card-button-counter--cart');
       const currentCount = parseInt(counterSpan.textContent, 10);
       counterSpan.textContent = currentCount + 1;
 
@@ -224,13 +224,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Находим все элементы карточек товаров
 
   // Находим все элементы карточек товаров
-  const cards = document.querySelectorAll('.catalog__card--sale');
+  const cards = document.querySelectorAll('.slider-catalog__card--sale');
 
   cards.forEach((card) => {
     // Получаем основную цену и размер скидки
-    const originalPriceElement = card.querySelector('.catalog__card-properties-item-value--sale');
-    const discountPercentageElement = card.querySelector('.catalog__card-image-superscript-text--sale');
-    const priceAfterDiscountElement = card.querySelector('.catalog__card-properties-item-value--sale-price');
+    const originalPriceElement = card.querySelector('.slider-catalog__card-properties-item-value--sale');
+    const discountPercentageElement = card.querySelector('.slider-catalog__card-image-superscript-text--sale');
+    const priceAfterDiscountElement = card.querySelector('.slider-catalog__card-properties-item-value--sale-price');
 
     if (originalPriceElement && discountPercentageElement && priceAfterDiscountElement) {
       const originalPrice = parseFloat(originalPriceElement.textContent);
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // открытие-закрытие модального окна по клику на ссылку товара
-  // document.querySelectorAll('.catalog__card-title-link, .catalog__card-image-link').forEach((element) => {
+  // document.querySelectorAll('.slider-catalog__card-title-link, .slider-catalog__card-image-link').forEach((element) => {
   //   element.addEventListener('click', (event) => {
   //     event.preventDefault();
   //     openModal();
