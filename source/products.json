@@ -1,0 +1,54 @@
+[
+  {
+    "productId": "soap-malo-pile",
+    "productType": "soap",
+    "productName": "Malo pile",
+    "productWeight": "70g",
+    "productPrice": 500,
+    "discountPercent": 30,
+    "productImagePng": "images/catalog-photos/pile-2@1x.png",
+    "productImageWebp": "images/catalog-photos/pile-2@1x.webp 1x",
+    "productAlt": "Sapun u obliku malog pileta",
+    "imageWidth": 1019,
+    "imageHeight": 1080
+  },
+  {
+    "productId": "soap-zekica",
+    "productType": "soap",
+    "productName": "Zekica",
+    "productWeight": "70g",
+    "productPrice": 400,
+    "discountPercent": 0,
+    "productImagePng": "images/catalog-photos/zecic@1x.jpg",
+    "productImageWebp": "images/catalog-photos/zecic@1x.webp 1x",
+    "productAlt": "Sapun u obliku zekice",
+    "imageWidth": 1019,
+    "imageHeight": 1080
+  },
+  {
+    "productId": "sets-uskrsnji-set",
+    "productType": "set",
+    "productName": "Uskršnji set",
+    "productComposition": "Jaje, Zeka, cvetic, poklon-kutija",
+    "productPrice": 1200,
+    "discountPercent": 10,
+    "productImagePng": "images/catalog-photos/uskrsnji-set@1x.jpg",
+    "productImageWebp": "images/catalog-photos/uskrsnji-set@1x.webp 1x",
+    "productAlt": "Set sapuna sa uskršnjim motivima",
+    "imageWidth": 736,
+    "imageHeight": 981
+  },
+  {
+    "productId": "sets-mini-helloween-set",
+    "productType": "set",
+    "productName": "Mini Helloween set",
+    "productComposition": "Mini bundeva, lobanja na podlozi, poklon-kutija",
+    "productPrice": 1100,
+    "discountPercent": 0,
+    "productImagePng": "images/catalog-photos/mini-hell@1x.jpg",
+    "productImageWebp": "images/catalog-photos/mini-hell@1x.webp 1x",
+    "productAlt": "Set sapuna sa motivima Noći veštica",
+    "imageWidth": 1019,
+    "imageHeight": 1080
+  }
+]

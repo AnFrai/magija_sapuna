@@ -1,4 +1,4 @@
-import { cartModule } from './cart-module.js'; // Импортируем модуль корзины
+import { cartModule } from './add-to-cart/cart-module.js'; // Импортируем модуль корзины
 import { toggleFavoriteMessage } from './favorite-text-visibility-module.js';
 
 export const favoritesModule = (() => {
