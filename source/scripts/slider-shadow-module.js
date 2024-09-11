@@ -1,3 +1,5 @@
+// Тени слайдера категорий шапки
+
 export const sliderShadowModule = (() => {
   const slider = document.querySelector('.main-header__category-slider');
 
@@ -24,8 +26,8 @@ export const sliderShadowModule = (() => {
   };
 
   const init = () => {
-    updateShadow(); // Обновить тени при инициализации
-    bindScrollEvent(); // Привязать событие прокрутки
+    updateShadow();
+    bindScrollEvent();
   };
 
   return { init };

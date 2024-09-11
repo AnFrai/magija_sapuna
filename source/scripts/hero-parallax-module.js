@@ -1,3 +1,5 @@
+// Прокрутка бекграунда hero
+
 export const heroParallaxModule = (() => {
   const hero = document.querySelector('.hero');
   const heroButton = document.querySelector('.hero__button');

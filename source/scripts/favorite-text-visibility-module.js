@@ -1,3 +1,5 @@
+//
+
 export function toggleFavoriteMessage() {
   const favoriteList = document.getElementById('favoriteList');
   const favoriteMessage = document.querySelector('.no-articles');

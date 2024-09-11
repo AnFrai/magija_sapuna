@@ -1,3 +1,5 @@
+// Поиск в хедере
+
 export const searchModule = (() => {
   const searchOpenButton = document.getElementById('search-open-button');
   const searchActivationButton = document.getElementById('search-activation-button');

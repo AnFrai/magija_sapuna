@@ -1,3 +1,5 @@
+// Главное меню навигации
+
 export const navigationModule = (() => {
   const menuButton = document.querySelector('.user-communication__menu-button');
   const navigationList = document.querySelector('.main-nav__list');
